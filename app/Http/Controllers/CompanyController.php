@@ -37,7 +37,7 @@ class CompanyController extends Controller
     * Storing records of child class ie Employee/Company
     * @param Request $request
     *
-    * @return obj | Model Resource
+    * @return redirect to company list page
     **/
     public function store(Request $request)
     {
