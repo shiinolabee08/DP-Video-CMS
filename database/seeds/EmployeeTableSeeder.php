@@ -17,7 +17,7 @@ class EmployeeTableSeeder extends Seeder
 	            'last_name' => 'Employee' .$i,
 	            'email' => 'sample_employee'.$i.'@gmail.com',
 	            'phone' => '07759149471',
-	            'company_id' => mt_rand(1,2),
+	            'company_id' => 1,
 	            'created_at' => date('Y-m-d H:i:s')
 	        ]);
     	}

@@ -35,7 +35,7 @@ class Controller extends BaseController
      */
     public function index()
     {
-        $data = $this->model_class::all();
+        $data = $this->model_class::paginate(10);
 
         return view( $this->model_class_names[1] . '.index', compact('data', $data));
     }

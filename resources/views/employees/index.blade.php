@@ -46,6 +46,7 @@
             @endforeach
           </tbody>
         </table>
+        {{ $data->links() }}
       @else 
         <div class="well">No records yet.</div>
       @endif
