@@ -19,7 +19,14 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+window.baseUrl = 'http://localhost:8000/';
+
+
+Vue.component('client-carousel-slider', require('./components/ClientCarouselSlider.vue').default);
+Vue.component('testimonials-carousel-slider', require('./components/TestimonialsCarouselSlider.vue').default);
+Vue.component('case-studies-slider', require('./components/CaseStudiesSlider.vue').default);
+Vue.component('awards-carousel-slider', require('./components/AwardsSlider.vue').default);
+Vue.component('count-up', require('./components/CountUpWidget.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -28,5 +35,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app',
+    el: '#app'
 });

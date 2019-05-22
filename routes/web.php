@@ -15,15 +15,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('/', function () {
+//   return File::get(public_path() . '/index.html');
+// });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Resource for Employees
-Route::resource('employees', 'EmployeeController');
 
-//Resource for Companies
-Route::resource('companies', 'CompanyController');
+//Front Pages
+Route::get('/{url}', function($url){
+    return view('front/' . $url);
+});
+
+//Resource for Pages
+Route::resource('pages', 'PageController');
+
+//Resource for Posts
+Route::resource('posts', 'PostController');
 
 //Show images/assets from storage
 Route::get('storage/{filename}', function ($filename)

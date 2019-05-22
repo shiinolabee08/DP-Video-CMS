@@ -1,8 +1,712 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+
+//Main Font
+@font-face{
+	font-family: 'FuturaPT Demi';
+	font-display:auto;
+	src : url('../fonts/Futura/FuturaPTDemi.otf') format('opentype');
+}
+
+@font-face{
+	font-family: 'FuturaPT Medium';
+	font-display:auto;
+	src : url('../fonts/Futura/FuturaPTMedium.otf') format('opentype');
+}
+
+@font-face{
+	font-family: 'FuturaPT Book';
+	font-display:auto;
+	src : url('../fonts/Futura/FuturaPTBook.otf') format('opentype');
+}
+
+@font-face{
+	font-family: 'FuturaPT Heavy';
+	font-display:auto;
+	src : url('../fonts/Futura/FuturaPTHeavy.otf') format('opentype');
+}
+
+@font-face{
+	font-family: 'FuturaPT Light';
+	font-display:auto;
+	src : url('../fonts/Futura/FuturaPTLight.otf') format('opentype');
+}
+
+@font-face{
+	font-family: 'FuturaPT Bold';
+	font-display:auto;
+	src : url('../fonts/Futura/FuturaPTBold.otf') format('opentype');
+}
+
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+header#top{
+	background-color: $header-background-color;
+}
+
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.banner-full-height {
+    height: 90vh;
+    margin-bottom: 80px;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.owl-carousel .owl-stage {
+  display: flex;
+  align-items: center;
+}
+
+.client-carousel-slider{
+	padding:100px 0px;
+	background-color: $content-background-color;
+
+	.owl-carousel .owl-item img{
+		max-width: 200px !important;
+		opacity: 0.5;
+	}
+
+	.owl-carousel .owl-item img:hover{
+		opacity: 1;
+	}
+}
+
+.awards-carousel-slider{
+	padding: 100px 0px;
+	background-color: #fff;
+
+	.owl-carousel .owl-item img{
+		margin:0px auto;
+		// max-width: 200px !important;
+	}
+}
+
+.spacer{
+	min-width: 100%;
+	min-height: 100px;
+}
+
+.title-heading{
+
+	position: relative;
+
+	h1{
+		color: $heading-text-color;
+		font-family: 'FuturaPT Heavy';
+	    line-height: 40px;
+	    font-size: 40px;
+	}
+
+	h3{
+		font-size: 20px;
+    	font-family: 'FuturaPT Book';
+	}
+} 
+
+.white-heading{
+	*{
+		color: #fff !important;
+	}
+}
+
+.main-heading p{
+	font-size: 18px;
+    font-family: 'FuturaPT Book';
+    color: $main-text-color;
+    line-height: normal;
+    font-weight: normal;
+}
+
+.page-content{
+	padding:80px 0px;
+
+	.flex-column{
+		margin-bottom: 50px;
+	}
+
+	.main-heading p{
+		margin-bottom: 35px;
+	}
+}
+
+.top-info{
+	padding: 30px 0px;
+}
+
+.has-primary-border-center::before {
+    content: "";
+    position: absolute;
+    background-color: #cdae10;
+    width: 50px;
+    height: 9px;
+    border-radius: 10px;
+    margin: 0px auto;
+    top: -30px;
+    left: 0;
+    right: 0;
+}
+
+.has-primary-border-left::before {
+    content: "";
+    position: absolute;
+    background-color: #cdae10;
+    width: 60px;
+    height: 9px;
+    border-radius: 10px;
+    left: 0;
+    top: -20px;
+}
+
+.call-to-action{
+    border: 2px solid $yellow-bg-color;
+    border-radius: 30px;
+    font-family: 'FuturaPT Medium';
+    font-size: 16px;
+    color: $main-text-color;
+    padding: 15px 25px;
+
+    &:hover{
+    	text-decoration: none;
+    	color: inherit;
+    	transform: translateY(-3px);
+    	-webkit-transform: translateY(-3px);
+    }
+}
+
+.services-fancy-boxes{
+	padding: 0 0 50px 0;
+
+	.service-fancy-box{
+		margin-bottom: 50px;
+		position: relative;
+
+		.inner-content{
+			background-color: $yellow-bg-color;
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: auto;
+			padding:3%;
+			border-radius: 35px;
+			min-height: 170px;
+			text-align: center;
+
+			h2{
+				font-family: 'FuturaPT Bold';
+			    text-transform: uppercase;
+			    font-size: 32px;
+			    letter-spacing: 1px;
+			    color: $main-text-color;
+			    line-height: normal;
+			    margin-top: 25px;
+			}
+
+			p{
+				margin-top: 10px;
+			    font-family: 'FuturaPT Book';
+			    line-height: normal;
+			    font-size: 20px;
+			    letter-spacing: 0.3px;
+			    color: $main-text-color;
+			}
+
+			.links{
+				position: relative;
+
+				a:first-child{
+					font-family: 'FuturaPT Demi';
+				    text-transform: uppercase;
+				    color: $main-text-color;
+				    font-size: 20px;
+				    float: left;
+				}
+
+				a:last-child{
+					font-family: 'FuturaPT Demi';
+				    text-transform: uppercase;
+				    color: $main-text-color;
+				    font-size: 20px;
+				    float: right;
+				}
+			}
+			 
+		}
+
+	}
+}
+
+.packages {
+	background-color: $content-background-color;
+
+	.package-item{
+		box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.2);
+		border-radius: 0px 0px 25px 25px;
+
+	    .header{
+			border-radius: 25px 25px 0px 0px;
+	    	padding: 25px 25px;
+		    font-family: 'FuturaPT Heavy';
+	    	text-align: center;
+	    }
+
+	    .body{
+	    	background-color: #fff;
+	    	position: relative;
+	    	padding: 15px 10px;
+    		text-align: center;
+			border-radius: 0px 0px 25px 25px;
+
+	    	h4.price{
+	    		font-family: 'FuturaPT Medium';
+			    color: $heading-text-color;
+			    font-size: 22px;
+			    font-weight: bold;
+	    	}
+
+	    	p.note{
+	    		line-height: 1.25;
+	    		font-size: 18px;
+	    		font-family: 'FuturaPT Book';
+	    	}
+
+	    	.divider{
+	    		display: block;
+			    background: #eaeaea;
+			    height: 2px;
+			    width: 80%;
+			    margin: 0 auto;
+	    	}
+
+	    	.order{
+	    		background-color: $yellow-bg-color;
+			    display: block;
+			    border-radius: 30px;
+			    padding: 15px 0px;
+			    display: block;
+			    width: 80%;
+			    margin: 0 auto 25px;
+
+		    	a{
+		    		font-family: 'FuturaPT Heavy';
+				    text-transform: uppercase;
+				    font-weight: bold;
+				    font-size: 24px;
+				    color: #fff;
+		    	}
+	    	}
+
+	    	.chat-discuss {
+			    font-family: 'FuturaPT Heavy';
+			    padding: 10px 0px 25px 0px;
+			    font-weight: bold;
+
+			    span{
+			    	color: $yellow-bg-color;
+			    }
+
+			    a {
+				    color: $main-text-color!important;
+				    font-weight: normal;
+				}
+			}
+
+	    	ul{
+			    margin-left: 0;
+	    		margin-right: 20px;
+	    		margin-bottom: 20px;
+	    		
+	    		li{
+	    			list-style: none;
+	    			margin-left: -15px;
+
+	    			i {
+					    color: $yellow-bg-color;
+					    float: left;
+					    margin-left: 30px;
+					}
+	    		}
+	    	}
+	    }
+	}
+}
+
+
+.package-standard{
+	.header{
+		background-color: #acacac;
+	}
+}
+
+.package-advanced{
+	.header{
+		background-color: $yellow-bg-color;
+	}
+}
+
+
+.case-studies, .valued-clients, .satisfied-videos-projects-completed, .our-process{
+	background-size: cover;
+	background-position: center center;
+	padding:100px 0px;
+	min-height: 650px;
+}
+
+.case-studies{
+	position: relative;
+	background-attachment: fixed;
+
+	.title-heading{
+		h1{
+			margin-bottom: 30px;
+		}
+	}
+
+	.case-study-item{
+
+		img{
+			margin:20px auto;
+			opacity: 1;
+			max-width: 80% !important;
+		}
+
+		.inner-content{
+			position: relative;
+
+			h1{
+				margin-top: 15px;
+				font-size: 24px;
+				line-height: 20px;
+				font-family: "FuturaPT Heavy";
+				color: $yellow-bg-color;
+
+				img.icon{
+					max-width: 30px !important;
+					min-width: 30px;
+					display: inline-block;
+				}
+			}
+
+			p{
+				margin-top: 15px;
+				font-family: 'FuturaPT Book';
+				font-size: 22px;
+				line-height: 23px;
+				color: #fff;
+				margin-bottom: 35px;
+			}
+
+			a{
+				background-color: transparent;
+				border:2px solid $yellow-bg-color;
+				border-radius: 30px;
+				font-family: 'FuturaPT Medium';
+				font-size:14px;
+				line-height: 14px;
+				color: #fff;
+				padding: 10px 30px; 
+			}
+		}
+	}
+}
+
+.valued-clients {
+	position: relative;
+	background-attachment: scroll;
+}
+
+.satisfied-videos-projects-completed{
+	background-attachment: fixed;
+
+	.title-heading{
+		h1{
+			margin-bottom: 30px;
+		}
+	}
+
+	.items {
+		margin-top: 30px;
+		margin-bottom: 50px;
+		
+		.item{
+			margin-bottom: 10px;
+
+			h2{
+				font-size: 2em;
+			    font-family: "FuturaPT Heavy";
+			    line-height: 1em;
+			    color: #d6b215;
+			    text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.convert-your-customers{
+	padding: 100px 0px;
+	background-position: left center;
+	background-attachment: fixed;
+
+	.title-heading{
+		h1{
+			font-size: 40px;
+			margin-bottom: 30px;
+		}
+
+		h3{
+			font-size: 17px;
+		}
+	}
+
+	.items {
+		margin-top: 30px;
+		margin-bottom: 50px;
+		
+		.item{
+			margin-bottom: 10px;
+
+			h2{
+				font-size: 2em;
+			    font-family: "FuturaPT Heavy";
+			    line-height: 1em;
+			    color: #d6b215;
+			    text-transform: uppercase;
+			}
+
+			h3 {
+			    font-family: 'FuturaPT Demi';
+			    color: $yellow-bg-color !important;
+			    text-transform: uppercase;
+			    font-size: 15px;
+			}
+		}
+	}
+}
+
+.our-process{
+	background-attachment: fixed;
+
+	.title-heading{
+		h1{
+			margin-bottom: 30px;
+		}
+	}
+
+	.items{
+		margin-bottom: 30px;
+		margin-top: 30px;
+
+		.item{
+			position: relative;
+
+			p{
+				font-size: 18px;
+			    font-family: 'FuturaPT Book';
+			    color: $main-text-color;
+			    line-height: normal;
+			    font-weight: normal;
+			}
+		}
+	}
+}
+
+.testimonials{
+	padding:100px 0px;
+	background-color: #fff;
+
+	.testimonial-item{
+		text-align: center;
+
+		img{
+			max-width: 340px!important;
+			vertical-align: top;
+			display: inline-block!important;
+		}
+
+		.inner-content{
+			position: relative;
+
+			h2{
+				text-align: left;
+				font-size: 24px;
+				font-family: 'Open Sans';
+				font-weight: 800;
+				line-height: 22px;
+			}
+
+			p{
+				text-align: left;
+				font-size:20px;
+				font-family: 'Open Sans';
+				font-weight: 400;
+				line-height: 22px;
+			}
+
+			img.icon{
+				max-width: 130px!important;
+				margin-bottom: 15px;
+				display: block !important;
+			}
+
+			img.star{
+				display: block !important;
+				max-width: 150px!important;
+			}
+		}
+	}
+}
+
+//Bottom Section
+.bottom-section{
+	position: relative;
+
+	.work-together{
+		background-color: $yellow-bg-color;
+		padding:50px 0px;
+
+		.info{
+			position: relative;
+
+			h2{
+				font-size: 26px;
+				font-family: 'FuturaPT Heavy';
+			    color: $main-text-color;
+			    line-height: 36px;
+			    font-weight: 400;
+			    margin-bottom: 8px;
+			}
+
+			p, a{
+				font-size: 1.1em;
+				color: #fff !important;
+    			font-family: 'FuturaPT Light';
+			}
+
+			a{
+				text-decoration: none;
+			}
+		}
+	}
+
+	.consultancy{
+		padding: 100px 0px;
+		background-color: #262626;
+
+		.title-heading{
+			h1{
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+}
+
+//Footer Section
+.footer-wrapper{
+	position: relative;
+	background-color: #f8f8f8;
+	padding:75px 0 0 0;
+
+	.footer-widgets{
+		position: relative;
+		padding-bottom: 30px;
+
+		h3{
+			text-transform: capitalize;
+		    font-family: 'FuturaPT Demi';
+	    	font-size: 19px;
+			margin-bottom: 15px;
+			line-height: 26px;
+			letter-spacing: 0;
+			color: $main-text-color;
+		}
+
+		.nav{
+			list-style: none;
+
+			li{
+				padding: 0px 0px;
+				margin-bottom: 0px;
+			
+				a{
+					font-family: 'FuturaPT Demi';
+					padding: 0px;
+					display: block;
+					border-bottom: 0px;
+					color: $footer-menu-items-text-color;
+					font-weight: 700;
+					font-size: 16px;
+
+					&:hover{
+						opacity: 0.65;
+					}
+				}
+			}
+		}
+
+		a{
+			transition:all 0.2s ease;
+		}
+	}
+
+	.copyright{
+		display: block;
+		padding-bottom: 20px;
+
+		p{
+			color: #8c8c8c;
+			line-height: 22px;
+    		margin-top: 3px;
+			padding-bottom: 0px;
+			font-family: 'FuturaPT Book';
+			font-size: 14px;
+		}
+	}
+}
