@@ -10702,14 +10702,55 @@ header#top {
   background-color: #464646;
 }
 
-html,
-body {
-  background-color: #fff;
-  color: #636b6f;
-  font-family: "Nunito", sans-serif;
-  font-weight: 200;
-  height: 100vh;
-  margin: 0;
+header#top .navbar {
+  background-color: #464646 !important;
+}
+
+header#top .navbar .nav li {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+header#top .navbar .nav li a {
+  font-family: "FuturaPT Book";
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+header#top .navbar .nav li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.banner-area {
+  position: relative;
+}
+
+.banner-area .video-background {
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-area .video-background .video-foreground,
+.banner-area .video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.main-content {
+  padding-top: 80px;
 }
 
 .banner-full-height {
@@ -11235,6 +11276,46 @@ body {
 .testimonials .testimonial-item .inner-content img.star {
   display: block !important;
   max-width: 150px !important;
+}
+
+.inner-page-header-container {
+  background-color: #fff;
+  padding: 100px 0px;
+}
+
+.inner-page-header-container .title-heading h1 {
+  margin-bottom: 30px;
+  font-size: 60px;
+  line-height: 74px;
+  letter-spacing: normal;
+  font-family: "FuturaPT Heavy";
+}
+
+.inner-page-header-container .title-heading h3 {
+  font-size: 16px;
+  font-family: "FuturaPT Book";
+}
+
+.inner-page-header-dark-container {
+  background-color: #515151;
+  padding: 100px 0px;
+}
+
+.inner-page-header-dark-container .title-heading h1 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 1em;
+  letter-spacing: normal;
+  font-family: "FuturaPT Heavy";
+}
+
+.inner-page-header-dark-container .title-heading h3 {
+  color: #fff;
+  font-size: 22.4px;
+  line-height: 32px;
+  font-family: "FuturaPT Book";
 }
 
 .bottom-section {

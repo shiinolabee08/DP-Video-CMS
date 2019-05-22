@@ -29,11 +29,18 @@
             @include('layouts/partials/header-nav')
 
             <!-- Banner Area -->
-            <div class="flex-center position-ref banner-full-height">     
+            <div class="flex-center position-ref banner-area banner-full-height">   
 
+                <div class="video-background">
+                    <div class="video-foreground">
+                        <iframe src="https://www.youtube.com/embed/-RADtUtbD9M?start=1&autoplay=1&controls=0&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+                      <!-- <iframe src="https://www.youtube.com/embed/-RADtUtbD9M?controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> -->
+                    </div>
+                </div>                 
                 <div class="content">
-                    <div class="title m-b-md">
-                        Here Banner Slider
+                    <div class="title-heading">
+                        <h3>The Art of Videography</h3>
+                        <h1>The To Stand Out From The Crowd Using Creative Video Production</h1>
                     </div>
                 </div>
             </div>
@@ -69,7 +76,7 @@
             <div class="container services-fancy-boxes">
                 <div class="row">
                     <div class="col-sm-6 service-fancy-box">
-                        <div class="inner-content" style="background-image: url('/images/corporate-video.png');">
+                        <div class="inner-content" style="background-image: url('/images/services/corporate-video.png');">
                             <h2>Corporate Video</h2>
                             <p>We can create videos that help companies gain an edge over their competiors, be it for internal use or external.</p>
                             <div class="links">
@@ -80,7 +87,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 service-fancy-box">
-                        <div class="inner-content" style="background-image: url('/images/curtain-ico.png');">
+                        <div class="inner-content" style="background-image: url('/images/services/curtain-ico.png');">
                             <h2>Event Filming</h2>
                             <p>We have vast experience in event highlight videos and choosing the best moments for the final cut comes natural to us.</p>
                             <div class="links">
@@ -93,7 +100,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6 service-fancy-box">
-                        <div class="inner-content" style="background-image: url('/images/explainer-video.png');">
+                        <div class="inner-content" style="background-image: url('/images/services/explainer-video.png');">
                             <h2>Explainer Video</h2>
                             <p>Let us help you to create an explainer video, which is a straightforward way to get your message or vision across.</p>
                             <div class="links">
@@ -104,7 +111,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 service-fancy-box">
-                        <div class="inner-content" style="background-image: url('/images/promotional-video.png');">
+                        <div class="inner-content" style="background-image: url('/images/services/promotional-video.png');">
                             <h2>Promotional Video</h2>
                             <p>If you have something to shout about, let us craft you your very own promotional video.</p>
                             <div class="links">

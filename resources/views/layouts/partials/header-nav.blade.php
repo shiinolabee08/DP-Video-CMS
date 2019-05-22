@@ -1,6 +1,6 @@
 <header id="top">
     
-    <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+    <nav class="navbar navbar-expand-sm fixed-top navbar-light shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ URL::to('/') }}/dplogo-light.svg" width="74" />
@@ -11,7 +11,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav nav">
+                <ul class="navbar-nav nav ml-md-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                     </li>
@@ -36,38 +36,6 @@
                 </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>                           
-                    @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('posts.index') }}">{{ __('Posts') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('pages.index') }}">{{ __('Pages') }}</a>
-                        </li> 
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-                </ul>
             </div>
         </div>
     </nav>
