@@ -68,25 +68,25 @@
         	<div class="col-md-2 col-sm-12"></div>
         	<div class="col-md-8 col-sm-12">
         		<div class="row">
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/palisade-logo.png">
         					<h3>Palisade Secure</h3>
         				</div>
         			</div>
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/tubetech-logo.png">
         					<h3>Tube Tech International</h3>
         				</div>
         			</div>
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/rotaflex.png">
         					<h3>Rotaflex</h3>
         				</div>
         			</div>
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/elite-islands-logo.png">
         					<h3>Elite Island Resorts</h3>
@@ -95,25 +95,25 @@
         		</div>
 
         		<div class="row">
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/primassure.png">
         					<h3>Primassure Insurance</h3>
         				</div>
         			</div>
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/lbbd.png">
         					<h3>Barking & Dagenham Council</h3>
         				</div>
         			</div>
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/IOD-logo.png">
         					<h3>Institute of Directors</h3>
         				</div>
         			</div>
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/ablestokelogo.png">
         					<h3>Ablestoke Financial</h3>
@@ -122,25 +122,25 @@
         		</div>
 
         		<div class="row">
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/simply-reset.png">
         					<h3>Simply Reset</h3>
         				</div>
         			</div>
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/MotorAid-Logo.png">
         					<h3>MotorAid</h3>
         				</div>
         			</div>
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/premierlogo.png">
         					<h3>Premier Security</h3>
         				</div>
         			</div>
-        			<div class="col-3">
+        			<div class="col-md-3 col-sm-12">
         				<div class="item">
         					<img src="./images/clients/mhfed-logo-tiny.png">
         					<h3>MHFed</h3>

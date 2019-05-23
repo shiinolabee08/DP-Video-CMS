@@ -10717,10 +10717,31 @@ header#top .navbar .nav li a {
   color: #fff;
   text-transform: uppercase;
   transition: all 0.2s ease;
+  border: 2px solid transparent;
+  transition: color 0.2s ease;
 }
 
 header#top .navbar .nav li a:hover {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #e3c00e;
+}
+
+header#top .navbar .nav li .dropdown-menu {
+  padding: 0px 0px;
+  margin: 0px auto;
+  border: none;
+}
+
+header#top .navbar .nav li .dropdown-menu a.dropdown-item {
+  background-color: #464646;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
+  background-color: #e3c00e;
+  color: #515151;
+  border-bottom: 0px;
 }
 
 .banner-area {
@@ -11145,7 +11166,7 @@ header#top .navbar .nav li a:hover {
 
 .valued-clients .clients {
   position: relative;
-  padding: 50px 0px;
+  padding: 50px 0px 0px 0px;
   vertical-align: top;
 }
 
@@ -11503,6 +11524,57 @@ header#top .navbar .nav li a:hover {
   color: #515151;
   font-size: 16px;
   font-family: "FuturaPT Book";
+}
+
+.service-banner {
+  background-position: left top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: #404040;
+  background-attachment: scroll;
+  padding: 80px 0px;
+}
+
+.service-banner .call-to-action {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  font-family: "FuturaPT Book";
+}
+
+.service-banner img {
+  width: auto;
+  display: block;
+}
+
+.service-banner p {
+  display: inline-block;
+  font-family: "FuturaPT Book";
+  font-size: 16px;
+  color: #fff;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.service-banner p strong a {
+  color: #e3c00e;
+  text-decoration: none;
+}
+
+.service-banner .title-heading h1 {
+  font-family: "FuturaPT Heavy";
+  font-size: 48px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 60px;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+.service-banner .title-heading h1 strong {
+  color: #e3c00e;
 }
 
 .bottom-section {

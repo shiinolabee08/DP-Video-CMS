@@ -15,8 +15,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/services') }}">{{ __('Services') }}</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{ url('/services') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          {{ __('Services') }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('/services/corporate-video') }}">Corporate Video</a>
+                            <a class="dropdown-item" href="{{ url('/services/event-filming') }}">Event Filming</a>
+                            <a class="dropdown-item" href="{{ url('/services/logo-animation') }}">Logo Animation</a>
+                            <a class="dropdown-item" href="{{ url('/services/explainer-video') }}">Explainer Video</a>
+                            <a class="dropdown-item" href="{{ url('/services/facebook-cover-videos') }}">Facebook Cover Videos</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/our-work') }}">{{ __('Our Work') }}</a>

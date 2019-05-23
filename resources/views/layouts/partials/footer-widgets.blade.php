@@ -7,22 +7,22 @@
 						<h3>Top Notch Services</h3>
 						<ul class="nav flex-column">
 						  <li class="nav-item">
-						    <a class="nav-link active" href="#">Corporate Video</a>
+						    <a class="nav-link active" href="{{ url('/services/corporate-video') }}">Corporate Video</a>
 						  </li>
 						  <li class="nav-item">
-						    <a class="nav-link" href="#">Event Filming</a>
+						    <a class="nav-link" href="{{ url('/services/event-filming') }}">Event Filming</a>
 						  </li>
 						  <li class="nav-item">
-						    <a class="nav-link" href="#">Explainer Video</a>
+						    <a class="nav-link" href="{{ url('/services/explainer-video') }}">Explainer Video</a>
 						  </li>
 						  <li class="nav-item">
-						    <a class="nav-link" href="#">Facebook Cover Videos</a>
+						    <a class="nav-link" href="{{ url('/services/facebook-cover-videos') }}">Facebook Cover Videos</a>
 						  </li>
 						  <li class="nav-item">
-						    <a class="nav-link" href="#">Motion Graphics</a>
+						    <a class="nav-link" href="{{ url('/services/motion-graphics') }}">Motion Graphics</a>
 						  </li>
 						  <li class="nav-item">
-						    <a class="nav-link" href="#">Promotional Video</a>
+						    <a class="nav-link" href="{{ url('/services/promotional-video') }}">Promotional Video</a>
 						  </li>
 						  <!-- <li class="nav-item">
 						    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -33,7 +33,7 @@
 						<h3>Packages</h3>
 						<ul class="nav flex-column">
 						  <li class="nav-item">
-						    <a class="nav-link active" href="#">Youtube Editing</a>
+						    <a class="nav-link" href="#">Youtube Editing</a>
 						  </li>					  
 						</ul>
 					</div>
@@ -41,19 +41,19 @@
 						<h3>Company</h3>
 						<ul class="nav flex-column">
 						  <li class="nav-item">
-						    <a class="nav-link active" href="#">About</a>
+						    <a class="nav-link" href="{{ url('/about-us') }}">About</a>
 						  </li>	
 						  <li class="nav-item">
-						    <a class="nav-link active" href="#">Services</a>
+						    <a class="nav-link" href="{{ url('/services') }}">Services</a>
 						  </li>	
 						  <li class="nav-item">
-						    <a class="nav-link active" href="#">Our Work</a>
+						    <a class="nav-link" href="{{ url('/our-work') }}">Our Work</a>
 						  </li>	
 						  <li class="nav-item">
-						    <a class="nav-link active" href="#">Contact</a>
+						    <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
 						  </li>	
 						  <li class="nav-item">
-						    <a class="nav-link active" href="#">Testimonials</a>
+						    <a class="nav-link" href="{{ url('/testimonials') }}">Testimonials</a>
 						  </li>					  
 						</ul>
 					</div>

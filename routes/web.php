@@ -29,6 +29,10 @@ Route::get('/{url}', function($url){
     return view('front/' . $url);
 });
 
+Route::get('/services/{category}', function( $category ){
+    return view('front/services/' . $category);
+});
+
 //Resource for Pages
 Route::resource('pages', 'PageController');
 
