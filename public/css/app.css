@@ -11143,6 +11143,30 @@ header#top .navbar .nav li a:hover {
   background-attachment: scroll;
 }
 
+.valued-clients .clients {
+  position: relative;
+  padding: 50px 0px;
+  vertical-align: top;
+}
+
+.valued-clients .clients .item {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.valued-clients .clients .item h3 {
+  margin-top: 20px;
+  font-family: "FuturaPT Heavy";
+  color: #e3c00e;
+  font-size: 21px;
+  line-height: normal;
+}
+
+.valued-clients .clients .item img {
+  max-width: 50%;
+  vertical-align: top;
+}
+
 .satisfied-videos-projects-completed {
   background-attachment: fixed;
 }
@@ -11315,6 +11339,169 @@ header#top .navbar .nav li a:hover {
   color: #fff;
   font-size: 22.4px;
   line-height: 32px;
+  font-family: "FuturaPT Book";
+}
+
+.inner-page-header-dark-container .title-heading p {
+  color: #fff;
+  font-family: "FuturaPT Book";
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.inner-page-header-dark-container .services-list {
+  position: relative;
+}
+
+.inner-page-header-dark-container .services-list ul {
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.inner-page-header-dark-container .services-list ul li {
+  list-style-type: none;
+  color: #fff;
+  font-size: 19px;
+  font-family: "FuturaPT Demi";
+  line-height: 22px;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 15px;
+}
+
+.inner-page-header-dark-container .services-list ul li i.fas {
+  color: #e3c00e !important;
+  font-size: inherit;
+  margin-right: 5px;
+}
+
+.awards {
+  padding: 100px 0px;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.awards .container {
+  margin-bottom: 30px;
+}
+
+.awards .title-heading h1 {
+  margin-bottom: 30px;
+}
+
+.meet-the-team {
+  background-color: #fff;
+  padding: 100px 0px;
+}
+
+.meet-the-team .team-list {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.meet-the-team .team-list .member-box {
+  border-radius: 25px;
+  position: relative;
+  min-height: 150px;
+  display: inline-block;
+}
+
+.meet-the-team .team-list .member-box img {
+  width: 100%;
+}
+
+.meet-the-team .team-list .member-box h3 {
+  margin-top: 25px;
+  position: absolute;
+  bottom: 10px;
+  padding: 25px;
+  font-family: "FuturaPT Medium";
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  font-weight: 400;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.meet-the-team .team-list .member-box h3 ::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.meet-the-team .team-list .member-box h3:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-page .title-heading h1 {
+  font-family: "FuturaPT Heavy";
+  line-height: 40px;
+  font-size: 40px;
+}
+
+.contact-page .title-heading h3 {
+  font-family: "FuturaPT Book";
+  font-size: 18px;
+  line-height: normal;
+}
+
+.get-in-touch {
+  background-color: #fff;
+  padding: 80px 0px;
+}
+
+.get-in-touch .title-heading h1 {
+  color: #e3c00e;
+  font-size: 30px;
+  font-family: "FuturaPT Heavy";
+  line-height: 58px;
+}
+
+.get-in-touch .main-heading h1 {
+  color: #515151;
+  font-size: 45px;
+  font-family: "FuturaPT Heavy";
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+.get-in-touch .main-heading ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.get-in-touch .main-heading ul li {
+  list-style-type: none;
+}
+
+.get-in-touch .main-heading ul li a {
+  color: #515151;
+  font-weight: 400;
+  font-family: "FuturaPT Book";
+  font-size: 16px;
+}
+
+.get-in-touch .main-heading ul li a:hover {
+  text-decoration: none;
+}
+
+.get-in-touch .main-heading ul li i.fa {
+  margin-right: 10px;
+  color: #e3c00e;
+}
+
+.get-in-touch .main-heading p {
+  color: #515151;
+  font-size: 16px;
   font-family: "FuturaPT Book";
 }
 

@@ -21,11 +21,21 @@ window.Vue = require('vue');
 
 window.baseUrl = 'http://localhost:8000/';
 
+import * as VueGoogleMaps from "vue2-google-maps";
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: "AIzaSyAKJuxOzYxwocH6V5hPDJ0hfkoKTomZ2hY",
+    libraries: "places" // necessary for places input
+  }
+});
+
 
 Vue.component('client-carousel-slider', require('./components/ClientCarouselSlider.vue').default);
 Vue.component('testimonials-carousel-slider', require('./components/TestimonialsCarouselSlider.vue').default);
 Vue.component('case-studies-slider', require('./components/CaseStudiesSlider.vue').default);
 Vue.component('awards-carousel-slider', require('./components/AwardsSlider.vue').default);
+Vue.component('map-widget', require('./components/MapWidget.vue').default);
 Vue.component('count-up', require('./components/CountUpWidget.vue').default);
 
 /**

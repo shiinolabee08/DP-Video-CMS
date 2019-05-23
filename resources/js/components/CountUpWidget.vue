@@ -1,7 +1,7 @@
 <template>
   <div class="CountUp">
     <CountUp
-      :endVal="endVal"
+      :endVal="endval"
       :options="options"
       @ready="onReady"
     />
@@ -15,7 +15,7 @@
         components: {
             CountUp
         },
-        props : { endVal : { default : 500, type : Number } },
+        props : [ 'endval' ],
         data : function() {
             return {
                 options: {
@@ -31,7 +31,7 @@
         methods: {
             onReady: function(instance, CountUp) {
                 const that = this;
-                instance.update(that.endVal);
+                instance.update(that.endval);
             }
         }
     };

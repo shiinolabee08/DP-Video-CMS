@@ -19,6 +19,9 @@
      <!-- Bootstrap -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -32,8 +35,11 @@
             <div class="flex-center position-ref banner-area banner-full-height">   
 
                 <div class="video-background">
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                        <source src="https://www.youtube.com/embed/-RADtUtbD9M?start=1&autoplay=1&controls=0&showinfo=0&rel=0" type="video/mp4">
+                    </video>
                     <div class="video-foreground">
-                        <iframe src="https://www.youtube.com/embed/-RADtUtbD9M?start=1&autoplay=1&controls=0&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+                        <!-- <iframe src="https://www.youtube.com/embed/-RADtUtbD9M?start=1&autoplay=1&controls=0&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe> -->
                       <!-- <iframe src="https://www.youtube.com/embed/-RADtUtbD9M?controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> -->
                     </div>
                 </div>                 
@@ -166,7 +172,7 @@
 
             <!-- Awards Carousel Slider -->
             <div class="container-fluid awards-carousel-slider">
-                <awards-carousel-slider></awards-carousel-slider>                    
+                <awards-carousel-slider v-bind:home="true"></awards-carousel-slider>                    
             </div>        
             <!-- Awards Carousel Slider -->
 
@@ -186,7 +192,7 @@
                     <div class="row text-center items">
                         <div class="col-md-4">
                             <div class="item">
-                                <count-up v-bind:endVal="500"></count-up>
+                                <count-up v-bind:endval="500"></count-up>
                                 <h2>Satisfied Customers</h2>
                             </div>
                         </div>

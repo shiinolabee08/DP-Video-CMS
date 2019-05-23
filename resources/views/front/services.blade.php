@@ -22,7 +22,7 @@
 <div class="container services-fancy-boxes">
     <div class="row">
         <div class="col-sm-6 service-fancy-box">
-            <div class="inner-content" style="background-image: url('/images/services/corporate-video.png');">
+            <div class="inner-content" style="background-image: url('/storage/services/corporate-video.png');">
                 <h2>Corporate Video</h2>
                 <p>We can create videos that help companies gain an edge over their competiors, be it for internal use or external.</p>
                 <div class="links">

@@ -505,6 +505,30 @@ header#top{
 .valued-clients {
 	position: relative;
 	background-attachment: scroll;
+
+	.clients{
+		position: relative;
+		padding:50px 0px;
+		vertical-align: top;
+
+		.item{
+			text-align: center;
+			margin-bottom: 40px;
+
+			h3{
+				margin-top: 20px;
+			    font-family: 'FuturaPT Heavy';
+			    color: #e3c00e;
+			    font-size: 21px;
+			    line-height: normal;
+			}
+
+			img{
+				max-width: 50%;
+				vertical-align: top;
+			}
+		}
+	}
 }
 
 .satisfied-videos-projects-completed{
@@ -691,9 +715,192 @@ header#top{
 			line-height: 32px;
 			font-family: 'FuturaPT Book';
 		}
+
+		p{
+			color: #fff;
+			font-family: 'FuturaPT Book';
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.services-list{
+		position: relative;
+
+		ul{
+			list-style: none;
+			margin-left: 0px;
+			padding-left: 0px;
+
+			li{
+				list-style-type: none;
+				color: #fff;
+				font-size: 19px;
+				font-family: 'FuturaPT Demi';
+				line-height: 22px;
+				font-weight: 400;
+				font-style: normal;
+				margin-bottom: 15px;
+
+				i.fas{
+					color: $yellow-bg-color !important;
+					font-size: inherit;
+					margin-right: 5px;
+				}
+			}
+		}
 	}
 
 }
+
+.awards{
+	padding: 100px 0px;
+	background-attachment: scroll;
+	background-size: cover;
+
+	.container{
+		margin-bottom: 30px;
+	}
+
+	.title-heading{
+
+		h1{
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.meet-the-team{
+	background-color: #fff;
+	padding: 100px 0px;
+
+	.team-list{
+		margin-top: 25px;
+		margin-bottom: 20px;
+
+		.member-box{
+			border-radius: 25px;
+			position: relative;
+			// padding: 15px 10px;
+			min-height: 150px;
+			display: inline-block;
+
+			img{
+				width: 100%;
+			}
+
+
+			h3{
+
+				::before{
+					position: absolute;
+					top: 0;
+					left: 0;
+					margin: 0 auto;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0,0,0,0.55);
+				}
+
+				margin-top: 25px;
+				position: absolute;
+				bottom: 10px;
+				padding: 25px;
+				font-family: 'FuturaPT Medium';
+			    font-size: 18px;
+			    line-height: 18px;
+			    color: #ffffff;
+			    font-weight: 400;
+			    visibility: hidden;
+			    opacity: 0;
+			    transition:all 0.2s ease;
+			
+			    &:hover{
+			    	opacity: 1;
+			    	visibility: visible;
+			    }
+			}
+		}
+	}
+}
+
+.contact-page{
+
+	.title-heading{
+
+		h1{
+		    font-family: 'FuturaPT Heavy';
+		    line-height: 40px;
+		    font-size: 40px;
+		}
+
+		h3{
+			font-family: 'FuturaPT Book';
+			font-size:18px;
+			line-height: normal;
+		}
+	}
+}
+
+.get-in-touch{
+	background-color: #fff;
+	padding: 80px 0px;
+
+	.title-heading{
+
+		h1{
+			color: $yellow-bg-color;
+			font-size: 30px;
+			font-family: 'FuturaPT Heavy';
+			line-height: 58px;
+		}
+
+	}
+
+	.main-heading{
+
+		h1{
+			color: $main-text-color;
+			font-size: 45px;
+			font-family: 'FuturaPT Heavy';
+			line-height: 60px;
+			text-transform: uppercase;
+		}
+
+		ul{
+			list-style-type: none;
+			padding-left: 0px;
+
+			li{
+				list-style-type: none;
+				
+				a{
+					color: $main-text-color;
+					font-weight: 400;
+					font-family: 'FuturaPT Book';
+					font-size: 16px;
+
+					&:hover{
+						text-decoration: none;
+					}
+				}
+
+				i.fa{
+					margin-right: 10px;
+					color:$yellow-bg-color;
+				}
+			}
+		}
+
+		p{
+			color: $main-text-color;
+			font-size: 16px;
+			font-family: 'FuturaPT Book';
+		}
+	}
+}
+
 //Bottom Section
 .bottom-section{
 	position: relative;

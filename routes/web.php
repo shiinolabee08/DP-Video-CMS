@@ -36,9 +36,12 @@ Route::resource('pages', 'PageController');
 Route::resource('posts', 'PostController');
 
 //Show images/assets from storage
-Route::get('storage/{filename}', function ($filename)
+Route::get('storage/{category}/{filename}', function ( $category,  $filename)
 {
-    $path = storage_path('app/public/logos/' . $filename);
+
+    // $this->middleware('auth'); // restrict unauthorized user
+
+    $path = storage_path("app/public/{$category}/{$filename}");
 
     if (!File::exists($path)) {
         abort(404);

@@ -27,6 +27,9 @@
     "vue-countup-v2": "^3.0.1",
     "vue-owl-carousel": "^2.0.3",
     "vue-template-compiler": "^2.6.10",
-    "babel-runtime" : "5.3.0"
+    "babel-runtime": "5.3.0"
+  },
+  "dependencies": {
+    "vue2-google-maps": "^0.10.6"
   }
 }
