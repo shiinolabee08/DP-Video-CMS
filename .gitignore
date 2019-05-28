@@ -2,6 +2,8 @@
 /public/hot
 /public/storage
 /public/page-cache
+/public/css/app.css
+/public/js/app.js
 /storage/*.key
 /vendor
 .env

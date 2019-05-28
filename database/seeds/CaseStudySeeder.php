@@ -22,7 +22,7 @@ class CaseStudySeeder extends Seeder
         DB::table('case_studies')->insert([
             'title' => 'Rotaflex Mill Spout Cleaning System',
             'feature_image' => '0.jpg',
-            'youtube_video_url' => 'https://www.youtube.com/watch?v=JOQRaEHeyLk',
+            'youtube_video_url' => 'https://www.youtube.com/embed/JOQRaEHeyLk',
             'case_study_category_id' => 11,
             'created_at' => date('Y-m-d H:i:s')
         ]);
@@ -30,7 +30,7 @@ class CaseStudySeeder extends Seeder
         DB::table('case_studies')->insert([
             'title' => 'Ablestoke - Meet The Investment Manager',
             'feature_image' => 'KnviaPKb5sQ.jpg',
-            'youtube_video_url' => 'https://www.youtube.com/watch?v=KnviaPKb5sQ',
+            'youtube_video_url' => 'https://www.youtube.com/embed/KnviaPKb5sQ',
             'case_study_category_id' => 11,
             'created_at' => date('Y-m-d H:i:s')
         ]);
@@ -38,7 +38,7 @@ class CaseStudySeeder extends Seeder
         DB::table('case_studies')->insert([
             'title' => 'Aspire Estate Agents Battersea',
             'feature_image' => 'HDmElyhRtGs.jpg',
-            'youtube_video_url' => 'https://www.youtube.com/watch?v=HDmElyhRtGs',
+            'youtube_video_url' => 'https://www.youtube.com/embed/HDmElyhRtGs',
             'case_study_category_id' => 11,
             'created_at' => date('Y-m-d H:i:s')
         ]);
