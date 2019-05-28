@@ -37,7 +37,7 @@
                 <div class="video-background">                    
                     <!-- <iframe src="https://www.youtube.com/embed/-RADtUtbD9M?start=1&autoplay=1&controls=0&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe> -->
                     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                        <source src="{{url('/storage/videos/dp-video-banner-video.mp4')}}" type="video/mp4">
+                        <source src="{{url('/videos/dp-video-banner-video.mp4')}}" type="video/mp4">
                     </video>
                 </div>               
                 <div class="container content">
