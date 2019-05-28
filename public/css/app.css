@@ -10704,6 +10704,21 @@ header#top {
 
 header#top .navbar {
   background-color: #464646 !important;
+  padding-bottom: 15px;
+}
+
+header#top .navbar .phone-top {
+  margin: 10px 0px;
+  text-align: right;
+  display: block;
+}
+
+header#top .navbar .phone-top a {
+  color: #e3c00e;
+}
+
+header#top .navbar .phone-top a i {
+  color: #fff;
 }
 
 header#top .navbar .nav li {
@@ -10744,12 +10759,25 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   border-bottom: 0px;
 }
 
+header#top .free-quote {
+  display: inline-block;
+  margin: 10px 15px;
+}
+
+header#top .free-quote a {
+  color: #fff;
+  border-color: #fff;
+}
+
+header#top .free-quote a:hover {
+  color: #e3c00e;
+}
+
 .banner-area {
   position: relative;
   padding-top: 150px;
   text-align: left;
   height: 110vh;
-  margin-bottom: 80px;
 }
 
 .banner-area .video-background {
@@ -10863,6 +10891,7 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
 }
 
 .client-carousel-slider {
+  position: relative;
   padding: 100px 0px;
   background-color: #f8f8f8;
 }
@@ -10876,6 +10905,34 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   opacity: 1;
 }
 
+.client-carousel-slider .prev {
+  position: absolute;
+  top: 35%;
+  left: 55px;
+  color: #e3c00e;
+  font-size: 50px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.client-carousel-slider .prev:hover {
+  color: #fff;
+}
+
+.client-carousel-slider .next {
+  position: absolute;
+  top: 35%;
+  right: 55px;
+  color: #e3c00e;
+  font-size: 50px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.client-carousel-slider .next:hover {
+  color: #fff;
+}
+
 .awards-carousel-slider {
   padding: 100px 0px;
   background-color: #fff;
@@ -10883,6 +10940,34 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
 
 .awards-carousel-slider .owl-carousel .owl-item img {
   margin: 0px auto;
+}
+
+.awards-carousel-slider .prev {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  color: #e3c00e;
+  font-size: 65px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.awards-carousel-slider .prev:hover {
+  color: #fff;
+}
+
+.awards-carousel-slider .next {
+  position: absolute;
+  top: 0;
+  right: -80px;
+  color: #e3c00e;
+  font-size: 65px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.awards-carousel-slider .next:hover {
+  color: #fff;
 }
 
 .spacer {
@@ -11156,6 +11241,34 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   margin-bottom: 30px;
 }
 
+.case-studies .prev {
+  position: absolute;
+  top: 50%;
+  left: -80px;
+  color: #e3c00e;
+  font-size: 65px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.case-studies .prev:hover {
+  color: #fff;
+}
+
+.case-studies .next {
+  position: absolute;
+  top: 50%;
+  right: -80px;
+  color: #e3c00e;
+  font-size: 65px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.case-studies .next:hover {
+  color: #fff;
+}
+
 .case-studies .case-study-item img {
   margin: 20px auto;
   opacity: 1;
@@ -11196,6 +11309,7 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   font-family: "FuturaPT Medium";
   font-size: 14px;
   line-height: 14px;
+  display: inline-block;
   color: #fff;
   padding: 10px 30px;
 }
@@ -11670,6 +11784,124 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   line-height: 32px;
   color: #515151;
   margin-bottom: 15px;
+}
+
+.case-study-categies-list {
+  position: relative;
+}
+
+.case-study-categies-list ul {
+  list-style-type: none;
+  padding: 0px 0px;
+  margin: 0px auto;
+}
+
+.case-study-categies-list ul li {
+  list-style-type: none;
+  padding: 5px 20px;
+  color: #e3c00e;
+  border: 1px solid #e3c00e;
+  background-color: #fff;
+  font-size: 15px;
+  font-family: "FuturaPT Medium";
+  margin: 5px 5px 5px 10px;
+  line-height: 38px;
+  border-radius: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.case-study-categies-list ul li:hover {
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.13);
+}
+
+.case-study-categies-list ul li.active {
+  background-color: #e3c00e;
+  color: #fff;
+}
+
+.case-study-categies-list .results-data-grid {
+  position: relative;
+  margin: 50px auto;
+}
+
+.case-study-categies-list .results-data-grid .result-item {
+  position: relative;
+  min-height: 150px;
+  padding: 10px;
+}
+
+.case-study-categies-list .results-data-grid .result-item::before {
+  position: absolute;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  margin: 0px auto;
+  z-index: 10;
+}
+
+.case-study-categies-list .results-data-grid .result-item:hover::before,
+.case-study-categies-list .results-data-grid .result-item:hover > .inner-content > .title-heading > h2,
+.case-study-categies-list .results-data-grid .result-item:hover > .inner-content > .button button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.case-study-categies-list .results-data-grid .result-item .item-backgroud-overlay {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.case-study-categies-list .results-data-grid .result-item .inner-content {
+  position: relative;
+  z-index: 12;
+}
+
+.case-study-categies-list .results-data-grid .result-item .inner-content .title-heading h2 {
+  font-family: "FuturaPT Demi";
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 10px 0;
+  padding: 0px 10px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.case-study-categies-list .results-data-grid .result-item .inner-content .button {
+  position: relative;
+  text-align: center;
+  margin: 25px auto 0px;
+}
+
+.case-study-categies-list .results-data-grid .result-item .inner-content .button button {
+  transition: all 0.2s ease;
+  font-family: "FuturaPT Medium";
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid #e3c00e;
+  border-radius: 30px;
+  padding: 10px 30px;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  color: #fff;
 }
 
 .bottom-section {

@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 window.baseUrl = 'http://localhost:8000/';
 
+/*Google Map*/
 import * as VueGoogleMaps from "vue2-google-maps";
 
 Vue.use(VueGoogleMaps, {
@@ -30,6 +31,11 @@ Vue.use(VueGoogleMaps, {
   }
 });
 
+/*Modal*/
+import VModal from 'vue-js-modal'
+
+Vue.use(VModal, { dynamic: true, dialog:true });
+
 
 Vue.component('client-carousel-slider', require('./components/ClientCarouselSlider.vue').default);
 Vue.component('testimonials-carousel-slider', require('./components/TestimonialsCarouselSlider.vue').default);
@@ -37,6 +43,7 @@ Vue.component('case-studies-slider', require('./components/CaseStudiesSlider.vue
 Vue.component('awards-carousel-slider', require('./components/AwardsSlider.vue').default);
 Vue.component('map-widget', require('./components/MapWidget.vue').default);
 Vue.component('count-up', require('./components/CountUpWidget.vue').default);
+Vue.component('client-services-widget', require('./components/ClientServicesWidget.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -45,5 +52,5 @@ Vue.component('count-up', require('./components/CountUpWidget.vue').default);
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
 });

@@ -11,13 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::get('/', function () {
-//   return File::get(public_path() . '/index.html');
-// });
+Route::get('/', 'FrontController@index');
 
 Auth::routes();
 
@@ -26,7 +20,7 @@ Route::get('/admin/dashboard', 'HomeController@index')->name('dashboard');
 
 //Front Pages
 Route::get('/{url}', function($url){
-    return view('front/' . $url);
+    return view('front/' . $url, [ 'viewName' => Route::current()->getName() ]);
 });
 
 Route::get('/services/{category}', function( $category ){

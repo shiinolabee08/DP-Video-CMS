@@ -12,15 +12,17 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-     <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Meta Tags for SEO -->
+    <meta property='og:site_name' content='Digital Pie Video'/>
+    <meta property='og:url' content='https://www.digitalpie.video/'/>
+    <meta property='og:title' content='Home'/><meta property='og:type' content='article'/>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -28,6 +30,8 @@
     <body>
         <!-- App -->
         <div id="app">
+
+            <v-dialog :width="850" :adaptive="true" :draggable="true" :pivotY="1" :height="500"></v-dialog>
             
             @include('layouts/partials/header-nav')
 
@@ -35,7 +39,6 @@
             <div class="position-ref banner-area">   
 
                 <div class="video-background">                    
-                    <!-- <iframe src="https://www.youtube.com/embed/-RADtUtbD9M?start=1&autoplay=1&controls=0&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe> -->
                     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                         <source src="{{url('/videos/dp-video-banner-video.mp4')}}" type="video/mp4">
                     </video>
@@ -193,6 +196,10 @@
                         </div>
                         <div class="col-md-3"><div class="spacer"></div></div>
                     </div>
+                    <!-- Case Studies List -->
+                    
+                    <client-services-widget></client-services-widget>
+                    <!-- Case Studies List -->
                 </div>
             </div>
             <!-- Our Valued Clients -->

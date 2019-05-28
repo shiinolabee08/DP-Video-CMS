@@ -1,26 +1,26 @@
 <template>
 	<div class="container">
-		<carousel :autoplay="true" :items="5" :dots="false" :nav="false" :rewind="false" :loop="true" :autoplayTimeout="10000" :margin="45">
+		<carousel :autoplay="true" :items="5" :dots="false" :nav="false" :rewind="false" :loop="false" :autoplayTimeout="10000" :margin="45">
 
-		    <!-- <template slot="prev"><span class="prev">prev</span></template> -->
+		    <template slot="prev"><span class="prev"><i class="fa fa-chevron-left"></i></span></template>
 
-		    <img src="/images/sliders/iod-logo.png" style="max-width: 100px !important;">
+		    <a href="https://www.iod.com/" target="_blank"><img src="/images/sliders/iod-logo.png" style="max-width: 100px !important;"></a>
 
-		    <img src="/images/sliders/logo.gif">
+		    <a href="https://www.eliteislandresorts.com/" target="_blank"><img src="/images/sliders/logo.gif"></a>
 
-		    <img src="/images/sliders/mhfed.png" width="65" style="max-width: 100px !important;">
+		    <a href="https://www.mhfed.com/" target="_blank"><img src="/images/sliders/mhfed.png" width="65" style="max-width: 100px !important;"></a>
 
-		    <img src="/images/sliders/motoraid-logo-transparent.png">
+		    <a href="https://www.motoraid.com/" target="_blank"><img src="/images/sliders/motoraid-logo-transparent.png"></a>
 
-		    <img src="/images/sliders/premier-ssl-log.png">
+		    <a href="https://www.premier-ssl.com/" target="_blank"><img src="/images/sliders/premier-ssl-log.png"></a>
 
-		    <img src="/images/sliders/tavistock.png">
+		    <a href="https://www.tavistockinvestments.com/" target="_blank"><img src="/images/sliders/tavistock.png"></a>
 
-		    <img src="/images/sliders/tubetech-logo.svg" width="150">
+		    <a href="https://www.tubetech.com/" target="_blank"><img src="/images/sliders/tubetech-logo.svg" width="150"></a>
 
-		    <img src="/images/sliders/uwc_logo.png" style="max-width: 100px !important;">
+		    <a href="https://www.ultimatewarriorchallenge.com/" target="_blank"><img src="/images/sliders/uwc_logo.png" style="max-width: 100px !important;"></a>
 
-		    <!-- <template slot="next"><span class="next">next</span></template> -->
+		    <template slot="next"><span class="next"><i class="fa fa-chevron-right"></i></span></template>
 
 		</carousel>
 	</div>

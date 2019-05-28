@@ -49,6 +49,6 @@ class CaseStudyController extends Controller
     public function edit(CaseStudy $case_study)
     {
         return view('case-studies.edit', [ 'case_study' => $case_study ]);
-    }
+    }    
 
 }

@@ -50,6 +50,21 @@ header#top{
 
 	.navbar{
 		background-color: $header-background-color !important;
+		padding-bottom: 15px;
+
+		.phone-top{
+			margin:10px 0px;
+			text-align: right;
+			display: block;
+
+			a{
+				color: $yellow-bg-color;
+
+				i{
+					color: #fff;
+				}
+			}
+		}
 
 		.nav{
 			li{
@@ -92,6 +107,21 @@ header#top{
 			}
 
 		}
+
+	}
+
+	.free-quote{
+		display: inline-block;
+		margin:10px 15px;
+
+		a{
+			color: #fff;
+			border-color: #fff;
+
+			&:hover{
+				color: $yellow-bg-color;
+			}
+		}
 	}
 }
 
@@ -100,7 +130,7 @@ header#top{
 	padding-top: 150px;
 	text-align: left;
 	height: 110vh;
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
 
 	.video-background{
 		background-color: rgba(0, 0, 0, 0.6);
@@ -221,6 +251,7 @@ header#top{
 }
 
 .client-carousel-slider{
+	position: relative;
 	padding:100px 0px;
 	background-color: $content-background-color;
 
@@ -232,6 +263,34 @@ header#top{
 	.owl-carousel .owl-item img:hover{
 		opacity: 1;
 	}
+
+	.prev{
+		position: absolute;
+		top: 35%;
+		left: 55px;
+		color: $yellow-bg-color;
+		font-size: 50px;
+		z-index: 10;
+		cursor: pointer;
+
+		&:hover{
+			color: #fff;
+		}
+	}
+
+	.next{
+		position: absolute;
+		top: 35%;
+		right: 55px;
+		color: $yellow-bg-color;
+		font-size: 50px;
+		z-index: 10;
+		cursor: pointer;
+
+		&:hover{
+			color: #fff;
+		}
+	}
 }
 
 .awards-carousel-slider{
@@ -241,6 +300,34 @@ header#top{
 	.owl-carousel .owl-item img{
 		margin:0px auto;
 		// max-width: 200px !important;
+	}
+
+	.prev{
+		position: absolute;
+		top: 0;
+		left: -80px;
+		color: $yellow-bg-color;
+		font-size: 65px;
+		z-index: 10;
+		cursor: pointer;
+
+		&:hover{
+			color: #fff;
+		}
+	}
+
+	.next{
+		position: absolute;
+		top: 0;
+		right: -80px;
+		color: $yellow-bg-color;
+		font-size: 65px;
+		z-index: 10;
+		cursor: pointer;
+
+		&:hover{
+			color: #fff;
+		}
 	}
 }
 
@@ -524,6 +611,34 @@ header#top{
 		}
 	}
 
+	.prev{
+		position: absolute;
+		top: 50%;
+		left: -80px;
+		color: $yellow-bg-color;
+		font-size: 65px;
+		z-index: 10;
+		cursor: pointer;
+
+		&:hover{
+			color: #fff;
+		}
+	}
+
+	.next{
+		position: absolute;
+		top: 50%;
+		right: -80px;
+		color: $yellow-bg-color;
+		font-size: 65px;
+		z-index: 10;
+		cursor: pointer;
+
+		&:hover{
+			color: #fff;
+		}
+	}
+
 	.case-study-item{
 
 		img{
@@ -565,6 +680,7 @@ header#top{
 				font-family: 'FuturaPT Medium';
 				font-size:14px;
 				line-height: 14px;
+				display: inline-block;
 				color: #fff;
 				padding: 10px 30px; 
 			}
@@ -1093,6 +1209,127 @@ header#top{
 		}
 	}
 
+}
+
+.case-study-categies-list{
+	position: relative;
+
+	ul{
+		list-style-type: none;
+		padding:0px 0px;
+		margin:0px auto;
+
+		li{
+			list-style-type: none;
+			padding:5px 20px;
+			color: $yellow-bg-color;
+			border:1px solid $yellow-bg-color;
+			background-color: #fff;
+			font-size: 15px;
+			font-family: 'FuturaPT Medium';
+			margin:5px 5px 5px 10px;
+			line-height: 38px;
+			border-radius: 30px;
+			display: inline-block;
+			cursor: pointer;
+
+			&:hover{
+			    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+			}
+		}
+
+		li.active{
+			background-color: $yellow-bg-color;
+			color: #fff;
+		}
+	}
+
+	.results-data-grid{
+		position: relative;
+		margin:50px auto;
+
+		.result-item{
+			position: relative;
+			min-height: 150px;
+			padding: 10px;
+
+			&::before{
+				position: absolute;
+				content: '';
+				background-color: rgba(0, 0, 0, 0.6);
+				width: 100%;
+				height: 100%;
+				visibility: hidden;
+				opacity: 0;
+				top: 0;
+				left: 0;
+				margin:0px auto;
+				z-index: 10;
+			}
+
+			&:hover::before, &:hover > .inner-content > .title-heading > h2, &:hover > .inner-content > .button button{
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.item-backgroud-overlay{
+				background-size: cover;
+				background-position: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin:auto 0;
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+
+			.inner-content{
+				position: relative;
+				z-index: 12;
+
+				
+				.title-heading{
+
+					h2{
+						font-family: 'FuturaPT Demi';
+						color: #fff;
+						font-size: 24px;
+						line-height: 24px;
+						margin: 10px 0;
+						padding:0px 10px;
+						text-align: center;
+						opacity: 0;
+						visibility: hidden;
+						transition:all 0.2s ease;
+					}
+				}
+
+				.button{
+					position: relative;
+					text-align: center;
+					margin:25px auto 0px;
+
+					button{
+						transition:all 0.2s ease;
+						font-family: 'FuturaPT Medium';
+						font-size: 18px;
+						background-color: transparent;
+						border:1px solid $yellow-bg-color;
+						border-radius: 30px;
+						padding: 10px 30px;
+						line-height: 20px;
+						text-transform: uppercase;
+						display: inline-block;
+						opacity: 0;
+						visibility: hidden;
+						color: #fff;
+					}	
+				}
+			}
+
+		}
+	}
 }
 
 //Bottom Section

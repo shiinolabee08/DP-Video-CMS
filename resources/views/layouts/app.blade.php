@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Meta Tags for SEO -->
+    <meta property='og:site_name' content='Digital Pie Video'/>
+    <meta property='og:url' content='{{ url()->current() }}'/>
+    <meta property='og:title' content='{{ url()->current() }}'/><meta property='og:type' content='article'/>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta property='og:site_name' content='Digital Pie Video'/><meta property='og:url' content='https://www.digitalpie.video/about-us/'/><meta property='og:title' content='About Us'/><meta property='og:type' content='article'/>
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 

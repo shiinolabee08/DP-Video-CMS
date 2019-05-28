@@ -16,6 +16,7 @@ class CreateCaseStudyCategoriesTable extends Migration
         Schema::create('case_study_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title')->nullable(false);
+            $table->string('slug')->nullable(false);
             $table->string('description', 150);
             $table->timestamps();
         });
