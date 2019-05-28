@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Digital Pie Video</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -32,23 +32,50 @@
             @include('layouts/partials/header-nav')
 
             <!-- Banner Area -->
-            <div class="flex-center position-ref banner-area banner-full-height">   
+            <div class="position-ref banner-area">   
 
-                <div class="video-background">
+                <div class="video-background">                    
+                    <!-- <iframe src="https://www.youtube.com/embed/-RADtUtbD9M?start=1&autoplay=1&controls=0&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe> -->
                     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                        <source src="https://www.youtube.com/embed/-RADtUtbD9M?start=1&autoplay=1&controls=0&showinfo=0&rel=0" type="video/mp4">
+                        <source src="{{url('/storage/videos/dp-video-banner-video.mp4')}}" type="video/mp4">
                     </video>
-                    <div class="video-foreground">
-                        <!-- <iframe src="https://www.youtube.com/embed/-RADtUtbD9M?start=1&autoplay=1&controls=0&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe> -->
-                      <!-- <iframe src="https://www.youtube.com/embed/-RADtUtbD9M?controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> -->
+                </div>               
+                <div class="container content">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="title-heading">
+                                <h3>The Art of Videography</h3>
+                                <h1>The To Stand Out From The Crowd Using Creative <br>Video Production</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-5"></div>
                     </div>
-                </div>                 
-                <div class="content">
-                    <div class="title-heading">
-                        <h3>The Art of Videography</h3>
-                        <h1>The To Stand Out From The Crowd Using Creative Video Production</h1>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12">
+                            <a href="{{ url('/contact') }}" class="call-to-action"> Enquire Now</a>
+                            <img src="/images/trust-pilot-logo.png"/>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
+                            <img src="/images/google-partner-logo.png"/>
+                        </div>
                     </div>
                 </div>
+                <div class="container-fluid camera-tools">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="/images/camoptions-nonanim.svg" width="150"/>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="/images/iso400.svg" width="150"/>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="/images/camera-animated-looped-futura.svg" width="150"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
             </div>
             <!-- Banner Area -->
 

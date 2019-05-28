@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin/dashboard', 'HomeController@index')->name('dashboard');
 
 
 //Front Pages
@@ -34,10 +34,13 @@ Route::get('/services/{category}', function( $category ){
 });
 
 //Resource for Pages
-Route::resource('pages', 'PageController');
+Route::resource('/admin/pages', 'PageController');
 
 //Resource for Posts
-Route::resource('posts', 'PostController');
+Route::resource('/admin/posts', 'PostController');
+
+//Resource for Case Studies
+Route::resource('/admin/case-studies', 'CaseStudyController');
 
 //Show images/assets from storage
 Route::get('storage/{category}/{filename}', function ( $category,  $filename)

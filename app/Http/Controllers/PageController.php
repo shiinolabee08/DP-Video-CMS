@@ -21,7 +21,7 @@ class PageController extends Controller
     protected $model_class_names = [ 'page', 'pages' ];
 
     /**
-     * Renders the form for creating a new company.
+     * Renders the form for creating a new page.
      *
      * @return \Illuminate\Http\Response
      */

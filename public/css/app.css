@@ -10746,10 +10746,14 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
 
 .banner-area {
   position: relative;
+  padding-top: 150px;
+  text-align: left;
+  height: 110vh;
+  margin-bottom: 80px;
 }
 
 .banner-area .video-background {
-  background: #000;
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
   right: 0;
@@ -10760,8 +10764,7 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   height: 100%;
 }
 
-.banner-area .video-background .video-foreground,
-.banner-area .video-background iframe {
+.banner-area .video-background video {
   position: absolute;
   top: 0;
   left: 0;
@@ -10770,51 +10773,88 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   pointer-events: none;
 }
 
-.main-content {
-  padding-top: 80px;
+.banner-area .camera-tools {
+  padding: 20px 0px;
+  background-color: #231f20;
 }
 
-.banner-full-height {
-  height: 90vh;
-  margin-bottom: 80px;
+.banner-area .camera-tools img {
+  width: 150px !important;
+  vertical-align: middle;
+  position: relative;
+}
+
+.banner-area .content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: left;
+}
+
+.banner-area .content .title-heading h3 {
+  color: #e3c00e;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26.4px;
+  letter-spacing: normal;
+  font-family: "FuturaPT Heavy";
+}
+
+.banner-area .content .title-heading h1 {
+  font-family: "FuturaPT Heavy";
+  color: #fff;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.banner-area .call-to-action {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  font-family: "FuturaPT Book";
+}
+
+.banner-area img {
+  width: auto;
+  display: block;
+}
+
+.banner-area p {
+  display: inline-block;
+  font-family: "FuturaPT Book";
+  font-size: 16px;
+  color: #fff;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.banner-area p strong a {
+  color: #e3c00e;
+  text-decoration: none;
+}
+
+.video-background::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0px auto;
+  z-index: 100;
+}
+
+.main-content {
+  padding-top: 80px;
 }
 
 .flex-center {
   align-items: center;
   display: flex;
   justify-content: center;
-}
-
-.position-ref {
-  position: relative;
-}
-
-.top-right {
-  position: absolute;
-  right: 10px;
-  top: 18px;
-}
-
-.content {
-  text-align: center;
-}
-
-.title {
-  font-size: 84px;
-}
-
-.links > a {
-  color: #636b6f;
-  padding: 0 25px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.m-b-md {
-  margin-bottom: 30px;
 }
 
 .owl-carousel .owl-stage {
@@ -11007,6 +11047,7 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   padding: 25px 25px;
   font-family: "FuturaPT Heavy";
   text-align: center;
+  color: #515151;
 }
 
 .packages .package-item .body {
@@ -11341,6 +11382,15 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   font-family: "FuturaPT Book";
 }
 
+.inner-page-header-container .main-heading p {
+  margin-bottom: 50px;
+}
+
+.clients-say .title-heading h1 {
+  margin-bottom: 50px;
+  font-size: 60px;
+}
+
 .inner-page-header-dark-container {
   background-color: #515151;
   padding: 100px 0px;
@@ -11577,6 +11627,51 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   color: #e3c00e;
 }
 
+.proven-process {
+  padding: 80px 0px;
+  background-color: #fff;
+}
+
+.proven-process .title-heading h1 {
+  font-size: 60px;
+  line-height: 74px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.proven-process .items {
+  margin-top: 30px;
+}
+
+.proven-process .items .item {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.proven-process .items .item i {
+  color: #e3c00e;
+  font-size: 70px;
+  display: block;
+}
+
+.proven-process .items .item h2 {
+  text-transform: uppercase;
+  color: #515151;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-family: "FuturaPT Book";
+  line-height: 32px;
+}
+
+.proven-process .items .item p {
+  font-size: 16px;
+  font-family: "FuturaPT Book";
+  line-height: 32px;
+  color: #515151;
+  margin-bottom: 15px;
+}
+
 .bottom-section {
   position: relative;
 }
@@ -11679,5 +11774,19 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
   padding-bottom: 0px;
   font-family: "FuturaPT Book";
   font-size: 14px;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-background video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-background video {
+    width: auto;
+    height: 100%;
+  }
 }
 
