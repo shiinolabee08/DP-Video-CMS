@@ -10698,6 +10698,33 @@ a.text-dark:focus {
   }
 }
 
+/* Animations */
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 header#top {
   background-color: #464646;
 }
@@ -11827,7 +11854,7 @@ header#top .free-quote a:hover {
 
 .case-study-categies-list .results-data-grid .result-item {
   position: relative;
-  min-height: 150px;
+  min-height: 180px;
   padding: 10px;
 }
 
@@ -11872,7 +11899,7 @@ header#top .free-quote a:hover {
 .case-study-categies-list .results-data-grid .result-item .inner-content .title-heading h2 {
   font-family: "FuturaPT Demi";
   color: #fff;
-  font-size: 24px;
+  font-size: 23px;
   line-height: 24px;
   margin: 10px 0;
   padding: 0px 10px;
@@ -11891,7 +11918,7 @@ header#top .free-quote a:hover {
 .case-study-categies-list .results-data-grid .result-item .inner-content .button button {
   transition: all 0.2s ease;
   font-family: "FuturaPT Medium";
-  font-size: 18px;
+  font-size: 17px;
   background-color: transparent;
   border: 1px solid #e3c00e;
   border-radius: 30px;

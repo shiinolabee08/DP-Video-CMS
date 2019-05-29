@@ -1989,6 +1989,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   // props : [ 'options' ],
   data: function data() {
@@ -2012,8 +2014,11 @@ __webpack_require__.r(__webpack_exports__);
     filter: function filter(type) {
       var app = this;
       app.selectedCategory = type;
+      app.resultData = [];
       axios.get('/api/case-studies/' + type).then(function (response) {
         app.resultData = response.data.data;
+      })["catch"](function (response) {
+        console.log(response);
       });
     },
     showVideo: function showVideo(record) {
@@ -39242,94 +39247,108 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "case-study-categies-list" }, [
-    _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-2" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-8 text-center" }, [
-          _vm.categories.length
-            ? _c(
-                "ul",
-                _vm._l(_vm.categories, function(category) {
-                  return _c(
-                    "li",
-                    {
-                      class: { active: _vm.selectedCategory == category.id },
-                      on: {
-                        click: function($event) {
-                          return _vm.filter(category.id)
+    _c(
+      "div",
+      { staticClass: "container" },
+      [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-2" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-8 text-center" }, [
+            _vm.categories.length
+              ? _c(
+                  "ul",
+                  _vm._l(_vm.categories, function(category) {
+                    return _c(
+                      "li",
+                      {
+                        class: { active: _vm.selectedCategory == category.id },
+                        on: {
+                          click: function($event) {
+                            return _vm.filter(category.id)
+                          }
                         }
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n\t\t\t\t\t\t" +
-                          _vm._s(category.title) +
-                          "\n\t\t\t\t\t"
-                      )
-                    ]
-                  )
-                }),
-                0
-              )
-            : _vm._e()
+                      },
+                      [
+                        _vm._v(
+                          "\n\t\t\t\t\t\t" +
+                            _vm._s(category.title) +
+                            "\n\t\t\t\t\t"
+                        )
+                      ]
+                    )
+                  }),
+                  0
+                )
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-2" })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-2" })
-      ]),
-      _vm._v(" "),
-      _vm.resultData.length
-        ? _c("div", { staticClass: "row results-data-grid" }, [
-            _c("div", { staticClass: "col-md-2 col-sm-12" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-10 col-sm-12" }, [
-              _c(
-                "div",
-                { staticClass: "row" },
-                _vm._l(_vm.resultData, function(item) {
-                  return _c(
-                    "div",
-                    { staticClass: "col-md-3 col-sm-12 result-item mr-2 mb-2" },
-                    [
-                      _c("div", {
-                        staticClass: "item-backgroud-overlay",
-                        style: {
-                          backgroundImage:
-                            "url(/images/case-studies/" +
-                            item.feature_image +
-                            ")"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "inner-content" }, [
-                        _c("div", { staticClass: "title-heading" }, [
-                          _c("h2", [_vm._v(_vm._s(item.title))])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "button" }, [
-                          _c(
-                            "button",
-                            {
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.showVideo(item)
-                                }
+        _c(
+          "transition",
+          { attrs: { name: "fade", duration: { enter: 500, leave: 800 } } },
+          [
+            _vm.resultData.length
+              ? _c("div", { staticClass: "row results-data-grid" }, [
+                  _c("div", { staticClass: "col-md-2 col-sm-12" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-10 col-sm-12" }, [
+                    _c(
+                      "div",
+                      { staticClass: "row" },
+                      _vm._l(_vm.resultData, function(item) {
+                        return _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-md-3 col-sm-12 result-item mr-2 mb-2"
+                          },
+                          [
+                            _c("div", {
+                              staticClass: "item-backgroud-overlay",
+                              style: {
+                                backgroundImage:
+                                  "url(/uploads/case-studies/" +
+                                  item.feature_image +
+                                  ")"
                               }
-                            },
-                            [_vm._v("Watch Video")]
-                          )
-                        ])
-                      ])
-                    ]
-                  )
-                }),
-                0
-              )
-            ])
-          ])
-        : _vm._e()
-    ])
+                            }),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "inner-content" }, [
+                              _c("div", { staticClass: "title-heading" }, [
+                                _c("h2", [_vm._v(_vm._s(item.title))])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "button" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    attrs: { type: "button" },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.showVideo(item)
+                                      }
+                                    }
+                                  },
+                                  [_vm._v("Watch Video")]
+                                )
+                              ])
+                            ])
+                          ]
+                        )
+                      }),
+                      0
+                    )
+                  ])
+                ])
+              : _vm._e()
+          ]
+        )
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = []

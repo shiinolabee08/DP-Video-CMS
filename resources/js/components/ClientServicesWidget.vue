@@ -14,12 +14,13 @@
 			</div>
 
 			<!-- Results Grid -->
+			<transition name="fade" :duration="{ enter: 500, leave: 800 }">
 			<div class="row results-data-grid" v-if="resultData.length">
 				<div class="col-md-2 col-sm-12"></div>
 				<div class="col-md-10 col-sm-12">
 					<div class="row">
 						<div class="col-md-3 col-sm-12 result-item mr-2 mb-2" v-for="item in resultData">
-							<div class="item-backgroud-overlay" v-bind:style="{ backgroundImage : 'url(/images/case-studies/' + item.feature_image +')' }"></div>
+							<div class="item-backgroud-overlay" v-bind:style="{ backgroundImage : 'url(/uploads/case-studies/' + item.feature_image +')' }"></div>
 							<div class="inner-content">
 								<div class="title-heading">
 									<h2>{{ item.title }}</h2>
@@ -33,6 +34,7 @@
 				</div>
 				<!-- <div class="col-md-2 col-sm-12"></div> -->
 			</div>
+			</transition>
 			<!-- Results Grid -->
 		</div>
 	</div>
@@ -68,10 +70,14 @@
 				var app = this;
 				
 				app.selectedCategory = type;
+				app.resultData = [];
 
 				axios.get('/api/case-studies/' + type)
 					.then((response) => {
 						app.resultData = response.data.data;
+					}).
+					catch((response) => {
+						console.log(response);
 					})
 			},
 

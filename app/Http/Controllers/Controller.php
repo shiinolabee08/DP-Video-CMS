@@ -52,7 +52,7 @@ class Controller extends BaseController
 
         $newRecord = $this->model_class::create($request->all());
 
-        return redirect("/{$this->model_class_names[1]}/". $newRecord->id);
+        return redirect("/admin/{$this->model_class_names[1]}/". $newRecord->id);
     }
 
     /**
@@ -72,11 +72,11 @@ class Controller extends BaseController
 
         $request->session()->flash('message', 'Data record successfully updated.');
 
-        return redirect("{$this->model_class_names[1]}");
+        return redirect("/admin/{$this->model_class_names[1]}");
     }
 
     /**
-    * Deleting records of child class ie Employee/Company
+    * Deleting records of child class
     * @param int | $id
     *
     * @return redirect to list page
@@ -88,6 +88,6 @@ class Controller extends BaseController
 
         $request->session()->flash('message', 'Data record successfully deleted.');
 
-        return redirect("{$this->model_class_names[1]}");
+        return redirect("/admin/{$this->model_class_names[1]}");
     }
 }
