@@ -68,7 +68,7 @@ class CaseStudyController extends Controller
     {
         $request->validate($this->fields_to_validate);
 
-        $uploadedFile = $request->file('feature_image');
+        $uploadedFile = $request->hasFile('new_feature_image') ? $request->file('new_feature_image') : $request->file('feature_image');
         $filename = time().$uploadedFile->getClientOriginalName();
 
         Storage::disk('admin_uploads')->putFileAs(
