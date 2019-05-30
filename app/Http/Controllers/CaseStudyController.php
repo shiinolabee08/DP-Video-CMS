@@ -68,21 +68,57 @@ class CaseStudyController extends Controller
     {
         $request->validate($this->fields_to_validate);
 
-        $uploadedFile = $request->hasFile('new_feature_image') ? $request->file('new_feature_image') : $request->file('feature_image');
-        $filename = time().$uploadedFile->getClientOriginalName();
+        $uploadedFile = $request->hasFile('feature_image') ? $request->file('feature_image') : false;
 
-        Storage::disk('admin_uploads')->putFileAs(
-            'case-studies/',
-            $uploadedFile,
-            $filename
-        );
+        if ( $uploadedFile ) {
+            $filename = time().$uploadedFile->getClientOriginalName();
+
+            Storage::disk('admin_uploads')->putFileAs(
+                'case-studies/',
+                $uploadedFile,
+                $filename
+            );
+        }
 
         $newRecord = new $this->model_class($request->all());
-        $newRecord->feature_image = $filename;
+        $newRecord->feature_image = $uploadedFile ? $filename : '';
 
         $newRecord->save();
         
         return redirect("/admin/{$this->model_class_names[1]}/". $newRecord->id);
+    }
+
+    /**
+    * Updating records of child class ie Employee/Company
+    * @param int | $id
+    * @param Request $request
+    *
+    * @return redirect to list page
+    **/
+    public function update($id, Request $request)
+    {   
+
+        $request->validate($this->fields_to_validate_on_update);
+
+        $uploadedFile = $request->hasFile('new_feature_image') ? $request->file('new_feature_image') : $request->file('feature_image');
+
+        if ( $uploadedFile ) {
+            $filename = time().$uploadedFile->getClientOriginalName();
+
+            Storage::disk('admin_uploads')->putFileAs(
+                'case-studies/',
+                $uploadedFile,
+                $filename
+            );
+        }
+
+        $record = $this->model_class::findOrFail($id);
+        $newRecord->feature_image = $uploadedFile ? $filename : '';
+        $record->update($request->only($this->fields_to_update));
+
+        $request->session()->flash('message', 'Data record successfully updated.');
+
+        return redirect("/admin/{$this->model_class_names[1]}");
     }
 
     /**
