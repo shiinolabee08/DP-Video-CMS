@@ -14,7 +14,7 @@ class CaseStudyController extends Controller
     
     protected $model_class_names = [ 'case-study', 'case-studies' ];
 
-    protected $fields_to_update = [ 'title', 'youtube_video_url', 'case_study_category_id', 'published' ];
+    protected $fields_to_update = [ 'title', 'youtube_video_url', 'published' ];
 
     protected $fields_to_validate_on_update = [ 'title'  => 'required|max:100' ];
 
@@ -30,7 +30,7 @@ class CaseStudyController extends Controller
      */
     public function index()
     {
-        $data = $this->model_class::with('category')->paginate(10);
+        $data = $this->model_class::with('categories')->paginate(10);
 
         return view( $this->model_class_names[1] . '.index', compact('data', $data));
     }
@@ -78,9 +78,14 @@ class CaseStudyController extends Controller
                 $uploadedFile,
                 $filename
             );
+
         }
 
+        $categories = CaseStudyCategory::find($request->input('category_id'));
+
         $newRecord = new $this->model_class($request->all());
+        $newRecord->categories()->syncWithoutDetaching($categories);
+
         $newRecord->feature_image = $uploadedFile ? $filename : '';
 
         $newRecord->save();
@@ -100,8 +105,10 @@ class CaseStudyController extends Controller
 
         $request->validate($this->fields_to_validate_on_update);
 
-        $uploadedFile = $request->hasFile('new_feature_image') ? $request->file('new_feature_image') : $request->file('feature_image');
+        $uploadedFile = $request->hasFile('new_feature_image') ? $request->file('new_feature_image') : false;
 
+        $record = $this->model_class::findOrFail($id);
+        
         if ( $uploadedFile ) {
             $filename = time().$uploadedFile->getClientOriginalName();
 
@@ -110,10 +117,14 @@ class CaseStudyController extends Controller
                 $uploadedFile,
                 $filename
             );
+            $record->feature_image = $filename;
+            $record->update();
         }
 
-        $record = $this->model_class::findOrFail($id);
-        $record->feature_image = $uploadedFile ? $filename : '';
+        $categories = CaseStudyCategory::find($request->input('category_id'));
+
+
+        $record->categories()->syncWithoutDetaching($categories);
         $record->update($request->only($this->fields_to_update));
 
         $request->session()->flash('message', 'Data record successfully updated.');
@@ -128,10 +139,19 @@ class CaseStudyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(CaseStudy $case_study)
-    {
+    {   
+        $case_study_with_categories = CaseStudy::with('categories')->find($case_study->id);
+
+        $categories = $case_study_with_categories->categories->toArray();
+        $category_ids = [];
+
+        foreach ($categories as $category) {
+            array_push($category_ids, $category['id']);
+        }
+
         $case_study_categories = CaseStudyCategory::all();
 
-        return view('case-studies.edit', [ 'case_study' => $case_study, 'categories' => $case_study_categories ]);
+        return view('case-studies.edit', [ 'case_study' => $case_study, 'selected_categories' => $category_ids, 'categories' => $case_study_categories ]);
     }    
 
 }

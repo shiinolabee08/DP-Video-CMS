@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7 col-sm-12">
-                <h1>Edit Case Study Details</h1>
+                <h1>Edit Case Study Details</h1>                
                 <hr>
                 <form action="{{url('/admin/case-studies', [$case_study->id])}}" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="_method" value="PUT">
@@ -34,10 +34,10 @@
                 </div>
                     <div class="form-group">
                         <label>Category</label>
-                        <select class="form-control" name="case_study_category_id">
+                        <select class="form-control" multiple name="category_id[]">
                             @foreach ($categories as $category)
                                 <option value="{{$category->id}}"
-                                    @if ( $case_study->case_study_category_id == $category->id )
+                                    @if ( in_array($category->id, $selected_categories) )
                                       selected
                                     @endif
                                 >{{$category->title}}</option>

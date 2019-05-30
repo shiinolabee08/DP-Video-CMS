@@ -20,7 +20,7 @@ class CreateCaseStudiesTable extends Migration
             $table->string('youtube_video_url', 100)->nullable();
             $table->boolean('published')->default(1);
 
-            $table->unsignedInteger('case_study_category_id')->nullable();
+            // $table->unsignedInteger('category_id')->nullable();
 
             // $table->foreign('case_study_category_id')->references('id')->on('case_study_categories');
             $table->timestamps();

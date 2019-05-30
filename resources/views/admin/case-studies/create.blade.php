@@ -28,7 +28,7 @@
 
                 <div class="form-group">
                     <label>Category</label>
-                    <select class="form-control" name="case_study_category_id">
+                    <select class="form-control" multiple name="category_id[]">
                         @foreach ($categories as $category)
                             <option value="{{$category->id}}">{{$category->title}}</option>
                         @endforeach

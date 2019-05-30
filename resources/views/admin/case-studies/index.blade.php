@@ -27,7 +27,7 @@
                     <td scope="row">{{$casestudy->title}}</td>
                     <td>{{$casestudy->feature_image}}</td>
                     <td>{{$casestudy->youtube_video_url}}</td>
-                    <td>{{$casestudy->category->title}}</td>
+                    <td>{{$casestudy->categoriesToString()}}</td>
                     <th scope="row">{{$casestudy->published ? 'Yes' : 'No'}}</th>
                     <td>{{$casestudy->created_at->toFormattedDateString()}}</td>
                     <td>
