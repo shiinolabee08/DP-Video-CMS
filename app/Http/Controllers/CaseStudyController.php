@@ -113,7 +113,7 @@ class CaseStudyController extends Controller
         }
 
         $record = $this->model_class::findOrFail($id);
-        $newRecord->feature_image = $uploadedFile ? $filename : '';
+        $record->feature_image = $uploadedFile ? $filename : '';
         $record->update($request->only($this->fields_to_update));
 
         $request->session()->flash('message', 'Data record successfully updated.');
