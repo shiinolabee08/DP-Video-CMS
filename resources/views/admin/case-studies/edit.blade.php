@@ -6,7 +6,7 @@
             <div class="col-md-7 col-sm-12">
                 <h1>Edit Case Study Details</h1>
                 <hr>
-                <form action="{{url('/admin/case-studies', [$case_study->id])}}" method="post">
+                <form action="{{url('/admin/case-studies', [$case_study->id])}}" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="_method" value="PUT">
                     {{ csrf_field() }}
                     <div class="form-group">
