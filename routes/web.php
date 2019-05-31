@@ -35,6 +35,7 @@ Route::resource('/admin/posts', 'PostController');
 
 //Resource for Case Studies
 Route::resource('/admin/case-studies', 'CaseStudyController');
+Route::get('/admin/case-study/find', [ 'uses' => 'CaseStudyController@search' ]);
 
 //Show images/assets from storage
 Route::get('storage/{category}/{filename}', function ( $category,  $filename)

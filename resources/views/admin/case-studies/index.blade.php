@@ -2,14 +2,35 @@
 
 @section('content')
     <div class="container">
-        <a class="btn btn-primary" href="{{ route('case-studies.create') }}">New Case Study</a><hr>
+        <div class="row">
+            <div class="col-md-3 col-sm-5">
+                <div class="btn-group mb-3">
+                    <a class="btn btn-primary" href="{{ route('case-studies.create') }}"><i class="fa fa-plus"></i> New Case Study</a>
+                    <a href="#" class="btn btn-primary"><i class="fa fa-filter"></i> Filters</a>
+                </div>            
+            </div>
+            <div class="col-md-6 col-sm-7">
+                <form action="/admin/case-study/find" method="get">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Search</span>
+                        </div>
+                        <input type="text" name="search" class="form-control" placeholder="Find record(s) via title">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
         @if (Session::has('message'))
           <div class="alert alert-info">{{ Session::get('message') }}</div>
         @endif
 
         @if ( count($data) )
-            <h3>List of Case Studies</h3>
-            <table class="table">
+            <h3>List of Case Studies <span class="badge badge-secondary">{{ count($data) }}</span></h3>
+
+            {{ $data->links() }}
+            <table class="table table-responsive">
                 <thead class="thead-light">
                     <tr>
                         <th scope="col">Title</th>
@@ -25,7 +46,7 @@
                 @foreach($data as $casestudy)
                 <tr>
                     <td scope="row">{{$casestudy->title}}</td>
-                    <td>{{$casestudy->feature_image}}</td>
+                    <td style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-width:150px;">{{$casestudy->feature_image}}</td>
                     <td>{{$casestudy->youtube_video_url}}</td>
                     <td>{{$casestudy->categoriesToString()}}</td>
                     <th scope="row">{{$casestudy->published ? 'Yes' : 'No'}}</th>

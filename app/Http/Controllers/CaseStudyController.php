@@ -59,6 +59,21 @@ class CaseStudyController extends Controller
     }
 
     /**
+    * Search/Find records via search string
+    * @param \Illuminate\Http\Request
+    *
+    * @return \Illuminate\Http\Response
+    **/
+    public function search( Request $request )
+    {
+        $requestData = $request->query();
+
+        $data = $this->model_class::with('categories')->where('title', 'like', '%' . $requestData['search'] .'%')->paginate(10);
+
+        return view($this->model_class_names[1] . '.index', compact('data',$data));
+    }
+
+    /**
     * Storing records of child class
     * @param Request $request
     *
@@ -87,7 +102,7 @@ class CaseStudyController extends Controller
         $newRecord->feature_image = $uploadedFile ? $filename : '';
 
         $newRecord->save();
-        
+
         $newRecord->categories()->syncWithoutDetaching($categories);
 
         

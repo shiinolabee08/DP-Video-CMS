@@ -39292,9 +39292,9 @@ var render = function() {
           [
             _vm.resultData.length
               ? _c("div", { staticClass: "row results-data-grid" }, [
-                  _c("div", { staticClass: "col-md-2 col-sm-12" }),
+                  _c("div", { staticClass: "col-md-1 col-sm-12" }),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-10 col-sm-12" }, [
+                  _c("div", { staticClass: "col-md-11 col-sm-12" }, [
                     _c(
                       "div",
                       { staticClass: "row" },
