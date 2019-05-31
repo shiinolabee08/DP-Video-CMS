@@ -33,7 +33,12 @@ class FrontController
     **/
     public function fetchByCategory( $category )
     {
-        $records = CaseStudy::where('case_study_category_id', $category)->where('published', true)->get();
+        $records = CaseStudy::with('categories')
+                    ->where('published', true)
+                    ->whereHas('categories', function($q) use ($category){
+                        $q->where('case_study_category_id', '=', $category); 
+                    })
+                    ->get();
 
         return response()->json([ 'data' => ($records ? $records : []) ]); 
     }

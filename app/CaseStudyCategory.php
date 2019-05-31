@@ -9,7 +9,7 @@ class CaseStudyCategory extends Model
     protected $table = 'case_study_categories';
     protected $fillable = [ 'title', 'slug', 'description' ];
 
-    public function case_studies()
+    public function caseStudies()
     {
         return $this->belongsToMany('App\CaseStudy')->withTimestamps();
     }
