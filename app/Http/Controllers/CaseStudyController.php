@@ -84,11 +84,12 @@ class CaseStudyController extends Controller
         $categories = CaseStudyCategory::find($request->input('category_id'));
 
         $newRecord = new $this->model_class($request->all());
-        $newRecord->categories()->syncWithoutDetaching($categories);
-
         $newRecord->feature_image = $uploadedFile ? $filename : '';
 
         $newRecord->save();
+        
+        $newRecord->categories()->syncWithoutDetaching($categories);
+
         
         return redirect("/admin/{$this->model_class_names[1]}/". $newRecord->id);
     }
