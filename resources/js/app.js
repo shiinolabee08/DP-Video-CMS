@@ -44,6 +44,8 @@ Vue.component('awards-carousel-slider', require('./components/AwardsSlider.vue')
 Vue.component('map-widget', require('./components/MapWidget.vue').default);
 Vue.component('count-up', require('./components/CountUpWidget.vue').default);
 Vue.component('client-services-widget', require('./components/ClientServicesWidget.vue').default);
+Vue.component('case-studies-by-category-widget', require('./components/CaseStudiesByCategoryWidget.vue').default);
+Vue.component('image-slider', require('./components/ImageSlider.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

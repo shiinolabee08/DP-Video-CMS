@@ -32,6 +32,12 @@
                                 <a class="dropdown-item" href="{{ url('/services/logo-animation') }}">Logo Animation</a>
                                 <a class="dropdown-item" href="{{ url('/services/explainer-video') }}">Explainer Video</a>
                                 <a class="dropdown-item" href="{{ url('/services/facebook-cover-videos') }}">Facebook Cover Videos</a>
+                                <a class="dropdown-item" href="{{ url('/services/motion-graphics') }}">Motion Graphics</a>
+                                <a class="dropdown-item" href="{{ url('/services/promotional-video') }}">Promotional Video</a>
+                                <a class="dropdown-item" href="{{ url('/services/testimonial-video') }}">Testimonial Video</a>
+                                <a class="dropdown-item" href="{{ url('/services/youtube-editing') }}">Youtube Editing</a>
+                                <a class="dropdown-item" href="{{ url('/services/video-editing') }}">Video Editing</a>
+                                <a class="dropdown-item" href="{{ url('/services/wedding-video') }}">Wedding Video</a>
                             </div>
                         </li>
                         <li class="nav-item">

@@ -37,7 +37,7 @@
 				<div class="title-heading has-primary-border-center text-center">
 					<h1>Making Corporate Cool, Together.</h1>
 				</div>
-				<div class="main-heading">
+				<div class="main-heading text-center">
 					<p>Digital Pie Video’s team of creative professionals specialise in delivering the highest quality of corporate video production for clients all around the world for thousands of businesses. here with all the tools required to help you stand out from your competitors. experts at creating professional and concise corporate videos, whether its to promote your business to the outside world or for internal purposes a Digital Pie video will put you on the map, and get people talking. We film your business at work, conduct interviews, spliced with shots of the surrounding landscape and top it off with a range of post production effects to create a slick and attractive video that encapsulates exactly what your business is all about.</p>
 				</div>
 			</div>
@@ -53,14 +53,29 @@
 	</div>
 </div>
 
-<!-- Client Carousel Slider -->
-<div class="container-fluid client-carousel-slider">
-    <client-carousel-slider></client-carousel-slider>                    
+ <!-- Awards Carousel Slider -->
+<div class="container-fluid awards-carousel-slider">
+    <awards-carousel-slider v-bind:home="true"></awards-carousel-slider>                    
 </div>        
-<!-- Client Carousel Slider -->
+<!-- Awards Carousel Slider -->
+
+<div class="container-fluid corporate-video-production gray-bg-container">
+	<div class="container">
+		<div class="row">
+            <div class="col-md-12">
+                <div class="title-heading text-center has-primary-border-center">
+                    <h1>Our Corporate Video Production Work</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        	<case-studies-by-category-widget v-bind:type="11"></case-studies-by-category-widget>
+        </div>
+	</div>
+</div>
 
 <!-- Packages -->
-<div class="container-fluid packages inner-page-header-container">
+<div class="container-fluid packages gray-bg-container">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 col-sm-12"></div>

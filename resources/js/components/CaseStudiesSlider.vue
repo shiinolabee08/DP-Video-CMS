@@ -19,8 +19,8 @@
 
         	return {
 	        	caseStudiesList : [
-					{ videoThumb : window.baseUrl + 'images/case-studies/corporate-video-thumb.jpg', title : 'Corporate Video - Rotaflex ', icon : window.baseUrl + 'images/corporate-video-icon.png', content : 'The Rotaflex is a product used in the food industry (mainly flour mills) and is used to clean mill spouts and remove blockages and is also used by mills in over 60 countries worldwide.', videoUrl : 'https://www.youtube.com/embed/JOQRaEHeyLk', showModal : false},
-					{ videoThumb : window.baseUrl + 'images/case-studies/osborne-overlay.jpg', title : 'Promotional Video - Osborne & Sons', icon : window.baseUrl + 'images/corporate-video-icon.png', content : 'Osborne & Sons is a local, family run business and have been in the cockle and fishing trade since 1880! Located in the historic seaside town of Leigh-On-Sea, the company provides fresh cockles daily and have a range of their own cockle and fishing boats.',videoUrl : 'https://www.youtube.com/embed/qKLB9R4vctU', showModal : false }
+					{ videoThumb : '/images/case-studies/corporate-video-thumb.jpg', title : 'Corporate Video - Rotaflex ', icon : '/images/corporate-video-icon.png', content : 'The Rotaflex is a product used in the food industry (mainly flour mills) and is used to clean mill spouts and remove blockages and is also used by mills in over 60 countries worldwide.', videoUrl : 'https://www.youtube.com/embed/JOQRaEHeyLk', showModal : false},
+					{ videoThumb : '/images/case-studies/osborne-overlay.jpg', title : 'Promotional Video - Osborne & Sons', icon : '/images/corporate-video-icon.png', content : 'Osborne & Sons is a local, family run business and have been in the cockle and fishing trade since 1880! Located in the historic seaside town of Leigh-On-Sea, the company provides fresh cockles daily and have a range of their own cockle and fishing boats.',videoUrl : 'https://www.youtube.com/embed/qKLB9R4vctU', showModal : false }
 				]
         	}
         },

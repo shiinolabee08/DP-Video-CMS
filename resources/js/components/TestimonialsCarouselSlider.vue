@@ -1,11 +1,10 @@
 <template>
-	<div class="container">
-		<carousel :autoplay="true" :items="1" :dots="true" :nav="false" :rewind="false" :loop="true" :autoplayTimeout="20000" :margin="10" :center="true">
+	<div class="container testimonials-slider">
+		<carousel :autoplay="true" :items="1" :dots="true" :nav="false" :rewind="false" :loop="false" :autoplayTimeout="20000" :margin="10" :center="true">
 
-		    <!-- <template slot="prev"><span class="prev">prev</span></template> -->
+		    <template slot="prev"><span class="prev"><i class="fa fa-chevron-left"></i></span></template>
 		    <testimonial-item v-for="testimonial in testimonials" v-bind:key="testimonial.id" v-bind:item="testimonial"></testimonial-item>
-
-		    <!-- <template slot="next"><span class="next">next</span></template> -->
+		    <template slot="next"><span class="next"><i class="fa fa-chevron-right"></i></span></template>
 
 		</carousel>
 	</div>

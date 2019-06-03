@@ -10700,6 +10700,21 @@ a.text-dark:focus {
 
 /* Animations */
 
+.slide-leave-active,
+.slide-enter-active {
+  transition: 1s;
+}
+
+.slide-enter {
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.slide-leave-to {
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
 .slide-fade-enter-active {
   transition: all 0.3s ease;
 }
@@ -10717,7 +10732,7 @@ a.text-dark:focus {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 1.3s;
 }
 
 .fade-enter,
@@ -10904,6 +10919,7 @@ header#top .free-quote a:hover {
 
 .main-content {
   padding-top: 80px;
+  background-color: #f8f8f8;
 }
 
 .flex-center {
@@ -11077,12 +11093,15 @@ header#top .free-quote a:hover {
   font-size: 16px;
   color: #515151;
   padding: 15px 25px;
+  display: inline-block;
+  -webkit-transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
 }
 
 .call-to-action:hover {
   text-decoration: none;
   color: inherit;
   transform: translateY(-3px);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.11);
   -webkit-transform: translateY(-3px);
 }
 
@@ -11149,8 +11168,18 @@ header#top .free-quote a:hover {
   background-color: #f8f8f8;
 }
 
+.packages .title-heading h3 {
+  margin-bottom: 50px;
+  font-family: "FuturaPT Book";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  color: #515151;
+}
+
 .packages .package-item {
-  box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.2);
+  box-shadow: 35px 35px 35px -3px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 25px 25px;
 }
 
@@ -11172,7 +11201,7 @@ header#top .free-quote a:hover {
 
 .packages .package-item .body h4.price {
   font-family: "FuturaPT Medium";
-  color: #444;
+  color: #e3c00e;
   font-size: 22px;
   font-weight: bold;
 }
@@ -11209,6 +11238,10 @@ header#top .free-quote a:hover {
   color: #fff;
 }
 
+.packages .package-item .body .order a:hover {
+  text-decoration: none;
+}
+
 .packages .package-item .body .chat-discuss {
   font-family: "FuturaPT Heavy";
   padding: 10px 0px 25px 0px;
@@ -11222,6 +11255,10 @@ header#top .free-quote a:hover {
 .packages .package-item .body .chat-discuss a {
   color: #515151 !important;
   font-weight: normal;
+}
+
+.packages .package-item .body .chat-discuss a:hover {
+  text-decoration: none;
 }
 
 .packages .package-item .body ul {
@@ -11239,6 +11276,10 @@ header#top .free-quote a:hover {
   color: #e3c00e;
   float: left;
   margin-left: 30px;
+}
+
+.package-basic .header {
+  background-color: #e1e1e1;
 }
 
 .package-standard .header {
@@ -11464,21 +11505,53 @@ header#top .free-quote a:hover {
   background-color: #fff;
 }
 
-.testimonials .testimonial-item {
+.testimonials .testimonials-slider {
+  position: relative;
+}
+
+.testimonials .testimonials-slider .prev {
+  position: absolute;
+  top: 38%;
+  left: 0;
+  color: #e3c00e;
+  font-size: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.testimonials .testimonials-slider .prev:hover {
+  color: #fff;
+}
+
+.testimonials .testimonials-slider .next {
+  position: absolute;
+  top: 38%;
+  right: 0;
+  color: #e3c00e;
+  font-size: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.testimonials .testimonials-slider .next:hover {
+  color: #fff;
+}
+
+.testimonials .testimonials-slider .testimonial-item {
   text-align: center;
 }
 
-.testimonials .testimonial-item img {
+.testimonials .testimonials-slider .testimonial-item img {
   max-width: 340px !important;
   vertical-align: top;
   display: inline-block !important;
 }
 
-.testimonials .testimonial-item .inner-content {
+.testimonials .testimonials-slider .testimonial-item .inner-content {
   position: relative;
 }
 
-.testimonials .testimonial-item .inner-content h2 {
+.testimonials .testimonials-slider .testimonial-item .inner-content h2 {
   text-align: left;
   font-size: 24px;
   font-family: "Open Sans";
@@ -11486,7 +11559,7 @@ header#top .free-quote a:hover {
   line-height: 22px;
 }
 
-.testimonials .testimonial-item .inner-content p {
+.testimonials .testimonials-slider .testimonial-item .inner-content p {
   text-align: left;
   font-size: 20px;
   font-family: "Open Sans";
@@ -11494,13 +11567,13 @@ header#top .free-quote a:hover {
   line-height: 22px;
 }
 
-.testimonials .testimonial-item .inner-content img.icon {
+.testimonials .testimonials-slider .testimonial-item .inner-content img.icon {
   max-width: 130px !important;
   margin-bottom: 15px;
   display: block !important;
 }
 
-.testimonials .testimonial-item .inner-content img.star {
+.testimonials .testimonials-slider .testimonial-item .inner-content img.star {
   display: block !important;
   max-width: 150px !important;
 }
@@ -11527,9 +11600,35 @@ header#top .free-quote a:hover {
   margin-bottom: 50px;
 }
 
+.clients-say {
+  background-color: #f8f8f8 !important;
+}
+
 .clients-say .title-heading h1 {
   margin-bottom: 50px;
   font-size: 60px;
+}
+
+.inner-page-two-column-container {
+  background-color: #fff;
+  padding: 100px 0px;
+}
+
+.inner-page-two-column-container .title-heading h1 {
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "FuturaPT Heavy";
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.inner-page-two-column-container .title-heading h3 {
+  font-family: "FuturaPT Book";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
 }
 
 .inner-page-header-dark-container {
@@ -11587,6 +11686,33 @@ header#top .free-quote a:hover {
   color: #e3c00e !important;
   font-size: inherit;
   margin-right: 5px;
+}
+
+.gray-bg-container {
+  padding: 100px 0px;
+}
+
+.gray-bg-container .title-heading h1 {
+  font-size: 60px;
+  line-height: 74px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.image-slider {
+  overflow: hidden;
+  position: relative;
+  height: 350px;
+  width: 100%;
+}
+
+.image-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
 }
 
 .awards {
@@ -11724,6 +11850,28 @@ header#top .free-quote a:hover {
   background-color: #404040;
   background-attachment: scroll;
   padding: 80px 0px;
+  position: relative;
+}
+
+.service-banner .video-background {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+
+.service-banner .video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .service-banner .call-to-action {
@@ -11732,12 +11880,16 @@ header#top .free-quote a:hover {
   display: inline-block;
   font-size: 16px;
   color: #fff;
+  position: relative;
+  z-index: 10;
   font-family: "FuturaPT Book";
 }
 
 .service-banner img {
   width: auto;
   display: block;
+  position: relative;
+  z-index: 10;
 }
 
 .service-banner p {
@@ -11747,11 +11899,18 @@ header#top .free-quote a:hover {
   color: #fff;
   margin-top: 40px;
   margin-bottom: 50px;
+  position: relative;
+  z-index: 10;
 }
 
 .service-banner p strong a {
   color: #e3c00e;
   text-decoration: none;
+}
+
+.service-banner .title-heading {
+  position: relative;
+  z-index: 10;
 }
 
 .service-banner .title-heading h1 {
@@ -11768,6 +11927,15 @@ header#top .free-quote a:hover {
   color: #e3c00e;
 }
 
+.service-banner .title-heading h2 {
+  color: #fff;
+  font-family: "FuturaPT Heavy";
+  letter-spacing: 0;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
 .proven-process {
   padding: 80px 0px;
   background-color: #fff;
@@ -11778,6 +11946,30 @@ header#top .free-quote a:hover {
   line-height: 74px;
   font-weight: 700;
   letter-spacing: 0;
+}
+
+.proven-process .title-heading h3 {
+  color: #515151;
+  font-family: "FuturaPT Book";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.proven-process a.call-to-action {
+  -webkit-transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
+  display: inline-block;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+.proven-process a.call-to-action:hover {
+  text-decoration: none;
+  color: inherit;
+  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.11);
 }
 
 .proven-process .items {

@@ -16,10 +16,10 @@
 			<!-- Results Grid -->
 			<transition name="fade" :duration="{ enter: 500, leave: 800 }">
 			<div class="row results-data-grid" v-if="resultData.length">
-				<div class="col-md-1 col-sm-12"></div>
-				<div class="col-md-11 col-sm-12">
+				<!-- <div class="col-md-2 col-sm-12"></div> -->
+				<div class="col-md-11 offset-md-1 col-sm-12">
 					<div class="row">
-						<div class="col-md-3 col-sm-12 result-item mr-2 mb-2" v-for="item in resultData">
+						<div class="col-md-4 col-sm-12 result-item" v-for="item in resultData">
 							<div class="item-backgroud-overlay" v-bind:style="{ backgroundImage : 'url(/uploads/case-studies/' + item.feature_image +')' }"></div>
 							<div class="inner-content">
 								<div class="title-heading">
