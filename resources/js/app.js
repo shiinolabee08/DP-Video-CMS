@@ -26,7 +26,7 @@ import * as VueGoogleMaps from "vue2-google-maps";
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: "AIzaSyAKJuxOzYxwocH6V5hPDJ0hfkoKTomZ2hY",
+    key: "AIzaSyA2s7deD5insD1oaI21BBrzkCqVZrl_l-0",
     libraries: "places" // necessary for places input
   }
 });
@@ -46,6 +46,7 @@ Vue.component('count-up', require('./components/CountUpWidget.vue').default);
 Vue.component('client-services-widget', require('./components/ClientServicesWidget.vue').default);
 Vue.component('case-studies-by-category-widget', require('./components/CaseStudiesByCategoryWidget.vue').default);
 Vue.component('image-slider', require('./components/ImageSlider.vue').default);
+Vue.component('contact-form-widget', require('./components/ContactUsForm.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -11,24 +11,26 @@
     </div> 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-sm-12">
+			<div class="col-md-7 col-sm-12">
 				<div class="title-heading">
 					<h1>We Create <strong>Beautiful Logo<br> Animations</strong> To Bring Your Brand To Life</h1>
 					<h2>We can provide you with a stunning branded title<br> sequence to represent your business in modern,<br> professional and recognised fashion.</h2>
 				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-12">
+						<a href="{{ url('/contact') }}" class="call-to-action"> Enquire Now</a>
+						<img src="/images/trust-pilot-logo.png"/>
+					</div>
+					<div class="col-md-4 col-sm-12">
+						<p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
+						<img src="/images/google-partner-logo.png"/>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-4 col-sm-12">
+			<div class="col-md-5 col-sm-12">
 				<!-- Form Area -->
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-3 col-sm-12">
-				<a href="{{ url('/contact') }}" class="call-to-action"> Enquire Now</a>
-				<img src="/images/trust-pilot-logo.png"/>
-			</div>
-			<div class="col-md-3 col-sm-12">
-				<p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
-				<img src="/images/google-partner-logo.png"/>
+				<contact-form-widget v-bind:id="1"></contact-form-widget>
+				<!-- Form Area -->
 			</div>
 		</div>
 	</div>

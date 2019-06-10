@@ -1,18 +1,23 @@
-@extends('layouts.app')
+@extends('layouts.app-without-bottom-consultancy-form')
 
 @section('content')
 
 <div class="container-fluid inner-page-header-dark-container contact-page">
 	<div class="container">
         <div class="row">
-        	<div class="col-md-1 col-sm-12"><div class="spacer"></div></div>
+        	<div class="col-md-1 col-sm-12"></div>
             <div class="col-md-10 col-sm-12">
                 <div class="title-heading text-center has-primary-border-center">
                     <h1>Get A Free Quote</h1>
                     <h3>Speak to Digital Pie about your video project today! <br>Fill out the form to help us understand your requirements or pick up the phone and speak with one of our experts.</h3>
                 </div>
             </div>
-            <div class="col-md-1 col-sm-12"><div class="spacer"></div></div>
+            <div class="col-md-1 col-sm-12"></div>
+        </div>
+        <div class="row">
+        	<!-- Form Area -->
+			<contact-form-widget v-bind:id="2" v-bind:is-default="true"></contact-form-widget>
+			<!-- Form Area -->
         </div>
     </div>
 </div>

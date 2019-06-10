@@ -23,6 +23,8 @@ class Controller extends BaseController
 
     protected $model_class;
 
+    protected $is_redirect_to_index = false;
+
     public function __construct()
 	{
 	    $this->middleware('auth');
@@ -52,7 +54,7 @@ class Controller extends BaseController
 
         $newRecord = $this->model_class::create($request->all());
 
-        return redirect("/admin/{$this->model_class_names[1]}/". $newRecord->id);
+        return $this->is_redirect_to_index == true ? redirect("/admin/{$this->model_class_names[1]}/") : redirect("/admin/{$this->model_class_names[1]}/". $newRecord->id);
     }
 
     /**

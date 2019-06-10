@@ -2087,6 +2087,81 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ContactUsForm.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ContactUsForm.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    id: {
+      type: Number,
+      "default": 0
+    },
+    isDefault: {
+      type: Boolean,
+      "default": false
+    }
+  },
+  data: function data() {
+    return {
+      form: {},
+      formData: {},
+      errors: [],
+      basicFormFields: ['full_name', 'email', 'phone_number', 'more_info']
+    };
+  },
+  mounted: function mounted() {
+    var app = this;
+    axios.get('/api/contact-form/' + app.id).then(function (response) {
+      if (response.data.data) {
+        app.form = response.data.data;
+        app.formData = app.form.form_html;
+        app.setDefaultFormOptions();
+      }
+    })["catch"](function (response) {
+      console.log(response);
+    });
+  },
+  methods: {
+    setDefaultFormOptions: function setDefaultFormOptions() {//set v models via regex itiration on form_html string
+    },
+    submitForm: function submitForm(event) {
+      event.preventDefault();
+      console.log(this);
+
+      if (this.full_name.length <= 0) {
+        this.errors.push('Full Name required.');
+      }
+
+      if (this.email.length <= 0) {
+        this.errors.push('Email required.');
+      }
+
+      if (this.more_info.length <= 0) {
+        this.errors.push('You need to enter brief details of your project.');
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CountUpWidget.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CountUpWidget.vue?vue&type=script&lang=js& ***!
@@ -2200,15 +2275,21 @@ __webpack_require__.r(__webpack_exports__);
   name: "GoogleMap",
   data: function data() {
     return {
-      // default to Montreal to keep it simple
-      // change this to whatever makes sense
+      // default to United Kingdom
       center: {
-        lat: 45.508,
-        lng: -73.587
+        lat: 55.378052,
+        lng: -3.435973
       },
-      markers: [],
+      markers: [
+        /*{
+        position : {
+        lat : 51.573200,
+        lng : 0.682880
+        }
+        }*/
+      ],
       places: [],
-      currentPlace: null
+      currentPlace: 'Ryan House, 18 – 19 Aviation Way, Southend on Sea, Essex, SS2 6UN'
     };
   },
   mounted: function mounted() {
@@ -39526,6 +39607,57 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ContactUsForm.vue?vue&type=template&id=e4dd1932&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ContactUsForm.vue?vue&type=template&id=e4dd1932& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "contact-form-container",
+      class: { transparent: _vm.isDefault == true }
+    },
+    [
+      _c("transition", { attrs: { name: "fade" } }, [
+        _vm.form
+          ? _c("div", { staticClass: "contact-form-inner" }, [
+              _c(
+                "form",
+                {
+                  attrs: { method: "post", action: "#" },
+                  on: { submit: _vm.submitForm }
+                },
+                [
+                  _c("div", {
+                    domProps: { innerHTML: _vm._s(_vm.form.form_html) }
+                  })
+                ]
+              )
+            ])
+          : _vm._e()
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CountUpWidget.vue?vue&type=template&id=3919df93&scoped=true&":
 /*!****************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CountUpWidget.vue?vue&type=template&id=3919df93&scoped=true& ***!
@@ -54504,7 +54636,7 @@ window.baseUrl = 'http://localhost:8000/';
 
 Vue.use(vue2_google_maps__WEBPACK_IMPORTED_MODULE_0__, {
   load: {
-    key: "AIzaSyAKJuxOzYxwocH6V5hPDJ0hfkoKTomZ2hY",
+    key: "AIzaSyA2s7deD5insD1oaI21BBrzkCqVZrl_l-0",
     libraries: "places" // necessary for places input
 
   }
@@ -54525,6 +54657,7 @@ Vue.component('count-up', __webpack_require__(/*! ./components/CountUpWidget.vue
 Vue.component('client-services-widget', __webpack_require__(/*! ./components/ClientServicesWidget.vue */ "./resources/js/components/ClientServicesWidget.vue")["default"]);
 Vue.component('case-studies-by-category-widget', __webpack_require__(/*! ./components/CaseStudiesByCategoryWidget.vue */ "./resources/js/components/CaseStudiesByCategoryWidget.vue")["default"]);
 Vue.component('image-slider', __webpack_require__(/*! ./components/ImageSlider.vue */ "./resources/js/components/ImageSlider.vue")["default"]);
+Vue.component('contact-form-widget', __webpack_require__(/*! ./components/ContactUsForm.vue */ "./resources/js/components/ContactUsForm.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -55004,6 +55137,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ClientServicesWidget_vue_vue_type_template_id_94f9e950___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ClientServicesWidget_vue_vue_type_template_id_94f9e950___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/ContactUsForm.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/ContactUsForm.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ContactUsForm_vue_vue_type_template_id_e4dd1932___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ContactUsForm.vue?vue&type=template&id=e4dd1932& */ "./resources/js/components/ContactUsForm.vue?vue&type=template&id=e4dd1932&");
+/* harmony import */ var _ContactUsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ContactUsForm.vue?vue&type=script&lang=js& */ "./resources/js/components/ContactUsForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ContactUsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ContactUsForm_vue_vue_type_template_id_e4dd1932___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ContactUsForm_vue_vue_type_template_id_e4dd1932___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/ContactUsForm.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/ContactUsForm.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/ContactUsForm.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactUsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ContactUsForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ContactUsForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactUsForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/ContactUsForm.vue?vue&type=template&id=e4dd1932&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/ContactUsForm.vue?vue&type=template&id=e4dd1932& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactUsForm_vue_vue_type_template_id_e4dd1932___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ContactUsForm.vue?vue&type=template&id=e4dd1932& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ContactUsForm.vue?vue&type=template&id=e4dd1932&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactUsForm_vue_vue_type_template_id_e4dd1932___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContactUsForm_vue_vue_type_template_id_e4dd1932___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

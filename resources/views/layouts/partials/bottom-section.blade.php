@@ -41,7 +41,12 @@
                         <h3>Say hi on live chat, give us a call or simply fill out the form below. We would love to get to know you and your project better.</h3>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-12"><div class="spacer"></div></div>
+                <div class="col-md-2 col-sm-12"></div>
+            </div>
+            <div class="row">
+            	<!-- Form Area -->
+				<contact-form-widget v-bind:id="2" v-bind:is-default="true"></contact-form-widget>
+				<!-- Form Area -->
             </div>
 		</div>
 	</div>

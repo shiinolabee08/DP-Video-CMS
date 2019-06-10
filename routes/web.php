@@ -33,6 +33,10 @@ Route::resource('/admin/pages', 'PageController');
 //Resource for Posts
 Route::resource('/admin/posts', 'PostController');
 
+//Resource for Contact Forms
+Route::resource('/admin/contact-forms', 'ContactFormController');
+Route::get('/admin/contact-form/find', [ 'uses' => 'ContactFormController@search' ]);
+
 //Resource for Case Studies
 Route::resource('/admin/case-studies', 'CaseStudyController');
 Route::get('/admin/case-study/find', [ 'uses' => 'CaseStudyController@search' ]);

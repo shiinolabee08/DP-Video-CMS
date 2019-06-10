@@ -5,24 +5,26 @@
 <div class="container-fluid service-banner">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-sm-12">
+			<div class="col-md-7 col-sm-12">
 				<div class="title-heading">
 					<h1>Making Things Nice &amp; Clear<br> <strong>Explainer Video Production</strong>.</h1>
 					<h2>Digital Pie Video’s team of creative professionals<br> specialise in delivering the highest quality of<br> explainer video production for corporate and<br> creative clients all around the world.</h2>
 				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-12">
+						<a href="{{ url('/contact') }}" class="call-to-action"> Enquire Now</a>
+						<img src="/images/trust-pilot-logo.png"/>
+					</div>
+					<div class="col-md-4 col-sm-12">
+						<p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
+						<img src="/images/google-partner-logo.png"/>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-4 col-sm-12">
+			<div class="col-md-5 col-sm-12">
 				<!-- Form Area -->
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-3 col-sm-12">
-				<a href="{{ url('/contact') }}" class="call-to-action"> Enquire Now</a>
-				<img src="/images/trust-pilot-logo.png"/>
-			</div>
-			<div class="col-md-3 col-sm-12">
-				<p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
-				<img src="/images/google-partner-logo.png"/>
+				<contact-form-widget v-bind:id="1"></contact-form-widget>
+				<!-- Form Area -->
 			</div>
 		</div>
 	</div>

@@ -51,22 +51,34 @@
                             </li>                           
                         @else
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><i class="fas fa-address-card"></i> {{ __('Case Studies') }}</a>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><i class="fas fa-bars"></i> {{ __('Modules') }}</a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('case-studies.index') }}">
-                                        <i class="fas fa-briefcase"></i> {{ __('Items') }}
+                                    <a href="{{ route('case-studies.index') }}" class="dropdown-item"><i class="fas fa-address-card"></i> Case Studies</a>
+                                    <!-- <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="{{ route('case-studies.index') }}">
+                                            <i class="fas fa-briefcase"></i> {{ __('Items') }}
+                                        </a>  
+                                        <a class="dropdown-item" href="{{ url('/admin/case-studies/categories') }}">
+                                            <i class="fas fa-list"></i> {{ __('Categories') }}
+                                        </a>                                    
+                                    </div> -->
+                                    <a class="dropdown-item" href="{{ route('posts.index') }}">
+                                        <i class="fas fa-file-alt"></i> {{ __('Posts') }}
                                     </a>  
-                                    <a class="dropdown-item" href="{{ url('/admin/case-studies/categories') }}">
-                                        <i class="fas fa-list"></i> {{ __('Categories') }}
-                                    </a>                                    
+                                    <a class="dropdown-item" href="{{ route('pages.index') }}">
+                                        <i class="fas fa-columns"></i> {{ __('Pages') }}
+                                    </a>    
+                                    <a class="dropdown-item" href="{{ route('contact-forms.index') }}">
+                                        <i class="fas fa-columns"></i> {{ __('Contact Forms') }}
+                                    </a>    
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('posts.index') }}"><i class="fas fa-file-alt"></i> {{ __('Posts') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('pages.index') }}"><i class="fas fa-columns"></i> {{ __('Pages') }}</a>
-                            </li> 
+                            </li>  -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <i class="fas fa-user"></i> {{ Auth::user()->name }} <span class="caret"></span>

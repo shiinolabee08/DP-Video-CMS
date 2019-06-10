@@ -11,7 +11,7 @@ class CaseStudyCategorySeeder extends Seeder
      */
     public function run()
     {
-    	$categories = [ 'Testimonial Video', 'Event Filming', 'Explainer Videos', 'Facebook Cover Videos', 'Logo Animation', 'Motion Graphics', 'Promotional Video', 'Tutorial Video', 'Video Editing', 'Youtube Editing', 'Corporate Video' ];
+    	$categories = [ 'Testimonial Video', 'Event Filming', 'Explainer Videos', 'Facebook Cover Videos', 'Logo Animation', 'Motion Graphics', 'Promotional Video', 'Tutorial Video', 'Video Editing', 'Youtube Editing', 'Corporate Video', 'Wedding Videos' ];
 
     	foreach ($categories as $category) {
 

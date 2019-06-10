@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CaseStudy;
 use App\CaseStudyCategory;
+use App\ContactForm;
 use Illuminate\Http\Request;
 
 class FrontController
@@ -41,5 +42,16 @@ class FrontController
                     ->get();
 
         return response()->json([ 'data' => ($records ? $records : []) ]); 
+    }
+
+    /**
+    * Get contact form record via id
+    *
+    * @param int $id
+    * @return json $data;
+    **/
+    public function getContactForm( $id )
+    {
+        return response()->json([ 'data' => ContactForm::find($id) ]);
     }
 }

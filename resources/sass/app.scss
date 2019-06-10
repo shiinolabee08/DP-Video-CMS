@@ -1543,6 +1543,167 @@ header#top{
 	}
 }
 
+//Testimonial Boxes
+.testimonial-boxes{
+	position: relative;
+	padding: 50px 35px;
+
+	.testimonial-box{
+	    display: flex;
+	    padding: 25px;
+	    margin-bottom: 20px;
+	    background-color: #fff;
+	    border-radius: 35px;
+	    -webkit-box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.2);
+	    -moz-box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.2);
+	    box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.2);
+
+	    .thumb{
+	    	vertical-align: baseline;
+    		font-family: inherit;
+
+    		img{
+    			width: auto;
+    			height: auto;
+    		}
+	    }
+
+	   	.content{
+	   		padding: 0px 25px;
+		    flex-grow: 0;
+		    flex-shrink: 0;
+		    flex-basis: 80%;
+
+		    h2{
+		    	font-size: 22px;
+    			line-height: 27.5px;
+    			font-family: 'FuturaPT Heavy';
+    			font-weight: 700;
+    			color: $main-text-color;
+		    }
+
+		    h3{
+		    	color: $yellow-bg-color;
+		    	font-family: 'FuturaPT Demi';
+		    	font-weight: 400;
+		    	letter-spacing: normal;
+		    	font-size: 16px;
+		    }
+
+		    p{
+    			color: $main-text-color;
+		    	font-family: 'FuturaPT Book';
+		    	font-size: 16px;
+		    	line-height: 20px;
+		    	font-weight: 400;
+		    }
+
+		    img.rating{
+		    	width: 100px;
+		    }
+	   	}
+	}
+}
+
+//Contact Forms
+.contact-form-container{
+	background-color: #fff;
+	max-width: 400px;
+	border-radius: 25px;
+	margin-top: 25px;
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 20;
+
+    .contact-form-inner{
+		padding: 10px 30px;
+		margin:0px auto;
+		text-align: center;
+
+		p{
+			font-family: 'FuturaPT Book';
+			margin:0px auto;
+    		font-size: 24px;
+    		text-align: center;
+    		padding-bottom: 1.5em;
+    		color: $main-text-color;
+
+    		strong{
+    			font-family: 'FuturaPT Heavy';
+    			font-weight: 600;
+    		}
+		}
+
+		form{
+			position: relative;
+
+			input,textarea{
+				padding: 10px;
+			    font-size: 14px;
+			    font-family: 'FuturaPT Book';
+			    width: 100%;
+			    line-height: 24px;
+			    color: $main-text-color;
+			    transition: all 0.2s ease;
+			    -webkit-transition: all 0.2s ease;
+			    border: 2px solid $yellow-bg-color;
+			    background: none;
+			    border-radius: 30px;
+			    -webkit-border-radius: 30px;			    
+			    -webkit-border-radius: 30px;			    
+			}
+
+			input:focus, textarea:focus{
+				box-shadow: 0px 0px 10px rgba(0,0,0,0.11);
+				outline: 0;
+			}
+
+			input[type="submit"]{
+				background-color: $yellow-bg-color;
+			    border-radius: 30px;
+			    -webkit-border-radius: 30px;
+			    width: 150px;
+			    font-size: 18px;
+			    text-transform: uppercase;
+			    margin: -10px auto 0px auto;
+			    display: block;
+			    font-family: "FuturaPT Demi";
+			    padding: 10px 10px ;
+			    letter-spacing: 0.5px;
+			    color: #fff;
+			    transition:all .45s cubic-bezier(0.25,1,0.33,1);
+			    -webkit-transition:all .45s cubic-bezier(0.25,1,0.33,1);
+
+			    &:hover{
+			    	text-decoration: none;
+			    	color: #fff;
+			    	transform: translateY(-3px);
+			    	box-shadow: 0 20px 38px rgba(0, 0, 0, 0.11);
+			    	-webkit-transform: translateY(-3px);
+			    }
+			}
+		}
+    }
+}
+
+.contact-form-container.transparent{
+	background-color: transparent;
+	width: 100%;
+
+	form{
+
+		input,textarea{			
+		    border: 2px solid #fff;		    	
+
+		}		
+	}
+	
+    ::placeholder{
+    	color:#fff;	
+    }    
+}
+
 //Bottom Section
 .bottom-section{
 	position: relative;

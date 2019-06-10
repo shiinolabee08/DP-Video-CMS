@@ -18,12 +18,16 @@
   		name: "GoogleMap",
   		data() {
 		    return {
-		      // default to Montreal to keep it simple
-		      // change this to whatever makes sense
-		      center: { lat: 45.508, lng: -73.587 },
-		      markers: [],
+		      // default to United Kingdom
+		      center: { lat: 55.378052, lng: -3.435973 },
+		      markers: [/*{
+		      	position : {
+		      		lat : 51.573200,
+		      		lng : 0.682880
+		      	}
+		      }*/],
 		      places: [],
-		      currentPlace: null
+		      currentPlace: 'Ryan House, 18 – 19 Aviation Way, Southend on Sea, Essex, SS2 6UN'
 		    };
   		},
 
