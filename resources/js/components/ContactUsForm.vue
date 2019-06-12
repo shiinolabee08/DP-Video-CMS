@@ -4,6 +4,13 @@
 			<div class="contact-form-inner" v-if="form">
 				<form method="post" action="#" v-on:submit="submitForm">
 					<div v-html="form.form_html"></div>
+					<div v-if="errors.length">
+						<ul class="error-list">
+							<li v-for="error in errors">
+								{{error}}
+							</li>
+						</ul> 
+					</div>
 				</form>
 			</div>
 		</transition>

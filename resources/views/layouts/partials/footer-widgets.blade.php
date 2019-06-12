@@ -33,7 +33,8 @@
 						<h3>Packages</h3>
 						<ul class="nav flex-column">
 						  <li class="nav-item">
-						    <a class="nav-link" href="#">Youtube Editing</a>
+						    <a class="nav-link" href="{{ url('/services/youtube-editing') }}">Youtube Editing</a>
+						    <a class="nav-link" href="{{ url('/services/video-editing') }}">Video Editing</a>
 						  </li>					  
 						</ul>
 					</div>

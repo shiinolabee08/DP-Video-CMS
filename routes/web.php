@@ -41,6 +41,9 @@ Route::get('/admin/contact-form/find', [ 'uses' => 'ContactFormController@search
 Route::resource('/admin/case-studies', 'CaseStudyController');
 Route::get('/admin/case-study/find', [ 'uses' => 'CaseStudyController@search' ]);
 
+//Resource for Case Study Categories
+Route::resource('/admin/case-study-categories', 'CaseStudyCategoryController');
+
 //Show images/assets from storage
 Route::get('storage/{category}/{filename}', function ( $category,  $filename)
 {

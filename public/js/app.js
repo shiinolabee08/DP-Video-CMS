@@ -2107,6 +2107,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     id: {
@@ -39641,7 +39648,26 @@ var render = function() {
                 [
                   _c("div", {
                     domProps: { innerHTML: _vm._s(_vm.form.form_html) }
-                  })
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.length
+                    ? _c("div", [
+                        _c(
+                          "ul",
+                          { staticClass: "error-list" },
+                          _vm._l(_vm.errors, function(error) {
+                            return _c("li", [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t" +
+                                  _vm._s(error) +
+                                  "\n\t\t\t\t\t\t"
+                              )
+                            ])
+                          }),
+                          0
+                        )
+                      ])
+                    : _vm._e()
                 ]
               )
             ])

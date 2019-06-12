@@ -97,23 +97,52 @@ header#top{
 		}
 
 		.nav{
+
 			li{
 				// margin:0px 15px;
 				padding-left: 0px;
 				padding-right: 0px;
 
-				a{
+
+				a.nav-link{
 					font-family: 'FuturaPT Book';
 					font-size: 14px;
 					color: #fff;
 					text-transform: uppercase;
 					transition:all 0.2s ease;
 					border:2px solid transparent;
-					transition: color 0.2s ease;
+					position: relative;
+					padding-left: 0px;
+					padding-right: 0px;
+					margin-left: 10px;
+					margin-right: 10px;
 
-					&:hover{
-						border-bottom: 2px solid $yellow-bg-color;
+					&::after{
+				        -moz-transform-origin: 0 0;
+					    -ms-transform-origin: 0 0;
+					    -webkit-transform-origin: 0 0;
+					    transform-origin: 0 0;
+						-webkit-transition: -webkit-transform .3s ease-out,border-color .3s ease-out;
+					    transition: transform .3s ease-out,border-color .3s ease-out;
+					    position: absolute;
+					    display: block;
+					    left: 0;
+					    bottom: -3px;
+					    width: 100%;
+					    -ms-transform: scaleX(0);
+					    -webkit-transform: scaleX(0);
+					    transform: scaleX(0);
+					    border-top: 2px solid $yellow-bg-color;
+					    content: '';
+					    padding-bottom: inherit;
 					}
+
+					&:hover::after{
+						-ms-transform: scaleX(1);
+    					-webkit-transform: scaleX(1);
+    					transform: scaleX(1); 
+					}
+
 				}
 
 				.dropdown-menu{
@@ -125,7 +154,11 @@ header#top{
 						background-color: #464646;
 						color: #fff;
 						text-transform: capitalize;
-						font-size: 16px;
+						font-size: 14px;
+						padding: 5px 10px;
+						font-style: normal;
+						font-weight: 400;
+						font-family: 'FuturaPT Book';
 
 						&:hover{
 							background-color: $yellow-bg-color;
@@ -153,6 +186,11 @@ header#top{
 			}
 		}
 	}
+}
+
+.dropdown-toggle::after{
+	margin-left: 0px;
+	border:none;
 }
 
 .banner-area{
@@ -1695,10 +1733,10 @@ header#top{
 
 		input,textarea{			
 		    border: 2px solid #fff;		    	
-
+		    color: #fff;
 		}		
 	}
-	
+
     ::placeholder{
     	color:#fff;	
     }    

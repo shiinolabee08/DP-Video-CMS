@@ -58,7 +58,10 @@
         </div>
         <div class="row">
             <div class="col-md-3 col-sm-12"></div>
-            <div class="col-md-6 col-sm-12 text-center white-heading"><a href="{{ URL::to('/contact') }}" class="call-to-action">Want To Discuss?</a></div>
+            <div class="col-md-6 col-sm-12 text-center white-heading">
+                <a href="{{ URL::to('/contact') }}" class="call-to-action">Get A Free Quote</a>
+                <a href="{{ URL::to('/contact') }}" class="call-to-action">Want To Discuss?</a>
+            </div>
             <div class="col-md-3 col-sm-12"></div>
         </div>
     </div>

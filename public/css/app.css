@@ -10768,18 +10768,41 @@ header#top .navbar .nav li {
   padding-right: 0px;
 }
 
-header#top .navbar .nav li a {
+header#top .navbar .nav li a.nav-link {
   font-family: "FuturaPT Book";
   font-size: 14px;
   color: #fff;
   text-transform: uppercase;
   transition: all 0.2s ease;
   border: 2px solid transparent;
-  transition: color 0.2s ease;
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-header#top .navbar .nav li a:hover {
-  border-bottom: 2px solid #e3c00e;
+header#top .navbar .nav li a.nav-link::after {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  transition: border-color 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, border-color 0.3s ease-out;
+  transition: transform 0.3s ease-out, border-color 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  border-top: 2px solid #e3c00e;
+  content: "";
+  padding-bottom: inherit;
+}
+
+header#top .navbar .nav li a.nav-link:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 header#top .navbar .nav li .dropdown-menu {
@@ -10792,7 +10815,11 @@ header#top .navbar .nav li .dropdown-menu a.dropdown-item {
   background-color: #464646;
   color: #fff;
   text-transform: capitalize;
-  font-size: 16px;
+  font-size: 14px;
+  padding: 5px 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "FuturaPT Book";
 }
 
 header#top .navbar .nav li .dropdown-menu a.dropdown-item:hover {
@@ -10813,6 +10840,11 @@ header#top .free-quote a {
 
 header#top .free-quote a:hover {
   color: #e3c00e;
+}
+
+.dropdown-toggle::after {
+  margin-left: 0px;
+  border: none;
 }
 
 .banner-area {
@@ -12273,6 +12305,7 @@ header#top .free-quote a:hover {
 .contact-form-container.transparent form input,
 .contact-form-container.transparent form textarea {
   border: 2px solid #fff;
+  color: #fff;
 }
 
 .contact-form-container.transparent ::-webkit-input-placeholder {

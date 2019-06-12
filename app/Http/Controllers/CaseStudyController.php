@@ -58,6 +58,7 @@ class CaseStudyController extends Controller
         return view('case-studies.show', [ 'case_study' => $case_study ]);
     }
 
+
     /**
     * Search/Find records via search string
     * @param \Illuminate\Http\Request
