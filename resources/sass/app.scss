@@ -78,9 +78,23 @@
 header#top{
 	background-color: $header-background-color;
 
+
 	.navbar{
 		background-color: $header-background-color !important;
 		padding-bottom: 15px;
+
+		
+		.navbar-toggler{
+			color: #fff;
+			font-size: 23px;
+			border-color: transparent;
+			font-family: 'FuturaPT Book';
+
+			&:focus{
+				outline: none;
+				border:none;
+			}
+		}
 
 		.phone-top{
 			margin:10px 0px;
@@ -1862,4 +1876,11 @@ header#top{
     width: auto;
     height: 100%;
   }
+}
+
+@media only screen and (max-width:678px) {
+
+	.phone-top, .free-quote{
+		display: none !important;
+	}
 }
