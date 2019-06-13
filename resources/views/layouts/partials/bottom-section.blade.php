@@ -34,14 +34,12 @@
 	<div class="container-fluid consultancy">
 		<div class="container">
 			<div class="row">
-                <div class="col-md-2 col-sm-12"></div>
-                <div class="col-md-8 col-sm-12 text-center">
+                <div class="col-md-12 col-sm-12 text-center">
                     <div class="title-heading white-heading has-primary-border-center">
                         <h1>Get Free Consultancy</h1>
                         <h3>Say hi on live chat, give us a call or simply fill out the form below. We would love to get to know you and your project better.</h3>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-12"></div>
             </div>
             <div class="row">
             	<!-- Form Area -->
@@ -52,3 +50,24 @@
 	</div>
 	<!-- Work Together -->
 </section>
+<transition name="slide-up-down">
+	<div class="chat-box-toggle" v-if="!showChatbox" v-on:click="showChatbox=!showChatbox">
+		<h3>Start a Project <i class="fa fa-comment-dots"></i></h3>
+	</div>
+</transition>
+
+<transition name="slide-up-down">
+	<div class="chat-box" v-if="showChatbox">
+		<h3>Welcome to <strong>Digital Pie</strong> <i v-on:click="showChatbox=!showChatbox" class="fa fa-window-minimize"></i></h3>
+		<div class="panel panel-default">
+	        <div class="panel-heading">Start a project with us now by chatting straight away!</div>
+
+	        <div class="panel-body">
+	            <chat-messages :messages="messages"></chat-messages>
+	        </div>
+	        <div class="panel-footer">
+	            <chat-form v-on:messagesent="addMessage" v-bind:user="{{ Auth::user() }}"></chat-form>
+	        </div>
+	    </div>
+	</div>
+</transition>

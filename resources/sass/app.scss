@@ -75,6 +75,44 @@
   opacity: 0;
 }
 
+/* SlideUpDown */
+ul {
+   cursor: pointer;
+}
+
+.slide-up-down-enter-active {
+   -moz-transition-duration: 0.3s;
+   -webkit-transition-duration: 0.3s;
+   -o-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+   -moz-transition-timing-function: ease-in;
+   -webkit-transition-timing-function: ease-in;
+   -o-transition-timing-function: ease-in;
+   transition-timing-function: ease-in;
+}
+
+.slide-up-down-leave-active {
+   -moz-transition-duration: 0.3s;
+   -webkit-transition-duration: 0.3s;
+   -o-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+   -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+   -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+   -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slide-up-down-enter-to, .slide-up-down-leave {
+   max-height: 100px;
+   overflow: hidden;
+}
+
+.slide-up-down-enter, .slide-up-down-leave-to {
+   overflow: hidden;
+   max-height: 0;
+}
+/* SlideUpDown */
+
 header#top{
 	background-color: $header-background-color;
 
@@ -209,10 +247,67 @@ header#top{
 
 .banner-area{
 	position: relative;
-	padding-top: 150px;
+	padding-top: 105px;
 	text-align: left;
-	height: 110vh;
+	height: auto;
     // margin-bottom: 80px;
+
+    .VideoBg{
+
+    	.VideoBg__content{
+    		z-index: 10;
+    	}
+
+    	&::before{
+    		content: '';
+    		background-color: rgba(0, 0, 0, 0.6);
+		  	position: absolute;
+		  	top: 0; 
+		  	right: 0; 
+		  	bottom: 0; 
+		  	left: 0;
+		  	z-index: 1;
+		  	width: 100%; 
+		  	height: 100%;	
+    	}
+
+    	.camera-tools{
+			padding: 20px 0px;
+			background-color: #231f20;
+
+			img{
+				width: 150px !important;
+				vertical-align: middle;
+				position: relative;
+			}
+		}
+
+		.content{
+			padding-top: 115px;
+			padding-bottom: 150px;
+			text-align: left;
+
+			.title-heading{
+
+				h3{
+					color: $yellow-bg-color;
+					font-size: 22px;
+					font-weight: 600;
+					line-height: 26.4px;
+					letter-spacing: normal;
+					font-family: 'FuturaPT Heavy';
+				}
+
+				h1{
+				    font-family: 'FuturaPT Heavy';
+				    color: #fff;
+				    font-weight: 700;
+				    font-size: 48px;
+				    line-height: 60px;
+				}
+			}
+		}
+    }
 
 	.video-background{
 		background-color: rgba(0, 0, 0, 0.6);
@@ -235,42 +330,7 @@ header#top{
 		}
 	}
 
-	.camera-tools{
-		padding: 20px 0px;
-		background-color: #231f20;
-
-		img{
-			width: 150px !important;
-			vertical-align: middle;
-			position: relative;
-		}
-	}
-
-	.content{
-		padding-top: 100px;
-		padding-bottom: 100px;
-		text-align: left;
-
-		.title-heading{
-
-			h3{
-				color: $yellow-bg-color;
-				font-size: 22px;
-				font-weight: 600;
-				line-height: 26.4px;
-				letter-spacing: normal;
-				font-family: 'FuturaPT Heavy';
-			}
-
-			h1{
-			    font-family: 'FuturaPT Heavy';
-			    color: #fff;
-			    font-weight: 700;
-			    font-size: 48px;
-			    line-height: 60px;
-			}
-		}
-	}
+	
 
 	.call-to-action{
 		margin-top: 25px;
@@ -315,6 +375,168 @@ header#top{
 	z-index: 100;
 }
 
+/* Chat Box */
+.chat-box-toggle{
+	position: fixed;
+	bottom: 0;
+	right: 50px;
+	padding: 10px 20px;
+	background-color: #1e1d1d;
+	max-width: 310px;
+	overflow: hidden;
+	border-radius: 25px 25px 0px 0px;
+	z-index: 25;
+	min-width: 200px;
+
+	h3{
+		color: #fff;
+		font-family: 'FuturaPT Medium';
+		text-align: center;
+		cursor: pointer;
+		font-size: 18px;
+
+		i{
+			padding-left: 25px;
+			color: $yellow-bg-color;
+		}
+	}
+}
+.chat-box{
+	position: fixed;
+	bottom: 0;
+	right: 50px;
+	padding: 20px;
+	background-color: #1e1d1d;
+	max-width: 310px;
+	overflow: hidden;
+	border-radius: 25px 25px 0px 0px;
+	z-index: 25;
+
+	h3, .panel-heading, label{
+		text-align: left;
+		color: #fff;
+		font-family: 'FuturaPT Medium';
+	}
+
+	h3{
+		i{
+			margin-left: 10px;
+			color: #fff;
+			cursor: pointer;
+			vertical-align: middle;
+			font-size: 14px;
+		}
+	}
+
+	.message-info{
+		font-family: 'FuturaPT Book';
+		color: $yellow-bg-color;
+		font-style: italic;
+	}
+
+	.chat-list{
+		position: relative;
+		list-style: none;
+		margin: 0 0;
+		padding: 0;
+		background-color: transparent;
+
+		li {
+			margin-bottom: 10px;
+			padding-bottom: 5px;
+			border-bottom: 1px dotted #ddd;
+
+			.chat-body{
+				background-color: transparent;
+				margin-bottom: 5px;
+
+				.header{
+					position: relative;
+
+					small{
+						font-weight: 300;
+						font-family: 'FuturaPT Medium';
+						color: #fff;
+
+						a{
+							color: $yellow-bg-color;
+							text-decoration:none; 
+						}
+					}
+					
+					.primary-font{
+						font-family: 'FuturaPT Book';
+						color: #fff;
+					}
+				}
+
+				p{
+					margin:0px 0px;
+					color: #fff;
+					font-style: italic;
+					font-family: 'FuturaPT Medium';
+				}
+
+			}
+		}
+		
+	}
+
+	.panel-body {
+		overflow-y: auto;
+		min-height: 45px;
+		max-height: 180px;
+		margin-top: 10px;
+	}
+
+	.chat-form{
+		position: relative;
+
+		input, button{
+			font-family: 'FuturaPT Book';
+		}
+
+		.input-group{
+			margin-top: 10px;
+		}
+
+		label{
+			font-weight: 300;
+
+			strong{
+				font-weight: 700;
+				font-family: 'FuturaPT Heavy';
+			}
+		}
+
+		button{
+			color: #fff;
+			background-color: $yellow-bg-color;
+			border:none;
+
+			&:hover{
+				color: $yellow-bg-color;
+				background-color: #fff;
+			}
+		}
+
+	}
+}
+
+::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+background-color: #555;
+}
 
 .main-content{
 	padding-top: 80px;

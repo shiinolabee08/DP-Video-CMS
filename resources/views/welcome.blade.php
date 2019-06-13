@@ -38,47 +38,50 @@
             <!-- Banner Area -->
             <div class="position-ref banner-area">   
 
-                <div class="video-background">                    
+                <video-bg :sources="['{{url('/videos/dp-video-banner-video.mp4')}}']">
+                  <!-- If you want to add content here, a slot is waiting! -->
+                    <div class="container content">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="title-heading">
+                                    <h3>The Art of Videography</h3>
+                                    <h1>The To Stand Out From The Crowd Using Creative <br>Video Production</h1>
+                                </div>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12">
+                                <a href="{{ url('/contact') }}" class="call-to-action"> Enquire Now</a>
+                                <img src="/images/trust-pilot-logo.png"/>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
+                                <img src="/images/google-partner-logo.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid camera-tools">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="/images/camoptions-nonanim.svg" width="150"/>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="/images/iso400.svg" width="150"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="/images/camera-animated-looped-futura.svg" width="150"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </video-bg>
+                <!-- <div class="video-background">                    
                     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                         <source src="{{url('/videos/dp-video-banner-video.mp4')}}" type="video/mp4">
                     </video>
-                </div>               
-                <div class="container content">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="title-heading">
-                                <h3>The Art of Videography</h3>
-                                <h1>The To Stand Out From The Crowd Using Creative <br>Video Production</h1>
-                            </div>
-                        </div>
-                        <div class="col-md-5"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 col-sm-12">
-                            <a href="{{ url('/contact') }}" class="call-to-action"> Enquire Now</a>
-                            <img src="/images/trust-pilot-logo.png"/>
-                        </div>
-                        <div class="col-md-3 col-sm-12">
-                            <p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
-                            <img src="/images/google-partner-logo.png"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid camera-tools">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img src="/images/camoptions-nonanim.svg" width="150"/>
-                            </div>
-                            <div class="col-md-5">
-                                <img src="/images/iso400.svg" width="150"/>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="/images/camera-animated-looped-futura.svg" width="150"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
+                </div>   -->             
             </div>
             <!-- Banner Area -->
 

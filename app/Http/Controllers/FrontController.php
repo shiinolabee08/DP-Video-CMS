@@ -19,7 +19,7 @@ class FrontController
     	$returnData = false;
 
     	switch ($type) {
-    		case 1: $returnData = CaseStudyCategory::all();
+    		case 1: $returnData = CaseStudyCategory::whereNotIn('id', [12, 13])->get();
     			break;
     	}
 

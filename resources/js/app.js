@@ -26,15 +26,24 @@ import * as VueGoogleMaps from "vue2-google-maps";
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: "AIzaSyA2s7deD5insD1oaI21BBrzkCqVZrl_l-0",
+    key: process.env.MIX_GOOGLE_MAP_API_KEY,
     libraries: "places" // necessary for places input
   }
 });
+
+/*Video BG*/
+import VideoBg from 'vue-videobg'
+
+Vue.component('video-bg', VideoBg);
+
 
 /*Modal*/
 import VModal from 'vue-js-modal'
 
 Vue.use(VModal, { dynamic: true, dialog:true });
+
+/*Moment*/
+Vue.use(require('vue-moment'));
 
 
 Vue.component('client-carousel-slider', require('./components/ClientCarouselSlider.vue').default);
@@ -47,6 +56,8 @@ Vue.component('client-services-widget', require('./components/ClientServicesWidg
 Vue.component('case-studies-by-category-widget', require('./components/CaseStudiesByCategoryWidget.vue').default);
 Vue.component('image-slider', require('./components/ImageSlider.vue').default);
 Vue.component('contact-form-widget', require('./components/ContactUsForm.vue').default);
+Vue.component('chat-messages', require('./components/ChatMessages.vue').default);
+Vue.component('chat-form', require('./components/ChatForm.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -56,4 +67,43 @@ Vue.component('contact-form-widget', require('./components/ContactUsForm.vue').d
 
 const app = new Vue({
     el: '#app',
+    data: {
+        messages: [],
+        showChatbox : false,
+    },
+
+    mounted(){
+        this.showChatbox = false;
+    },
+
+    created() {
+        this.fetchMessages();        
+
+        Echo.private('chat')
+            .listen('MessageSent', (e) => {
+
+                this.messages.push({
+                    name : e.message.name,
+                    email : e.message.email,
+                    message: e.message.message,
+                    user: e.user
+                });
+            });
+    },
+
+    methods: {
+        fetchMessages() {
+            axios.get('/api/messages').then(response => {
+                this.messages = response.data;
+            });
+        },
+
+        addMessage(message) {
+            this.messages.push(message);
+
+            axios.post('/api/messages', message).then(response => {
+              console.log(response.data);
+            });
+        }
+    }
 });
