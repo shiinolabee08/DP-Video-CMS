@@ -16,6 +16,7 @@ Route::get('/', 'FrontController@index');
 Auth::routes();
 
 Route::get('/admin/dashboard', 'HomeController@index')->name('dashboard');
+Route::get('/admin', 'HomeController@index');
 
 
 //Front Pages
@@ -32,6 +33,12 @@ Route::resource('/admin/pages', 'PageController');
 
 //Resource for Posts
 Route::resource('/admin/posts', 'PostController');
+
+//Resource for Form Submissions
+Route::get('/admin/form-submissions', 'FormSubmissionController@index');
+Route::get('/admin/form-submission/find', 'FormSubmissionController@search');
+Route::get('/admin/form-submissions/{id}/reply', 'FormSubmissionController@replyToSender');
+Route::post('/admin/form-submissions/send-reply', 'FormSubmissionController@submitReplyToSender');
 
 //Resource for Contact Forms
 Route::resource('/admin/contact-forms', 'ContactFormController');

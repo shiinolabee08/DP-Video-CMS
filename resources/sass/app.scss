@@ -375,6 +375,34 @@ header#top{
 	z-index: 100;
 }
 
+/* Admin Area Chat Box */
+.admin-chat-box-toggle{
+	position: fixed;
+	bottom: 0;
+	right: 50px;
+	padding: 10px 20px;
+	background-color: #ddd;
+	max-width: 310px;
+	overflow: hidden;
+	border-radius: 25px 25px 0px 0px;
+	z-index: 25;
+	min-width: 200px;
+
+	h3{
+		color: $main-text-color;
+		font-family: 'FuturaPT Medium';
+		text-align: center;
+		cursor: pointer;
+		font-size: 18px;
+
+		i{
+			padding-left: 25px;
+			color: $yellow-bg-color;
+		}
+	}
+
+}
+
 /* Chat Box */
 .chat-box-toggle{
 	position: fixed;
@@ -401,7 +429,10 @@ header#top{
 		}
 	}
 }
-.chat-box{
+
+
+
+.chat-box, .admin-chat-box{
 	position: fixed;
 	bottom: 0;
 	right: 50px;
@@ -520,6 +551,47 @@ header#top{
 			}
 		}
 
+	}
+}
+
+
+.admin-chat-box{
+	background-color: #ddd;
+
+	h3, .panel-heading, label{
+		color: $main-text-color;
+	}
+
+	.chat-list{		
+
+		li {
+			border-bottom: 1px dotted $main-text-color;
+
+			.chat-body{
+
+				.header{
+					position: relative;
+
+					small{
+						color: $main-text-color;
+
+						a{
+							color: $yellow-bg-color;
+						}
+					}
+					
+					.primary-font{
+						color: $main-text-color;
+					}
+				}
+
+				p{
+					color: $main-text-color;
+				}
+
+			}
+		}
+		
 	}
 }
 
@@ -1895,6 +1967,29 @@ background-color: #555;
 		margin:0px auto;
 		text-align: center;
 
+		.error-label{
+			color: $main-text-color;
+			font-family: 'FuturaPT Book';
+			font-size: 17px;
+			text-align: left;
+		}
+
+		ul.error-list{
+			margin:0px auto;
+			text-align: left;
+			padding-left: 0px;
+
+			li{
+				color: #fff;
+				list-style-type: none;
+				margin-bottom: 5px;
+				padding: 7px 20px;
+				font-family: 'FuturaPT Medium';
+				font-size: 14px;
+				background-color: #be3a3a;
+			}
+		}
+
 		p{
 			font-family: 'FuturaPT Book';
 			margin:0px auto;
@@ -1965,12 +2060,34 @@ background-color: #555;
 	background-color: transparent;
 	width: 100%;
 
-	form{
+	.contact-form-inner{
 
 		input,textarea{			
 		    border: 2px solid #fff;		    	
 		    color: #fff;
 		}		
+
+		.error-label{
+			color: #fff;
+			font-family: 'FuturaPT Book';
+			font-size: 17px;
+		}
+
+		ul.error-list{
+			margin:0px auto;
+			text-align: left;
+			padding-left: 0px;
+
+			li{
+				color: #fff;
+				list-style-type: none;
+				margin-bottom: 5px;
+				padding: 7px 20px;
+				font-family: 'FuturaPT Medium';
+				font-size: 14px;
+				background-color: #be3a3a;
+			}
+		}
 	}
 
     ::placeholder{

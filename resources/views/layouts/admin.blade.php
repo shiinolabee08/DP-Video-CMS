@@ -71,6 +71,9 @@
                                     <a class="dropdown-item" href="{{ route('contact-forms.index') }}">
                                         <i class="fas fa-columns"></i> {{ __('Contact Forms') }}
                                     </a>    
+                                    <a class="dropdown-item" href="{{ URL::to('/admin/form-submissions') }}">
+                                        <i class="fas fa-reply"></i> {{ __('Forms Submissions') }}
+                                    </a>    
                                 </div>
                             </li>
                             <!-- <li class="nav-item">
@@ -105,6 +108,28 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <transition name="slide-up-down">
+            <div class="admin-chat-box-toggle" v-if="!showChatbox" v-on:click="showChatbox=!showChatbox">
+                <h3>Chat Support <i class="fa fa-comment-dots"></i></h3>
+            </div>
+        </transition>
+
+        <transition name="slide-up-down">
+            <div class="admin-chat-box" v-if="showChatbox">
+                <h3>Client Support <i v-on:click="showChatbox=!showChatbox" class="fa fa-window-minimize"></i></h3>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Start a project with us now by chatting straight away!</div>
+
+                    <div class="panel-body">
+                        <chat-messages :messages="messages"></chat-messages>
+                    </div>
+                    <div class="panel-footer">
+                        <chat-form v-on:messagesent="addMessage" v-bind:user="{{ Auth::user() }}"></chat-form>
+                    </div>
+                </div>
+            </div>
+        </transition>
     </div>
 </body>
 </html>

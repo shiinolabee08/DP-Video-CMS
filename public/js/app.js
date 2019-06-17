@@ -2220,6 +2220,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     id: {
@@ -2236,7 +2244,13 @@ __webpack_require__.r(__webpack_exports__);
       form: {},
       formData: {},
       errors: [],
-      basicFormFields: ['full_name', 'email', 'phone_number', 'more_info']
+      message: null,
+      isLocked: false,
+      full_name: '',
+      email: '',
+      phone_number: '',
+      more_info: '',
+      successMsg: false
     };
   },
   mounted: function mounted() {
@@ -2252,22 +2266,57 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   methods: {
-    setDefaultFormOptions: function setDefaultFormOptions() {//set v models via regex itiration on form_html string
+    compiledMarkdown: function compiledMarkdown() {
+      return marked(this.formData, {
+        sanitize: true
+      });
     },
-    submitForm: function submitForm(event) {
-      event.preventDefault();
-      console.log(this);
+    setDefaultFormOptions: function setDefaultFormOptions() {
+      this.full_name = '';
+      this.email = '';
+      this.phone_number = '';
+      this.more_info = '';
+    },
+    setSuccessMessage: function setSuccessMessage() {
+      this.successMsg = true;
+    },
+    submitForm: function submitForm(e) {
+      e.preventDefault();
+      var app = this;
+      app.errors = [];
 
-      if (this.full_name.length <= 0) {
-        this.errors.push('Full Name required.');
+      if (app.full_name.length <= 0) {
+        app.errors.push('Full Name required.');
       }
 
-      if (this.email.length <= 0) {
-        this.errors.push('Email required.');
+      if (app.email.length <= 0) {
+        app.errors.push('Email required.');
       }
 
-      if (this.more_info.length <= 0) {
-        this.errors.push('You need to enter brief details of your project.');
+      if (app.more_info.length <= 0) {
+        app.errors.push('You need to enter brief details of your project.');
+      }
+
+      if (app.errors.length == 0) {
+        app.isLocked = true;
+        axios.post('/api/contact-us/', {
+          full_name: app.full_name,
+          email: app.email,
+          phone_number: app.phone_number,
+          more_info: app.more_info,
+          contact_form_id: app.id
+        }).then(function (response) {
+          app.isLocked = false;
+
+          if (response.data.status && response.data.mail_sent) {
+            app.setSuccessMessage();
+            app.setDefaultFormOptions();
+          } else if (response.data.mail_sent == false) {
+            app.errors.push('There was an error trying to send your enquiry. Please try again later.');
+          }
+        })["catch"](function (response) {
+          console.log(response);
+        });
       }
     }
   }
@@ -50348,12 +50397,137 @@ var render = function() {
                   on: { submit: _vm.submitForm }
                 },
                 [
-                  _c("div", {
-                    domProps: { innerHTML: _vm._s(_vm.form.form_html) }
-                  }),
+                  _vm.isDefault == false
+                    ? _c("p", [
+                        _vm._v("Talk to us today about your "),
+                        _c("br"),
+                        _c("strong", [_vm._v("video project.")])
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.full_name,
+                          expression: "full_name"
+                        }
+                      ],
+                      attrs: {
+                        type: "text",
+                        disabled: _vm.isLocked,
+                        placeholder: "Full Name*",
+                        name: "full_name"
+                      },
+                      domProps: { value: _vm.full_name },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.full_name = $event.target.value
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.email,
+                          expression: "email"
+                        }
+                      ],
+                      attrs: {
+                        type: "email",
+                        disabled: _vm.isLocked,
+                        name: "email",
+                        placeholder: "Email*"
+                      },
+                      domProps: { value: _vm.email },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.email = $event.target.value
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.phone_number,
+                          expression: "phone_number"
+                        }
+                      ],
+                      attrs: {
+                        type: "text",
+                        disabled: _vm.isLocked,
+                        name: "phone_number",
+                        placeholder: "Phone Number"
+                      },
+                      domProps: { value: _vm.phone_number },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.phone_number = $event.target.value
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("textarea", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.more_info,
+                          expression: "more_info"
+                        }
+                      ],
+                      attrs: {
+                        rows: "5",
+                        cols: "15",
+                        disabled: _vm.isLocked,
+                        name: "more_info",
+                        placeholder: "Talk about your project*"
+                      },
+                      domProps: { value: _vm.more_info },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.more_info = $event.target.value
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("input", { attrs: { type: "submit", value: "Send" } })
+                  ]),
                   _vm._v(" "),
                   _vm.errors.length
                     ? _c("div", [
+                        _c("h4", { staticClass: "error-label" }, [
+                          _vm._v("Please review your details below the ff:")
+                        ]),
+                        _vm._v(" "),
                         _c(
                           "ul",
                           { staticClass: "error-list" },
@@ -50369,6 +50543,21 @@ var render = function() {
                           0
                         )
                       ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.successMsg
+                    ? _c(
+                        "div",
+                        {
+                          staticClass: "alert alert-success",
+                          attrs: { role: "alert" }
+                        },
+                        [
+                          _vm._v(
+                            "Thank you for your inquiry. It has been sent."
+                          )
+                        ]
+                      )
                     : _vm._e()
                 ]
               )

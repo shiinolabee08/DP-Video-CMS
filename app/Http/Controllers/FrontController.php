@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\CaseStudy;
 use App\CaseStudyCategory;
+use App\FormSubmission;
+use App\Mail\EnquirySubmission;
 use App\ContactForm;
+
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
 class FrontController
@@ -53,5 +57,14 @@ class FrontController
     public function getContactForm( $id )
     {
         return response()->json([ 'data' => ContactForm::find($id) ]);
+    }
+
+    public function sendContactEmail( Request $request )
+    {
+        $contactSubmission = FormSubmission::create($request->all());
+
+        $sendMail = Mail::to(env('MAIL_TO_ADDRESS'))->send(new EnquirySubmission($contactSubmission));
+
+        return response()->json([ 'status' => ( $contactSubmission ? true : false ), 'mail_sent' => Mail::failures() ? false : true ]);
     }
 }

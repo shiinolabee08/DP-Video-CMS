@@ -11008,6 +11008,34 @@ header#top .free-quote a:hover {
   z-index: 100;
 }
 
+/* Admin Area Chat Box */
+
+.admin-chat-box-toggle {
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  padding: 10px 20px;
+  background-color: #ddd;
+  max-width: 310px;
+  overflow: hidden;
+  border-radius: 25px 25px 0px 0px;
+  z-index: 25;
+  min-width: 200px;
+}
+
+.admin-chat-box-toggle h3 {
+  color: #515151;
+  font-family: "FuturaPT Medium";
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.admin-chat-box-toggle h3 i {
+  padding-left: 25px;
+  color: #e3c00e;
+}
+
 /* Chat Box */
 
 .chat-box-toggle {
@@ -11036,7 +11064,8 @@ header#top .free-quote a:hover {
   color: #e3c00e;
 }
 
-.chat-box {
+.chat-box,
+.admin-chat-box {
   position: fixed;
   bottom: 0;
   right: 50px;
@@ -11050,13 +11079,17 @@ header#top .free-quote a:hover {
 
 .chat-box h3,
 .chat-box .panel-heading,
-.chat-box label {
+.chat-box label,
+.admin-chat-box h3,
+.admin-chat-box .panel-heading,
+.admin-chat-box label {
   text-align: left;
   color: #fff;
   font-family: "FuturaPT Medium";
 }
 
-.chat-box h3 i {
+.chat-box h3 i,
+.admin-chat-box h3 i {
   margin-left: 10px;
   color: #fff;
   cursor: pointer;
@@ -11064,13 +11097,15 @@ header#top .free-quote a:hover {
   font-size: 14px;
 }
 
-.chat-box .message-info {
+.chat-box .message-info,
+.admin-chat-box .message-info {
   font-family: "FuturaPT Book";
   color: #e3c00e;
   font-style: italic;
 }
 
-.chat-box .chat-list {
+.chat-box .chat-list,
+.admin-chat-box .chat-list {
   position: relative;
   list-style: none;
   margin: 0 0;
@@ -11078,82 +11113,132 @@ header#top .free-quote a:hover {
   background-color: transparent;
 }
 
-.chat-box .chat-list li {
+.chat-box .chat-list li,
+.admin-chat-box .chat-list li {
   margin-bottom: 10px;
   padding-bottom: 5px;
   border-bottom: 1px dotted #ddd;
 }
 
-.chat-box .chat-list li .chat-body {
+.chat-box .chat-list li .chat-body,
+.admin-chat-box .chat-list li .chat-body {
   background-color: transparent;
   margin-bottom: 5px;
 }
 
-.chat-box .chat-list li .chat-body .header {
+.chat-box .chat-list li .chat-body .header,
+.admin-chat-box .chat-list li .chat-body .header {
   position: relative;
 }
 
-.chat-box .chat-list li .chat-body .header small {
+.chat-box .chat-list li .chat-body .header small,
+.admin-chat-box .chat-list li .chat-body .header small {
   font-weight: 300;
   font-family: "FuturaPT Medium";
   color: #fff;
 }
 
-.chat-box .chat-list li .chat-body .header small a {
+.chat-box .chat-list li .chat-body .header small a,
+.admin-chat-box .chat-list li .chat-body .header small a {
   color: #e3c00e;
   text-decoration: none;
 }
 
-.chat-box .chat-list li .chat-body .header .primary-font {
+.chat-box .chat-list li .chat-body .header .primary-font,
+.admin-chat-box .chat-list li .chat-body .header .primary-font {
   font-family: "FuturaPT Book";
   color: #fff;
 }
 
-.chat-box .chat-list li .chat-body p {
+.chat-box .chat-list li .chat-body p,
+.admin-chat-box .chat-list li .chat-body p {
   margin: 0px 0px;
   color: #fff;
   font-style: italic;
   font-family: "FuturaPT Medium";
 }
 
-.chat-box .panel-body {
+.chat-box .panel-body,
+.admin-chat-box .panel-body {
   overflow-y: auto;
   min-height: 45px;
   max-height: 180px;
   margin-top: 10px;
 }
 
-.chat-box .chat-form {
+.chat-box .chat-form,
+.admin-chat-box .chat-form {
   position: relative;
 }
 
 .chat-box .chat-form input,
-.chat-box .chat-form button {
+.chat-box .chat-form button,
+.admin-chat-box .chat-form input,
+.admin-chat-box .chat-form button {
   font-family: "FuturaPT Book";
 }
 
-.chat-box .chat-form .input-group {
+.chat-box .chat-form .input-group,
+.admin-chat-box .chat-form .input-group {
   margin-top: 10px;
 }
 
-.chat-box .chat-form label {
+.chat-box .chat-form label,
+.admin-chat-box .chat-form label {
   font-weight: 300;
 }
 
-.chat-box .chat-form label strong {
+.chat-box .chat-form label strong,
+.admin-chat-box .chat-form label strong {
   font-weight: 700;
   font-family: "FuturaPT Heavy";
 }
 
-.chat-box .chat-form button {
+.chat-box .chat-form button,
+.admin-chat-box .chat-form button {
   color: #fff;
   background-color: #e3c00e;
   border: none;
 }
 
-.chat-box .chat-form button:hover {
+.chat-box .chat-form button:hover,
+.admin-chat-box .chat-form button:hover {
   color: #e3c00e;
   background-color: #fff;
+}
+
+.admin-chat-box {
+  background-color: #ddd;
+}
+
+.admin-chat-box h3,
+.admin-chat-box .panel-heading,
+.admin-chat-box label {
+  color: #515151;
+}
+
+.admin-chat-box .chat-list li {
+  border-bottom: 1px dotted #515151;
+}
+
+.admin-chat-box .chat-list li .chat-body .header {
+  position: relative;
+}
+
+.admin-chat-box .chat-list li .chat-body .header small {
+  color: #515151;
+}
+
+.admin-chat-box .chat-list li .chat-body .header small a {
+  color: #e3c00e;
+}
+
+.admin-chat-box .chat-list li .chat-body .header .primary-font {
+  color: #515151;
+}
+
+.admin-chat-box .chat-list li .chat-body p {
+  color: #515151;
 }
 
 ::-webkit-scrollbar-track {
@@ -12453,6 +12538,29 @@ header#top .free-quote a:hover {
   text-align: center;
 }
 
+.contact-form-container .contact-form-inner .error-label {
+  color: #515151;
+  font-family: "FuturaPT Book";
+  font-size: 17px;
+  text-align: left;
+}
+
+.contact-form-container .contact-form-inner ul.error-list {
+  margin: 0px auto;
+  text-align: left;
+  padding-left: 0px;
+}
+
+.contact-form-container .contact-form-inner ul.error-list li {
+  color: #fff;
+  list-style-type: none;
+  margin-bottom: 5px;
+  padding: 7px 20px;
+  font-family: "FuturaPT Medium";
+  font-size: 14px;
+  background-color: #be3a3a;
+}
+
 .contact-form-container .contact-form-inner p {
   font-family: "FuturaPT Book";
   margin: 0px auto;
@@ -12524,10 +12632,32 @@ header#top .free-quote a:hover {
   width: 100%;
 }
 
-.contact-form-container.transparent form input,
-.contact-form-container.transparent form textarea {
+.contact-form-container.transparent .contact-form-inner input,
+.contact-form-container.transparent .contact-form-inner textarea {
   border: 2px solid #fff;
   color: #fff;
+}
+
+.contact-form-container.transparent .contact-form-inner .error-label {
+  color: #fff;
+  font-family: "FuturaPT Book";
+  font-size: 17px;
+}
+
+.contact-form-container.transparent .contact-form-inner ul.error-list {
+  margin: 0px auto;
+  text-align: left;
+  padding-left: 0px;
+}
+
+.contact-form-container.transparent .contact-form-inner ul.error-list li {
+  color: #fff;
+  list-style-type: none;
+  margin-bottom: 5px;
+  padding: 7px 20px;
+  font-family: "FuturaPT Medium";
+  font-size: 14px;
+  background-color: #be3a3a;
 }
 
 .contact-form-container.transparent ::-webkit-input-placeholder {
