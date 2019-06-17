@@ -104,7 +104,7 @@
 				if ( app.errors.length == 0 ) {
 					app.isLocked = true;
 
-					axios.post('/api/contact-us/', { full_name : app.full_name, email : app.email, phone_number : app.phone_number, more_info : app.more_info, contact_form_id : app.id })
+					axios.post('/api/contact-us', { full_name : app.full_name, email : app.email, phone_number : app.phone_number, more_info : app.more_info, contact_form_id : app.id })
 					.then( (response) => {
 
 						app.isLocked = false;

@@ -2299,7 +2299,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (app.errors.length == 0) {
         app.isLocked = true;
-        axios.post('/api/contact-us/', {
+        axios.post('/api/contact-us', {
           full_name: app.full_name,
           email: app.email,
           phone_number: app.phone_number,
