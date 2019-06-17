@@ -42,7 +42,7 @@
 
         @include('layouts/partials/bottom-section')
 
-        @include('layouts/partials/footer-widgets')
+        @include('layouts/partials/footer-widgets')        
         
     </div>
 </body>
