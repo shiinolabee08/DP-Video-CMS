@@ -49,6 +49,6 @@ class MessageSent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Illuminate\Broadcasting\Channel('chat');
+        return new Channel('chat');
     }
 }
