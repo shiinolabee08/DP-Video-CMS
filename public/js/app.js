@@ -70406,7 +70406,7 @@ var app = new Vue({
     var _this = this;
 
     this.fetchMessages();
-    Echo["private"]('chat').listen('MessageSent', function (e) {
+    Echo.channel('chat').listen('MessageSent', function (e) {
       _this.messages.push({
         name: e.message.name,
         email: e.message.email,
