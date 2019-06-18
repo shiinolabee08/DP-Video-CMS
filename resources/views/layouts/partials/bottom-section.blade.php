@@ -66,7 +66,7 @@
                 <chat-messages :messages="messages"></chat-messages>
             </div>
             <div class="panel-footer">
-                <chat-form v-on:messagesent="addMessage" v-bind:user="{{ Auth::user() }}"></chat-form>
+                <chat-form v-on:messagesent="addMessage"></chat-form>
             </div>
         </div>
     </div>

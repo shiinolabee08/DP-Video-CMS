@@ -86,7 +86,7 @@ const app = new Vue({
                     name : e.message.name,
                     email : e.message.email,
                     message: e.message.message,
-                    user: e.user
+                    // user: e.user
                 });
             });
     },

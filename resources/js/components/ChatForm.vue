@@ -32,8 +32,6 @@
 
 <script>
     export default {
-        props: ['user', 'token' ],
-
         data() {
             return {
                 newMessage: '',
@@ -52,7 +50,6 @@
             sendMessage() {
 
                 this.$emit('messagesent', {
-                    user: this.user,
                     message: this.newMessage,
                     name : this.name,
                     email : this.email

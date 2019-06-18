@@ -1988,7 +1988,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['user', 'token'],
   data: function data() {
     return {
       newMessage: '',
@@ -2004,7 +2003,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     sendMessage: function sendMessage() {
       this.$emit('messagesent', {
-        user: this.user,
         message: this.newMessage,
         name: this.name,
         email: this.email
@@ -70410,8 +70408,8 @@ var app = new Vue({
       _this.messages.push({
         name: e.message.name,
         email: e.message.email,
-        message: e.message.message,
-        user: e.user
+        message: e.message.message // user: e.user
+
       });
     });
   },
