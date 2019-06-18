@@ -10916,6 +10916,8 @@ header#top .free-quote a:hover {
 .banner-area .VideoBg .camera-tools {
   padding: 20px 0px;
   background-color: #231f20;
+  position: absolute;
+  bottom: 0;
 }
 
 .banner-area .VideoBg .camera-tools img {
@@ -11383,6 +11385,10 @@ header#top .free-quote a:hover {
   color: #515151;
   line-height: normal;
   font-weight: normal;
+}
+
+.yellow-text h1 {
+  color: #e3c00e;
 }
 
 .page-content {

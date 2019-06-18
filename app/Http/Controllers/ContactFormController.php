@@ -16,6 +16,18 @@ class ContactFormController extends Controller
     protected $is_redirect_to_index = true;
 
     /**
+     * Fetch list of records
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $data = $this->model_class::with('submissions')->paginate(10);
+
+        return view( $this->model_class_names[1] . '.index', compact('data', $data));
+    }
+
+    /**
      * Renders the form for creating a new contact_form.
      *
      * @return \Illuminate\Http\Response

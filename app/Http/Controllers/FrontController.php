@@ -48,6 +48,18 @@ class FrontController
         return response()->json([ 'data' => ($records ? $records : []) ]); 
     }
 
+    public function fetchCaseStudiesPosts()
+    {
+        $categories = CaseStudyCategory::whereIn('id', [12, 13])->get();
+        $case_studies = CaseStudy::with('categories')->where('published', true)
+                        ->whereHas('categories', function($q) use ($category){
+                            $q->whereIn('case_study_category_id', [12, 13]); 
+                        })
+                        ->get();
+
+        return response()->json([ 'case_studies' => $case_studies, 'categories' => $categories ]);
+    }
+
     /**
     * Get contact form record via id
     *

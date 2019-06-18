@@ -36,6 +36,7 @@
                         <th scope="col">Name</th>
                         <th scope="col">Send To</th>
                         <th scope="col">Sender</th>
+                        <th scope="col">No. of Submissions</th>
                         <th scope="col">Is Published?</th>
                         <th scope="col">Created At</th>
                         <th scope="col">Actions</th>
@@ -47,9 +48,10 @@
                     <td scope="row">{{$contactForm->name}}</td>
                     <td>{{$contactForm->mail_to}}</td>
                     <td>{{$contactForm->mail_from}}</td>
-                    <th scope="row">{{$contactForm->published ? 'Yes' : 'No'}}</th>
-                    <td>{{$contactForm->created_at->toFormattedDateString()}}</td>
-                    <td>
+                    <td align="center">{{count($contactForm->submissions)}}</td>
+                    <th align="center">{{$contactForm->published ? 'Yes' : 'No'}}</th>
+                    <td align="center">{{$contactForm->created_at->toFormattedDateString()}}</td>
+                    <td align="center">
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <a href="{{ URL::to('/admin/contact-forms/' . $contactForm->id . '/edit') }}" class="btn btn-primary">
                               	<i class="fa fa-edit"></i> Edit

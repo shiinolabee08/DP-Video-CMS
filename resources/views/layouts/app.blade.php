@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{url('/fav.ico')}}">
 
     <!-- Meta Tags for SEO -->
     <meta property='og:site_name' content='Digital Pie Video'/>
     <meta property='og:url' content='{{ url()->current() }}'/>
-    <meta property='og:title' content='{{ url()->current() }}'/><meta property='og:type' content='article'/>
+    <meta property='og:title' content='{{ $pageName }}'/><meta property='og:type' content='article'/>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

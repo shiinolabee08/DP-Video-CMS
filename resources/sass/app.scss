@@ -274,6 +274,8 @@ header#top{
     	.camera-tools{
 			padding: 20px 0px;
 			background-color: #231f20;
+		    position: absolute;
+    		bottom: 0;
 
 			img{
 				width: 150px !important;
@@ -742,6 +744,10 @@ background-color: #555;
     color: $main-text-color;
     line-height: normal;
     font-weight: normal;
+}
+
+.yellow-text h1{
+	color: $yellow-bg-color;
 }
 
 .page-content{

@@ -20,6 +20,7 @@ class CreateFormSubmissionsTable extends Migration
             $table->string('phone_number')->nullable(true);
             $table->mediumText('more_info');
             $table->unsignedInteger('contact_form_id');
+            $table->boolean('status')->default(0);
 
             $table->foreign('contact_form_id')->references('id')->on('contact_forms');
             $table->timestamps();
