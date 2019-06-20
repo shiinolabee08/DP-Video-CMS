@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{url('/fav.ico')}}">
 
+
     <title>Digital Pie Video</title>
 
     <!-- Fonts -->
@@ -12,16 +13,10 @@
 
 
     <!-- Fontawesome -->
-    <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <noscript>
-            <link
-        rel="stylesheet"
-        href='https://fonts.googleapis.com/css?family=Roboto:400,600|Material+Icons'>
-    </noscript>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -29,7 +24,11 @@
     <!-- Meta Tags for SEO -->
     <meta property='og:site_name' content='Digital Pie Video'/>
     <meta property='og:url' content='https://www.digitalpie.video/'/>
-    <meta property='og:title' content='Home'/><meta property='og:type' content='article'/>
+    <meta property='og:title' content='Home'/><meta property='og:type' content='website advertising'/>
+    <meta name="title" content="Digital Pie Video"/>
+    <meta name="description" content="Digital Pie Video">
+
+    <link rel="canonical" href="{{ url('/')}}" />
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

@@ -9,7 +9,7 @@
     <meta property='og:site_name' content='Digital Pie Video'/>
     <meta property='og:url' content='{{ url()->current() }}'/>
     <meta property='og:title' content='{{ $pageName }} | Digital Pie Video'/>
-    <meta property='og:type' content='article'/>
+    <meta property='og:type' content='website advertising'/>
     <meta name="title" content="{{ $pageName }} | Digital Pie Video"/>
     <meta name="description" content="{{$pageName}}">
 
@@ -22,12 +22,7 @@
     <title> {{ $pageName }} | Digital Pie Video</title>
 
     <!-- Fontawesome -->
-    <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <noscript>
-            <link
-        rel="stylesheet"
-        href='https://fonts.googleapis.com/css?family=Roboto:400,600|Material+Icons'>
-    </noscript>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
