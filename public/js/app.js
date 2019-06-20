@@ -49773,7 +49773,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "case-study-categies-list" },
+    { staticClass: "case-study-categories-list" },
     [
       _c("transition", { attrs: { name: "fade" } }, [
         _vm.resultData.length

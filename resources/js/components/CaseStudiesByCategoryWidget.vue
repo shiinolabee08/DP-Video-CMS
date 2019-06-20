@@ -1,5 +1,5 @@
 <template>
-	<div class="case-study-categies-list">
+	<div class="case-study-categories-list">
 		<transition name="fade">
 			<div class="row results-data-grid" v-if="resultData.length">
 				<!-- <div class="col-md-2 col-sm-12"></div> -->
