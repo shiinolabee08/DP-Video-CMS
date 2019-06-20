@@ -2007,6 +2007,57 @@ background-color: #555;
 	}
 }
 
+.social-links{
+	list-style-type: none;
+	margin-left: 0px;
+	padding-left: 0px;
+
+	li{
+		list-style: none;
+		display: inline-block;
+		margin-right: 5px;
+
+		i{
+			color: $main-text-color;
+			font-size: 16px;
+		}
+	}
+}
+
+//Newsletter Form
+.newsletter-label{
+	font-family: 'FuturaPT Book';
+	font-size: 16px;
+	font-weight: 700;
+	color: $main-text-color;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+.newsletter-form{
+	margin-bottom: 20px;
+
+	.input-group{
+
+		input{
+			padding: 5px 7px;
+			font-family: 'FuturaPT Heavy';
+			font-size: 20px;
+		}
+
+		.input-group-append{
+			button{
+				font-size: 20px;
+				font-family: 'FuturaPT Heavy';
+				background-color: $yellow-bg-color;
+				color: #fff;
+				text-transform: uppercase;
+				border-color: $yellow-bg-color;
+			}
+		}
+	}
+}
+
 //Contact Forms
 .contact-form-container{
 	background-color: #fff;

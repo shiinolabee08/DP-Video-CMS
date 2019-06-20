@@ -69,11 +69,13 @@ const app = new Vue({
     el: '#app',
     data: {
         messages: [],
+        subscribe_email : '',
         showChatbox : false,
     },
 
     mounted(){
         this.showChatbox = false;
+        this.subscribe_email = '';
     },
 
     created() {
@@ -92,6 +94,23 @@ const app = new Vue({
     },
 
     methods: {
+        sendNewsletter(e){
+
+            e.preventDefault();
+
+            if ( this.subscribe_email.length) {
+                let email = this.subscribe_email;
+
+                axios.post('/api/subscribe/newsletter', { email : email })
+                    .then((response)=>{
+                        console.log(response);
+                        if ( response.data.status ) alert('Thank you for subscribing our Newsletter.');
+                    })
+            } else{
+                alert('Enter email to subscribe.');
+            }
+
+        },
         fetchMessages() {
             axios.get('/api/messages').then(response => {
                 this.messages = response.data;

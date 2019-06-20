@@ -8,6 +8,7 @@ use App\FormSubmission;
 use App\Mail\EnquirySubmission;
 use App\ContactForm;
 
+use NZTim\Mailchimp\Mailchimp;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
@@ -82,5 +83,16 @@ class FrontController
         $sendMail = Mail::to(env('MAIL_TO_ADDRESS'))->send(new EnquirySubmission($contactSubmission));
 
         return response()->json([ 'status' => ( $contactSubmission ? true : false ), 'mail_sent' => Mail::failures() ? false : true ]);
+    }
+
+    public function sendNewsletter( Request $request )
+    {   
+        $mc = new Mailchimp(env('MC_KEY'));
+
+        if ( $mc->subscribe(env('MC_LIST_ID'), $request->input('email')) ){
+            return response()->json([ 'status' => true]);
+        } else{
+            return response()->json(['status' => false]);
+        }
     }
 }

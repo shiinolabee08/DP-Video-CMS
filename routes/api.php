@@ -22,6 +22,7 @@ Route::get('/case-studies/{category}', 'FrontController@fetchByCategory');
 Route::get('/case-studies-posts', 'FrontController@fetchCaseStudiesPosts');
 Route::get('/contact-form/{id}', 'FrontController@getContactForm');
 Route::post('/contact-us', 'FrontController@sendContactEmail');
+Route::post('/subscribe/newsletter', 'FrontController@sendNewsletter');
 
 
 Route::group(['middleware' => 'web'], function () {

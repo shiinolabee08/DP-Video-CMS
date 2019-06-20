@@ -13,6 +13,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
+        "nztim/mailchimp": "^3.10",
         "pusher/pusher-php-server": "~3.0",
         "silber/page-cache": "^1.0"
     },

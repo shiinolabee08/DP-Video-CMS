@@ -60,7 +60,23 @@
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<h3>Newsletter Subscription</h3>
+						<p class="newsletter-label">Sign up for free newsletters & get more of Digital Pie delivered to you.</p>
 						<!-- Newsletter Form Area -->
+						<form v-on:submit="sendNewsletter" action="#" class="newsletter-form">
+							<div class="input-group">
+								<input type="text" name="email" class="form-control input-md" v-model="subscribe_email" placeholder="Email" />
+								<div class="input-group-append">
+				                    <button class="btn btn-outline-secondary" id="btn-chat" type="submit">
+				                        Submit
+				                    </button>
+				                </div>
+							</div>
+						</form>
+						<ul class="social-links">
+							<li><a href="https://twitter.com/digitalpieltd/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/digitalpieltd/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.instagram.com/digitalpieltd/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>

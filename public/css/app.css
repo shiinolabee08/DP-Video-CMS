@@ -12576,6 +12576,51 @@ header#top .free-quote a:hover {
   width: 100px;
 }
 
+.social-links {
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.social-links li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.social-links li i {
+  color: #515151;
+  font-size: 16px;
+}
+
+.newsletter-label {
+  font-family: "FuturaPT Book";
+  font-size: 16px;
+  font-weight: 700;
+  color: #515151;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.newsletter-form {
+  margin-bottom: 20px;
+}
+
+.newsletter-form .input-group input {
+  padding: 5px 7px;
+  font-family: "FuturaPT Heavy";
+  font-size: 20px;
+}
+
+.newsletter-form .input-group .input-group-append button {
+  font-size: 20px;
+  font-family: "FuturaPT Heavy";
+  background-color: #e3c00e;
+  color: #fff;
+  text-transform: uppercase;
+  border-color: #e3c00e;
+}
+
 .contact-form-container {
   background-color: #fff;
   max-width: 400px;

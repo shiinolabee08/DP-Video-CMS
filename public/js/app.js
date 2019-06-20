@@ -70656,10 +70656,12 @@ var app = new Vue({
   el: '#app',
   data: {
     messages: [],
+    subscribe_email: '',
     showChatbox: false
   },
   mounted: function mounted() {
     this.showChatbox = false;
+    this.subscribe_email = '';
   },
   created: function created() {
     var _this = this;
@@ -70675,6 +70677,21 @@ var app = new Vue({
     });
   },
   methods: {
+    sendNewsletter: function sendNewsletter(e) {
+      e.preventDefault();
+
+      if (this.subscribe_email.length) {
+        var email = this.subscribe_email;
+        axios.post('/api/subscribe/newsletter', {
+          email: email
+        }).then(function (response) {
+          console.log(response);
+          if (response.data.status) alert('Thank you for subscribing our Newsletter.');
+        });
+      } else {
+        alert('Enter email to subscribe.');
+      }
+    },
     fetchMessages: function fetchMessages() {
       var _this2 = this;
 
