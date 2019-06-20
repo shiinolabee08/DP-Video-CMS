@@ -107,7 +107,7 @@
 				<div class="title-heading text-center has-primary-border-center">
 					<h1>Related Case Studies</h1>
 				</div>
-				<case-studies-filter-post-widget v-bind:show-categories="false" v-bind:selected-post="25"></case-studies-filter-post-widget>
+				<case-studies-filter-post-widget v-bind:show-categories="false" v-bind:selected-post="69"></case-studies-filter-post-widget>
 			</div>
 		</div>
 	</div>

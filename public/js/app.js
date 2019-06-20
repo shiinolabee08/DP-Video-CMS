@@ -1961,7 +1961,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['showCategories', 'selectedPost', 'showAllPosts'],
+  // props : [ 'showCategories', 'selectedPostSlug', 'showAllPosts' ],
+  props: {
+    showCategories: {
+      type: Boolean
+    },
+    selectedPost: {
+      type: Number,
+      "default": ''
+    },
+    showAllPosts: {
+      type: Boolean
+    }
+  },
   data: function data() {
     return {
       categories: [],

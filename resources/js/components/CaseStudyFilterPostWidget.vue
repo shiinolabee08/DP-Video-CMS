@@ -42,7 +42,19 @@
 </template>
 <script>
 	export default{
-		props : [ 'showCategories', 'selectedPost', 'showAllPosts' ],
+		// props : [ 'showCategories', 'selectedPostSlug', 'showAllPosts' ],
+		props : {
+			showCategories : {
+				type : Boolean,
+			},
+			selectedPost : {
+				type : Number,
+				default : ''
+			},
+			showAllPosts : {
+				type : Boolean
+			}
+		},
 		data() {
 			return {
 				categories : [],
