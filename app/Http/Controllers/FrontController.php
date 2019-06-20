@@ -89,10 +89,8 @@ class FrontController
     {   
         $mc = new Mailchimp(env('MC_KEY'));
 
-        if ( $mc->subscribe(env('MC_LIST_ID'), $request->input('email')) ){
-            return response()->json([ 'status' => true]);
-        } else{
-            return response()->json(['status' => false]);
-        }
+        $mc->subscribe(env('MC_LIST_ID'), $request->input('email'));
+            
+        return response()->json([ 'status' => true]);
     }
 }

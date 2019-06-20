@@ -25,7 +25,7 @@
                                 <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="{{ url('/services') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="{{ url('/services') }}" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                   {{ __('Services') }}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">

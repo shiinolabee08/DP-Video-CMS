@@ -50777,7 +50777,13 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "form-group" }, [
-                    _c("input", { attrs: { type: "submit", value: "Send" } })
+                    _c("input", {
+                      class: { bigInput: _vm.isDefault == true },
+                      attrs: { type: "submit" },
+                      domProps: {
+                        value: _vm.isDefault ? "Contact Our Team" : "Send"
+                      }
+                    })
                   ]),
                   _vm._v(" "),
                   _vm.errors.length

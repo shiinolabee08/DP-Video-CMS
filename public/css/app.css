@@ -2,37 +2,37 @@
 
 @font-face {
   font-family: "FuturaPT Demi";
-  font-display: auto;
+  font-display: swap;
   src: url(/fonts/FuturaPTDemi.otf?5b6575ccd521b96b68504700b10e3e66) format("opentype");
 }
 
 @font-face {
   font-family: "FuturaPT Medium";
-  font-display: auto;
+  font-display: swap;
   src: url(/fonts/FuturaPTMedium.otf?bd99f124d37cfd9caecec4fe24094334) format("opentype");
 }
 
 @font-face {
   font-family: "FuturaPT Book";
-  font-display: auto;
+  font-display: swap;
   src: url(/fonts/FuturaPTBook.otf?99541f31c3aca8a3251b82b28ec7966e) format("opentype");
 }
 
 @font-face {
   font-family: "FuturaPT Heavy";
-  font-display: auto;
+  font-display: swap;
   src: url(/fonts/FuturaPTHeavy.otf?5dfc35f20430696b7213dad364c9efba) format("opentype");
 }
 
 @font-face {
   font-family: "FuturaPT Light";
-  font-display: auto;
+  font-display: swap;
   src: url(/fonts/FuturaPTLight.otf?a15258a71bcff8eb791ad54f27144d48) format("opentype");
 }
 
 @font-face {
   font-family: "FuturaPT Bold";
-  font-display: auto;
+  font-display: swap;
   src: url(/fonts/FuturaPTBold.otf?f3483f64fe4f53928cfe2786e7ec82cc) format("opentype");
 }
 
@@ -10884,6 +10884,11 @@ header#top .free-quote a:hover {
   color: #e3c00e;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
 .dropdown-toggle::after {
   margin-left: 0px;
   border: none;
@@ -11542,6 +11547,7 @@ header#top .free-quote a:hover {
   padding: 15px 10px;
   text-align: center;
   border-radius: 0px 0px 25px 25px;
+  min-height: 560px;
 }
 
 .packages .package-item .body h4.price {
@@ -12107,15 +12113,36 @@ header#top .free-quote a:hover {
 .meet-the-team .team-list .member-box {
   border-radius: 25px;
   position: relative;
-  min-height: 150px;
+  width: 100%;
+  min-height: 250px;
   display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.meet-the-team .team-list .member-box img {
+.meet-the-team .team-list .member-box::before {
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
   width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  height: 100%;
+  z-index: 10;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.meet-the-team .team-list .member-box:hover > h3,
+.meet-the-team .team-list .member-box:hover::before {
+  opacity: 1;
+  visibility: visible;
 }
 
 .meet-the-team .team-list .member-box h3 {
+  z-index: 15;
   margin-top: 25px;
   position: absolute;
   bottom: 10px;
@@ -12128,21 +12155,6 @@ header#top .free-quote a:hover {
   visibility: hidden;
   opacity: 0;
   transition: all 0.2s ease;
-}
-
-.meet-the-team .team-list .member-box h3 ::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
-}
-
-.meet-the-team .team-list .member-box h3:hover {
-  opacity: 1;
-  visibility: visible;
 }
 
 .contact-page .title-heading h1 {
@@ -12727,6 +12739,18 @@ header#top .free-quote a:hover {
   -webkit-transform: translateY(-3px);
 }
 
+.contact-form-container .contact-form-inner form input.bigInput {
+  font-family: "FuturaPT Book";
+  font-size: 18px;
+  color: #fff;
+  border-radius: 30px;
+  border: 2px solid #e3c00e;
+  background: transparent;
+  width: 250px;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+}
+
 .contact-form-container.transparent {
   background-color: transparent;
   width: 100%;
@@ -12902,6 +12926,10 @@ header#top .free-quote a:hover {
   .phone-top,
   .free-quote {
     display: none !important;
+  }
+
+  .meet-the-team .team-list .member-box {
+    min-height: 400px;
   }
 }
 

@@ -1,37 +1,37 @@
 //Main Font
 @font-face{
 	font-family: 'FuturaPT Demi';
-	font-display:auto;
+	font-display:swap;
 	src : url('../fonts/Futura/FuturaPTDemi.otf') format('opentype');
 }
 
 @font-face{
 	font-family: 'FuturaPT Medium';
-	font-display:auto;
+	font-display:swap;
 	src : url('../fonts/Futura/FuturaPTMedium.otf') format('opentype');
 }
 
 @font-face{
 	font-family: 'FuturaPT Book';
-	font-display:auto;
+	font-display:swap;
 	src : url('../fonts/Futura/FuturaPTBook.otf') format('opentype');
 }
 
 @font-face{
 	font-family: 'FuturaPT Heavy';
-	font-display:auto;
+	font-display:swap;
 	src : url('../fonts/Futura/FuturaPTHeavy.otf') format('opentype');
 }
 
 @font-face{
 	font-family: 'FuturaPT Light';
-	font-display:auto;
+	font-display:swap;
 	src : url('../fonts/Futura/FuturaPTLight.otf') format('opentype');
 }
 
 @font-face{
 	font-family: 'FuturaPT Bold';
-	font-display:auto;
+	font-display:swap;
 	src : url('../fonts/Futura/FuturaPTBold.otf') format('opentype');
 }
 
@@ -215,6 +215,7 @@ header#top{
 						}
 					}
 				}
+
 			}
 
 		}
@@ -235,6 +236,11 @@ header#top{
 		}
 	}
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
 
 .dropdown-toggle::after{
 	margin-left: 0px;
@@ -900,6 +906,7 @@ background-color: #555;
 	    	padding: 15px 10px;
     		text-align: center;
 			border-radius: 0px 0px 25px 25px;
+			min-height: 560px;
 
 	    	h4.price{
 	    		font-family: 'FuturaPT Medium';
@@ -1509,26 +1516,36 @@ background-color: #555;
 			border-radius: 25px;
 			position: relative;
 			// padding: 15px 10px;
-			min-height: 150px;
+			width: 100%;
+			min-height: 250px;
 			display: inline-block;
+			background-size: cover;
+			background-repeat: no-repeat;
 
-			img{
+			&::before{
+				border-radius: 25px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin: 0 auto;
 				width: 100%;
+				opacity: 0;
+				visibility: hidden;
+				height: 100%;
+				z-index: 10;
+				content: "";
+				background-color: rgba(0,0,0,0.55);
 			}
+
+			&:hover > h3, &:hover::before{
+		    	opacity: 1;
+		    	visibility: visible;
+		    }
 
 
 			h3{
 
-				::before{
-					position: absolute;
-					top: 0;
-					left: 0;
-					margin: 0 auto;
-					width: 100%;
-					height: 100%;
-					background-color: rgba(0,0,0,0.55);
-				}
-
+				z-index: 15;
 				margin-top: 25px;
 				position: absolute;
 				bottom: 10px;
@@ -1540,12 +1557,8 @@ background-color: #555;
 			    font-weight: 400;
 			    visibility: hidden;
 			    opacity: 0;
-			    transition:all 0.2s ease;
-			
-			    &:hover{
-			    	opacity: 1;
-			    	visibility: visible;
-			    }
+			    transition:all 0.2s ease;		
+			    
 			}
 		}
 	}
@@ -2159,6 +2172,18 @@ background-color: #555;
 			    	-webkit-transform: translateY(-3px);
 			    }
 			}
+
+			input.bigInput{
+				font-family: 'FuturaPT Book';
+			    font-size: 18px;
+			    color: #fff;
+			    border-radius: 30px;
+			    border: 2px solid $yellow-bg-color;
+			    background: transparent;
+			    width: 250px;
+			    text-transform: capitalize;
+			    letter-spacing: 0.3px;
+			}
 		}
     }
 }
@@ -2328,5 +2353,9 @@ background-color: #555;
 
 	.phone-top, .free-quote{
 		display: none !important;
+	}
+
+	.meet-the-team .team-list .member-box{
+		min-height: 400px;
 	}
 }

@@ -172,40 +172,40 @@
     			</div>
 		        <div class="row team-list">
 		        	<div class="col-md-4 col-sm-12">
-		        		<div class="member-box">
-		        			<img src="./images/team/ben-weller.jpg"/>
+		        		<div class="member-box" style="background-image:url(./images/team/ben-weller.jpg);">
+		        			<!-- <img src="./images/team/ben-weller.jpg"/> -->
 		        			<h3>Ben Weller</h3>
 		        		</div>
 		        	</div>
 		        	<div class="col-md-4 col-sm-12">
-		        		<div class="member-box">
-		        			<img src="./images/team/heather-campbell.jpg"/>
+		        		<div class="member-box" style="background-image:url(./images/team/heather-campbell.jpg);">
+		        			<!-- <img src="./images/team/heather-campbell.jpg"/> -->
 		        			<h3>Heather Campbell</h3>
 		        		</div>
 		        	</div>
 		        	<div class="col-md-4 col-sm-12">
-		        		<div class="member-box">
-		        			<img src="./images/team/karol-kolecava.jpg"/>
+		        		<div class="member-box" style="background-image: url(./images/team/karol-kolecava.jpg);">
+		        			<!-- <img src="./images/team/karol-kolecava.jpg"/> -->
 		        			<h3>Karl Kolecava</h3>
 		        		</div>
 		        	</div>
 		        </div>
 		        <div class="row team-list">
 		        	<div class="col-md-4 col-sm-12">
-		        		<div class="member-box">
-		        			<img src="./images/team/user-alt.gif"/>
+		        		<div class="member-box" style="background-image: url(./images/team/tom-ryan-1.jpg);">
+		        			<!-- <img src="./images/team/tom-ryan-1.jpg"/> -->
 		        			<h3>Tom Ryan</h3>
 		        		</div>
 		        	</div>
 		        	<div class="col-md-4 col-sm-12">
-		        		<div class="member-box">
-		        			<img src="./images/team/user-alt.gif"/>
+		        		<div class="member-box" style="background-image: url(./images/team/adam-marshall-1.jpg)">
+		        			<!-- <img src="./images/team/adam-marshall-1.jpg"/> -->
 		        			<h3>Adam Marshall</h3>
 		        		</div>
 		        	</div>
 		        	<div class="col-md-4 col-sm-12">
-		        		<div class="member-box">
-		        			<img src="./images/team/user-alt.gif"/>
+		        		<div class="member-box" style="background-image: url(./images/team/joe-simpkins.jpg);">
+		        			<!-- <img src="./images/team/joe-simpkins.jpg"/> -->
 		        			<h3>Joe Simpkins</h3>
 		        		</div>
 		        	</div>

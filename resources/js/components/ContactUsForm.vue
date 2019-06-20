@@ -9,7 +9,7 @@
 					<div class="form-group"><input type="email" v-bind:disabled="isLocked" v-model="email"  name="email" placeholder="Email*"></div>
 					<div class="form-group"><input type="text" v-bind:disabled="isLocked" v-model="phone_number" name="phone_number" placeholder="Phone Number"/></div>
 					<div class="form-group"><textarea rows="5" cols="15" v-bind:disabled="isLocked" name="more_info" v-model="more_info" placeholder="Talk about your project*"></textarea></div>
-					<div class="form-group"><input type="submit" value="Send"></div>
+					<div class="form-group"><input type="submit" v-bind:class="{ bigInput : isDefault == true }" v-bind:value="( isDefault ? 'Contact Our Team' : 'Send')"></div>
 					<div v-if="errors.length">
 						<h4 class="error-label">Please review your details below the ff:</h4>
 						<ul class="error-list">

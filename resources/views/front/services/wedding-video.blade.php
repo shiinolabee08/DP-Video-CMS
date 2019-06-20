@@ -221,7 +221,7 @@
 	</div>
 </div>
 
-<div class="container-fluid gray-bg-container">
+<!-- <div class="container-fluid gray-bg-container">
 	<div class="container">
 		<div class="row">
             <div class="col-md-12">
@@ -234,7 +234,7 @@
         	<case-studies-by-category-widget v-bind:type="12"></case-studies-by-category-widget>
         </div>
 	</div>
-</div>
+</div> -->
 
 <div class="container-fluid inner-page-header-container">
 	<div class="container">

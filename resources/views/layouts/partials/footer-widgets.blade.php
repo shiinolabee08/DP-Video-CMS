@@ -82,6 +82,9 @@
 			</div>
 		</div>
 	</section>
+	<section class="faq">
+		
+	</section>
 	<div class="copyright">
 		<div class="container">
 			<div class="row">
