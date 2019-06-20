@@ -24,7 +24,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="info">
 						<h2>Live Chat</h2>
-						<a href="javascript:void(0);"><i class="fa fa-comments"></i> Click here to live chat</a>
+						<a href="javascript:void(0);" v-on:click="showChatbox=!showChatbox"><i class="fa fa-comments"></i> Click here to live chat</a>
 						<!-- onclick="LC_API.open_chat_window();return false" -->
 					</div>
 				</div>

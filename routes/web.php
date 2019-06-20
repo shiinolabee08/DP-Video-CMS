@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'FrontController@index');
+Route::get('/{url}', 'FrontController@index');
 
 Auth::routes();
 
@@ -21,7 +21,11 @@ Route::get('/admin', 'HomeController@index');
 
 //Front Pages
 Route::get('/{url}', function($url){
-    return view('front/' . $url, [ 'pageName' => ucwords(str_replace('-', ' ', $url)), 'slug' => $url ]);
+    if( view()->exists('front/' . $url) ) {
+        return view('front/' . $url, [ 'pageName' => ucwords(str_replace('-', ' ', $url)), 'slug' => $url ]);
+    } else {
+        return response()->view('errors.' . '404', [], 404);
+    }
 });
 
 //Route for Case Studies individual pages
