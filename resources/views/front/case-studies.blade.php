@@ -19,7 +19,7 @@
 
 <div class="container-fluid inner-page-header-container">
     <div class="container">
-        <case-studies-filter-post-widget></case-studies-filter-post-widget>
+        <case-studies-filter-post-widget v-bind:show-categories="true" v-bind:show-all-posts="true"></case-studies-filter-post-widget>
     </div>
 </div>
 

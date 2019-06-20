@@ -29,6 +29,9 @@
 
 					Osborne & Sons wanted to create a promotional video to raise awareness of the fishmonger side of the business and to advertise the products within their cockle sheds. They wanted to distribute the video across social media platforms and to feature on the home-page of their existing website. Focusing primarily on the staff and produce, Osborne & Sons also wanted to touch on the heritage side of the business and to share some of the history of the company.</p>
 				</div>
+				<div class="custom-iframe embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" height="550" src="https://www.youtube.com/embed/ASEoKLPkVlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</div>
 		</div>
 		<div class="row" style="margin:20px 0px;">
@@ -46,8 +49,8 @@
 					<strong>Behind The Scenes With Our Crew</strong>
 
 					Capturing behind the scenes of our work is a great way to showcase how we do things here and provides great content for us to share with YOU! We were lucky enough to have Charlie, our work experience student, to join us on one of the shoots. Armed with a GoPro and a stills camera, Charlie followed us throughout the filming process. See his finished edit below!
-				</p>
-				</div>
+					</p>
+				</div>				
 			</div>
 		</div>
 	</div>
@@ -57,6 +60,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
+				<div class="custom-iframe embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FOsbornesFish%2Fvideos%2F1993880857598785%2F&amp;show_text=1&amp;width=720" height="750" scrolling="no" frameborder="0" allowtransparency="false" allow="encrypted-media" allowfullscreen="true"></iframe>
+				</div>
 				<div class="title-heading yellow-text text-left has-primary-border-left">
 					<h1>The Finished Piece</h1>
 				</div>
@@ -72,6 +78,19 @@
 			</div>
 		</div>
 	</div>	
+</div>
+
+<div class="container-fluid related-case-studies inner-page-header-container">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title-heading text-center has-primary-border-center">
+					<h1>Related Case Studies</h1>
+				</div>
+				<case-studies-filter-post-widget v-bind:show-categories="false" v-bind:selected-post="26"></case-studies-filter-post-widget>
+			</div>
+		</div>
+	</div>
 </div>
 
 @endsection

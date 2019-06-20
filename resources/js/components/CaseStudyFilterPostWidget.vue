@@ -1,7 +1,7 @@
 <template>
 	<div class="case-study-categories-list">
 		<div class="container">
-			<div class="row">
+			<div class="row" v-if="showCategories">
 				<div class="col-md-2"></div>
 				<div class="col-md-8 text-center">
 					<ul v-if="categories.length">
@@ -20,7 +20,7 @@
 				<!-- <div class="col-md-2 col-sm-12"></div> -->
 				<div class="col-md-11 offset-md-1 col-sm-12">
 					<div class="row">
-						<div class="col-md-4 col-sm-12 result-item" v-for="item in resultData">
+						<div class="col-md-4 col-sm-12 result-item" v-for="item in filteredResults">
 							<div class="item-backgroud-overlay" v-bind:style="{ backgroundImage : 'url(/uploads/case-studies/' + item.feature_image +')' }"></div>
 							<div class="inner-content">
 								<div class="title-heading">
@@ -42,7 +42,7 @@
 </template>
 <script>
 	export default{
-
+		props : [ 'showCategories', 'selectedPost', 'showAllPosts' ],
 		data() {
 			return {
 				categories : [],
@@ -67,6 +67,24 @@
 		filters:{
 			trimCategory( category ){
 				return category.replace('Case Study -', '');
+			},
+		},
+
+		computed : {
+
+			filteredResults(){
+				let app = this;
+
+				return app.resultData.filter( data => {
+					console.log(data);
+					if ( app.showAllPosts ){
+						return data;
+					} else if( app.selectedPost !== data.id ) {
+						return data;
+					} else{
+						return;
+					}
+				})
 			},
 		},
 

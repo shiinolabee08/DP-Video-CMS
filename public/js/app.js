@@ -1961,6 +1961,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['showCategories', 'selectedPost', 'showAllPosts'],
   data: function data() {
     return {
       categories: [],
@@ -1978,6 +1979,22 @@ __webpack_require__.r(__webpack_exports__);
   filters: {
     trimCategory: function trimCategory(category) {
       return category.replace('Case Study -', '');
+    }
+  },
+  computed: {
+    filteredResults: function filteredResults() {
+      var app = this;
+      return app.resultData.filter(function (data) {
+        console.log(data);
+
+        if (app.showAllPosts) {
+          return data;
+        } else if (app.selectedPost !== data.id) {
+          return data;
+        } else {
+          return;
+        }
+      });
     }
   },
   methods: {
@@ -49896,57 +49913,61 @@ var render = function() {
       "div",
       { staticClass: "container" },
       [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-2" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-8 text-center" }, [
-            _vm.categories.length
-              ? _c(
-                  "ul",
-                  [
-                    _c(
-                      "li",
-                      {
-                        class: { active: _vm.selectedCategory == 0 },
-                        on: {
-                          click: function($event) {
-                            return _vm.filter(0)
-                          }
-                        }
-                      },
-                      [_vm._v("All")]
-                    ),
-                    _vm._v(" "),
-                    _vm._l(_vm.categories, function(category) {
-                      return _c(
-                        "li",
-                        {
-                          class: {
-                            active: _vm.selectedCategory == category.id
-                          },
-                          on: {
-                            click: function($event) {
-                              return _vm.filter(category.id)
+        _vm.showCategories
+          ? _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-2" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-8 text-center" }, [
+                _vm.categories.length
+                  ? _c(
+                      "ul",
+                      [
+                        _c(
+                          "li",
+                          {
+                            class: { active: _vm.selectedCategory == 0 },
+                            on: {
+                              click: function($event) {
+                                return _vm.filter(0)
+                              }
                             }
-                          }
-                        },
-                        [
-                          _vm._v(
-                            "\n\t\t\t\t\t\t" +
-                              _vm._s(_vm._f("trimCategory")(category.title)) +
-                              "\n\t\t\t\t\t"
+                          },
+                          [_vm._v("All")]
+                        ),
+                        _vm._v(" "),
+                        _vm._l(_vm.categories, function(category) {
+                          return _c(
+                            "li",
+                            {
+                              class: {
+                                active: _vm.selectedCategory == category.id
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.filter(category.id)
+                                }
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t" +
+                                  _vm._s(
+                                    _vm._f("trimCategory")(category.title)
+                                  ) +
+                                  "\n\t\t\t\t\t"
+                              )
+                            ]
                           )
-                        ]
-                      )
-                    })
-                  ],
-                  2
-                )
-              : _vm._e()
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-2" })
-        ]),
+                        })
+                      ],
+                      2
+                    )
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" })
+            ])
+          : _vm._e(),
         _vm._v(" "),
         _c(
           "transition",
@@ -49961,7 +49982,7 @@ var render = function() {
                       _c(
                         "div",
                         { staticClass: "row" },
-                        _vm._l(_vm.resultData, function(item) {
+                        _vm._l(_vm.filteredResults, function(item) {
                           return _c(
                             "div",
                             { staticClass: "col-md-4 col-sm-12 result-item" },
