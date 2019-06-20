@@ -58,7 +58,7 @@ Vue.component('image-slider', require('./components/ImageSlider.vue').default);
 Vue.component('contact-form-widget', require('./components/ContactUsForm.vue').default);
 Vue.component('chat-messages', require('./components/ChatMessages.vue').default);
 Vue.component('chat-form', require('./components/ChatForm.vue').default);
-
+Vue.component('case-studies-filter-post-widget', require('./components/CaseStudyFilterPostWidget.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

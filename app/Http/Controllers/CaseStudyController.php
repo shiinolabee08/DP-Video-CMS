@@ -14,7 +14,7 @@ class CaseStudyController extends Controller
     
     protected $model_class_names = [ 'case-study', 'case-studies' ];
 
-    protected $fields_to_update = [ 'title', 'youtube_video_url', 'published' ];
+    protected $fields_to_update = [ 'title', 'post_slug', 'youtube_video_url', 'published' ];
 
     protected $fields_to_validate_on_update = [ 'title'  => 'required|max:100' ];
 

@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/case-study-categories/{type}', 'FrontController@fetchData');
 Route::get('/case-studies/{category}', 'FrontController@fetchByCategory');
-Route::get('/case-studies/filter-posts', 'FrontController@fetchCaseStudiesPosts');
+Route::get('/case-studies-posts', 'FrontController@fetchCaseStudiesPosts');
 Route::get('/contact-form/{id}', 'FrontController@getContactForm');
 Route::post('/contact-us', 'FrontController@sendContactEmail');
 

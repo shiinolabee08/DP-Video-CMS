@@ -17,8 +17,10 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    
+<div class="container-fluid inner-page-header-container">
+    <div class="container">
+        <case-studies-filter-post-widget></case-studies-filter-post-widget>
+    </div>
 </div>
 
 <div class="container-fluid convert-your-customers" style="background-image: url('./images/DSC08504.jpg');">

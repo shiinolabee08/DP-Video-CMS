@@ -41,7 +41,11 @@ class FrontController
         $records = CaseStudy::with('categories')
                     ->where('published', true)
                     ->whereHas('categories', function($q) use ($category){
-                        $q->where('case_study_category_id', '=', $category); 
+                        if ( $category > 0 ){
+                            $q->where('case_study_category_id', '=', $category); 
+                        } else {
+                            $q->whereIn('case_study_category_id', [12, 13]);
+                        }
                     })
                     ->get();
 
@@ -52,7 +56,7 @@ class FrontController
     {
         $categories = CaseStudyCategory::whereIn('id', [12, 13])->get();
         $case_studies = CaseStudy::with('categories')->where('published', true)
-                        ->whereHas('categories', function($q) use ($category){
+                        ->whereHas('categories', function($q){
                             $q->whereIn('case_study_category_id', [12, 13]); 
                         })
                         ->get();

@@ -1909,6 +1909,93 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      categories: [],
+      selectedCategory: 0,
+      resultData: []
+    };
+  },
+  mounted: function mounted() {
+    var app = this;
+    axios.get('/api/case-studies-posts').then(function (response) {
+      app.categories = response.data.categories;
+      app.resultData = response.data.case_studies;
+    })["catch"](function (response) {});
+  },
+  filters: {
+    trimCategory: function trimCategory(category) {
+      return category.replace('Case Study -', '');
+    }
+  },
+  methods: {
+    filter: function filter(type) {
+      var app = this;
+      app.selectedCategory = type;
+      app.resultData = [];
+      axios.get('/api/case-studies/' + type).then(function (response) {
+        app.resultData = response.data.data;
+      })["catch"](function (response) {
+        console.log(response);
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CaseStudyItem.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CaseStudyItem.vue?vue&type=script&lang=js& ***!
@@ -49789,6 +49876,146 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=template&id=324738da&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=template&id=324738da& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "case-study-categories-list" }, [
+    _c(
+      "div",
+      { staticClass: "container" },
+      [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-2" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-8 text-center" }, [
+            _vm.categories.length
+              ? _c(
+                  "ul",
+                  [
+                    _c(
+                      "li",
+                      {
+                        class: { active: _vm.selectedCategory == 0 },
+                        on: {
+                          click: function($event) {
+                            return _vm.filter(0)
+                          }
+                        }
+                      },
+                      [_vm._v("All")]
+                    ),
+                    _vm._v(" "),
+                    _vm._l(_vm.categories, function(category) {
+                      return _c(
+                        "li",
+                        {
+                          class: {
+                            active: _vm.selectedCategory == category.id
+                          },
+                          on: {
+                            click: function($event) {
+                              return _vm.filter(category.id)
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n\t\t\t\t\t\t" +
+                              _vm._s(_vm._f("trimCategory")(category.title)) +
+                              "\n\t\t\t\t\t"
+                          )
+                        ]
+                      )
+                    })
+                  ],
+                  2
+                )
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-2" })
+        ]),
+        _vm._v(" "),
+        _c(
+          "transition",
+          { attrs: { name: "fade", duration: { enter: 500, leave: 800 } } },
+          [
+            _vm.resultData.length
+              ? _c("div", { staticClass: "row results-data-grid" }, [
+                  _c(
+                    "div",
+                    { staticClass: "col-md-11 offset-md-1 col-sm-12" },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "row" },
+                        _vm._l(_vm.resultData, function(item) {
+                          return _c(
+                            "div",
+                            { staticClass: "col-md-4 col-sm-12 result-item" },
+                            [
+                              _c("div", {
+                                staticClass: "item-backgroud-overlay",
+                                style: {
+                                  backgroundImage:
+                                    "url(/uploads/case-studies/" +
+                                    item.feature_image +
+                                    ")"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "inner-content" }, [
+                                _c("div", { staticClass: "title-heading" }, [
+                                  _c("h2", [_vm._v(_vm._s(item.title))])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "hyperlink" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    attrs: {
+                                      href: "/case-studies/" + item.post_slug
+                                    }
+                                  },
+                                  [_vm._v("View Case Study")]
+                                )
+                              ])
+                            ]
+                          )
+                        }),
+                        0
+                      )
+                    ]
+                  )
+                ])
+              : _vm._e()
+          ]
+        )
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CaseStudyItem.vue?vue&type=template&id=85785e5e&":
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CaseStudyItem.vue?vue&type=template&id=85785e5e& ***!
@@ -50252,7 +50479,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "case-study-categies-list" }, [
+  return _c("div", { staticClass: "case-study-categories-list" }, [
     _c(
       "div",
       { staticClass: "container" },
@@ -70385,6 +70612,7 @@ Vue.component('image-slider', __webpack_require__(/*! ./components/ImageSlider.v
 Vue.component('contact-form-widget', __webpack_require__(/*! ./components/ContactUsForm.vue */ "./resources/js/components/ContactUsForm.vue")["default"]);
 Vue.component('chat-messages', __webpack_require__(/*! ./components/ChatMessages.vue */ "./resources/js/components/ChatMessages.vue")["default"]);
 Vue.component('chat-form', __webpack_require__(/*! ./components/ChatForm.vue */ "./resources/js/components/ChatForm.vue")["default"]);
+Vue.component('case-studies-filter-post-widget', __webpack_require__(/*! ./components/CaseStudyFilterPostWidget.vue */ "./resources/js/components/CaseStudyFilterPostWidget.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -70697,6 +70925,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CaseStudiesSlider_vue_vue_type_template_id_cd05c086___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CaseStudiesSlider_vue_vue_type_template_id_cd05c086___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/CaseStudyFilterPostWidget.vue":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/CaseStudyFilterPostWidget.vue ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CaseStudyFilterPostWidget_vue_vue_type_template_id_324738da___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CaseStudyFilterPostWidget.vue?vue&type=template&id=324738da& */ "./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=template&id=324738da&");
+/* harmony import */ var _CaseStudyFilterPostWidget_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CaseStudyFilterPostWidget.vue?vue&type=script&lang=js& */ "./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CaseStudyFilterPostWidget_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CaseStudyFilterPostWidget_vue_vue_type_template_id_324738da___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CaseStudyFilterPostWidget_vue_vue_type_template_id_324738da___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/CaseStudyFilterPostWidget.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CaseStudyFilterPostWidget_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CaseStudyFilterPostWidget.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CaseStudyFilterPostWidget_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=template&id=324738da&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=template&id=324738da& ***!
+  \**********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CaseStudyFilterPostWidget_vue_vue_type_template_id_324738da___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CaseStudyFilterPostWidget.vue?vue&type=template&id=324738da& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CaseStudyFilterPostWidget.vue?vue&type=template&id=324738da&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CaseStudyFilterPostWidget_vue_vue_type_template_id_324738da___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CaseStudyFilterPostWidget_vue_vue_type_template_id_324738da___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

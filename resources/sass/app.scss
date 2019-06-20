@@ -1430,6 +1430,25 @@ background-color: #555;
 
 }
 
+.case-study-post{
+	.title-heading{
+		h1{
+			text-transform: capitalize;
+			font-size: 60px;
+			font-weight: 700;
+			line-height: 74px;
+			font-family: 'FuturaPT Heavy';
+		}
+
+		h3{
+			color: $yellow-bg-color;
+		    text-transform: uppercase;
+		    font-family: "FuturaPT Book";
+		    font-size: 24px;
+		}
+	}
+}
+
 .gray-bg-container{
 	padding: 100px 0px;
 
@@ -1774,7 +1793,7 @@ background-color: #555;
 
 }
 
-.case-study-categies-list{
+.case-study-categories-list{
 	position: relative;
 
 	ul{
@@ -1795,6 +1814,7 @@ background-color: #555;
 			border-radius: 30px;
 			display: inline-block;
 			cursor: pointer;
+			font-weight: 600;
 
 			&:hover{
 			    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
@@ -1830,7 +1850,8 @@ background-color: #555;
 				z-index: 10;
 			}
 
-			&:hover::before, &:hover > .inner-content > .title-heading > h2, &:hover > .inner-content > .button button{
+			&:hover::before, &:hover > .inner-content > .title-heading > h2, 
+			&:hover > .inner-content > .button button, &:hover > .hyperlink{
 				opacity: 1;
 				visibility: visible;
 			}
@@ -1888,6 +1909,34 @@ background-color: #555;
 						visibility: hidden;
 						color: #fff;
 					}	
+				}
+
+			}
+
+			.hyperlink{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				opacity: 0;
+				visibility: hidden;
+				transition:all 0.2s ease;
+				z-index: 20;
+
+				a{
+					background-color: $yellow-bg-color;
+					color: #fff;
+					font-family: 'FuturaPT Medium';
+				    width: 100%;
+				    display: block;
+				    padding: 10px;
+				    text-align: center;
+				    font-size: 17px;
+
+				    &:hover{
+				    	text-decoration: none;
+				    }
 				}
 			}
 

@@ -8,19 +8,30 @@
     <!-- Meta Tags for SEO -->
     <meta property='og:site_name' content='Digital Pie Video'/>
     <meta property='og:url' content='{{ url()->current() }}'/>
-    <meta property='og:title' content='{{ $pageName }}'/><meta property='og:type' content='article'/>
+    <meta property='og:title' content='{{ $pageName }} | Digital Pie Video'/>
+    <meta property='og:type' content='article'/>
+    <meta name="title" content="{{ $pageName }} | Digital Pie Video"/>
+    <meta name="description" content="{{$pageName}}">
+
+    <link rel="canonical" href="{{ url('/' . $slug)}}" />
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Digital Pie Video</title>
+    <title> {{ $pageName }} | Digital Pie Video</title>
 
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <noscript>
+            <link
+        rel="stylesheet"
+        href='https://fonts.googleapis.com/css?family=Roboto:400,600|Material+Icons'>
+    </noscript>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" onload="this.rel = 'stylesheet'" rel="preload" as="style">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -29,7 +40,7 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" onload="this.rel = 'stylesheet'" rel="preload" as="style">
   
 </head>
 <body>

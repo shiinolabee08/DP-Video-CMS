@@ -12033,6 +12033,21 @@ header#top .free-quote a:hover {
   margin-right: 5px;
 }
 
+.case-study-post .title-heading h1 {
+  text-transform: capitalize;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 74px;
+  font-family: "FuturaPT Heavy";
+}
+
+.case-study-post .title-heading h3 {
+  color: #e3c00e;
+  text-transform: uppercase;
+  font-family: "FuturaPT Book";
+  font-size: 24px;
+}
+
 .gray-bg-container {
   padding: 100px 0px;
 }
@@ -12350,17 +12365,17 @@ header#top .free-quote a:hover {
   margin-bottom: 15px;
 }
 
-.case-study-categies-list {
+.case-study-categories-list {
   position: relative;
 }
 
-.case-study-categies-list ul {
+.case-study-categories-list ul {
   list-style-type: none;
   padding: 0px 0px;
   margin: 0px auto;
 }
 
-.case-study-categies-list ul li {
+.case-study-categories-list ul li {
   list-style-type: none;
   padding: 5px 20px;
   color: #e3c00e;
@@ -12373,29 +12388,30 @@ header#top .free-quote a:hover {
   border-radius: 30px;
   display: inline-block;
   cursor: pointer;
+  font-weight: 600;
 }
 
-.case-study-categies-list ul li:hover {
+.case-study-categories-list ul li:hover {
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.13);
 }
 
-.case-study-categies-list ul li.active {
+.case-study-categories-list ul li.active {
   background-color: #e3c00e;
   color: #fff;
 }
 
-.case-study-categies-list .results-data-grid {
+.case-study-categories-list .results-data-grid {
   position: relative;
   margin: 50px auto;
 }
 
-.case-study-categies-list .results-data-grid .result-item {
+.case-study-categories-list .results-data-grid .result-item {
   position: relative;
   min-height: 180px;
   padding: 10px;
 }
 
-.case-study-categies-list .results-data-grid .result-item::before {
+.case-study-categories-list .results-data-grid .result-item::before {
   position: absolute;
   content: "";
   background-color: rgba(0, 0, 0, 0.6);
@@ -12409,14 +12425,15 @@ header#top .free-quote a:hover {
   z-index: 10;
 }
 
-.case-study-categies-list .results-data-grid .result-item:hover::before,
-.case-study-categies-list .results-data-grid .result-item:hover > .inner-content > .title-heading > h2,
-.case-study-categies-list .results-data-grid .result-item:hover > .inner-content > .button button {
+.case-study-categories-list .results-data-grid .result-item:hover::before,
+.case-study-categories-list .results-data-grid .result-item:hover > .inner-content > .title-heading > h2,
+.case-study-categories-list .results-data-grid .result-item:hover > .inner-content > .button button,
+.case-study-categories-list .results-data-grid .result-item:hover > .hyperlink {
   opacity: 1;
   visibility: visible;
 }
 
-.case-study-categies-list .results-data-grid .result-item .item-backgroud-overlay {
+.case-study-categories-list .results-data-grid .result-item .item-backgroud-overlay {
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -12428,12 +12445,12 @@ header#top .free-quote a:hover {
   display: block;
 }
 
-.case-study-categies-list .results-data-grid .result-item .inner-content {
+.case-study-categories-list .results-data-grid .result-item .inner-content {
   position: relative;
   z-index: 12;
 }
 
-.case-study-categies-list .results-data-grid .result-item .inner-content .title-heading h2 {
+.case-study-categories-list .results-data-grid .result-item .inner-content .title-heading h2 {
   font-family: "FuturaPT Demi";
   color: #fff;
   font-size: 23px;
@@ -12446,13 +12463,13 @@ header#top .free-quote a:hover {
   transition: all 0.2s ease;
 }
 
-.case-study-categies-list .results-data-grid .result-item .inner-content .button {
+.case-study-categories-list .results-data-grid .result-item .inner-content .button {
   position: relative;
   text-align: center;
   margin: 25px auto 0px;
 }
 
-.case-study-categies-list .results-data-grid .result-item .inner-content .button button {
+.case-study-categories-list .results-data-grid .result-item .inner-content .button button {
   transition: all 0.2s ease;
   font-family: "FuturaPT Medium";
   font-size: 17px;
@@ -12466,6 +12483,33 @@ header#top .free-quote a:hover {
   opacity: 0;
   visibility: hidden;
   color: #fff;
+}
+
+.case-study-categories-list .results-data-grid .result-item .hyperlink {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.case-study-categories-list .results-data-grid .result-item .hyperlink a {
+  background-color: #e3c00e;
+  color: #fff;
+  font-family: "FuturaPT Medium";
+  width: 100%;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.case-study-categories-list .results-data-grid .result-item .hyperlink a:hover {
+  text-decoration: none;
 }
 
 .testimonial-boxes {

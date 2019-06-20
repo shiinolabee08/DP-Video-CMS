@@ -11,7 +11,11 @@
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="name">Title</label>
-                        <input type="text" class="form-control" value="{{$case_study->title}}" name="title">
+                        <input type="text" class="form-control" value="{{$case_study->title}}" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Post Slug</label>
+                        <input type="text" class="form-control" value="{{$case_study->post_slug}}" name="post_slug" placeholder="URL friendly name for your post">
                     </div>
                     <div class="feature-image">
                         <h4>Feature Image:</h4>

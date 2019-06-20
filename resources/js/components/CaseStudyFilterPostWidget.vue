@@ -1,12 +1,13 @@
 <template>
-	<div class="case-study-categories-list">		
+	<div class="case-study-categories-list">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2"></div>
 				<div class="col-md-8 text-center">
 					<ul v-if="categories.length">
+						<li v-on:click="filter(0);" v-bind:class="{ active: selectedCategory == 0 }">All</li>
 						<li v-on:click="filter(category.id)" v-bind:class="{ active: selectedCategory == category.id }" v-for="category in categories">
-							{{ category.title }}
+							{{ category.title | trimCategory }}
 						</li>
 					</ul>		
 				</div>
@@ -25,9 +26,9 @@
 								<div class="title-heading">
 									<h2>{{ item.title }}</h2>
 								</div>
-								<div class="button">
-									<button v-on:click="showVideo(item)" type="button">Watch Video</button>
-								</div>
+							</div>
+							<div class="hyperlink">
+								<a v-bind:href="'/case-studies/' + item.post_slug">View Case Study</a>
 							</div>
 						</div>
 					</div>
@@ -41,30 +42,36 @@
 </template>
 <script>
 	export default{
-		// props : [ 'options' ],
-		data(){
+
+		data() {
 			return {
-				options : null,
 				categories : [],
-				selectedCategory : 11,
+				selectedCategory : 0,
 				resultData : [],
 			}
 		},
 
 		mounted(){
-			var app = this;
+			let app = this;
 
-			axios.get('/api/case-study-categories/1')
+			axios.get('/api/case-studies-posts')
 				.then((response) => {
-					app.categories = response.data.data;
-					app.filter( 11 );
+					app.categories = response.data.categories;
+					app.resultData = response.data.case_studies;
 				})
-				.catch( (response) => {
-					console.log(response);
-				});
+				.catch((response) => {
+
+				})
 		},
 
-		methods : {
+		filters:{
+			trimCategory( category ){
+				return category.replace('Case Study -', '');
+			},
+		},
+
+		methods:{
+			
 			filter( type ){
 
 				var app = this;
@@ -80,17 +87,6 @@
 						console.log(response);
 					})
 			},
-
-			showVideo( record  ){
-				let videoUrl = record.youtube_video_url;
-				let title = record.title;
-
-				this.$modal.show('dialog', {
-					title: title,
-			        text: '<iframe width="100%" height="350" src="'+videoUrl+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>',			        
-		 	    });
-			}
 		}
-
 	}
 </script>

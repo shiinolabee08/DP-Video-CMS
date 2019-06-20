@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class CaseStudy extends Model
 {
     protected $table = 'case_studies';
-    protected $fillable = [ 'title', 'feature_image', 'youtube_video_url', 'published' ];
+    protected $fillable = [ 'title', 'post_slug', 'feature_image', 'youtube_video_url', 'published' ];
 
     public function categories()
     {

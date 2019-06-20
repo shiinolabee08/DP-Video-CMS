@@ -21,12 +21,12 @@ Route::get('/admin', 'HomeController@index');
 
 //Front Pages
 Route::get('/{url}', function($url){
-    return view('front/' . $url, [ 'pageName' => ucwords(str_replace('-', ' ', $url)) ]);
+    return view('front/' . $url, [ 'pageName' => ucwords(str_replace('-', ' ', $url)), 'slug' => $url ]);
 });
 
 //Route for Case Studies individual pages
 Route::get('/case-studies/{url}', function( $url ){
-    return view('front/case-studies/' . $url, [ 'pageName' => ucwords(str_replace('-', ' ', $url))  ]);
+    return view('front/case-studies/' . $url, [ 'pageName' => ucwords(str_replace('-', ' ', $url)), 'slug' => $url  ]);
 });
 
 Route::get('/services/{category}', function( $category ){

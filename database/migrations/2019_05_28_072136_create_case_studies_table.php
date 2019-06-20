@@ -16,6 +16,7 @@ class CreateCaseStudiesTable extends Migration
         Schema::create('case_studies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title')->nullable(false);
+            $table->string('post_slug')->nullable();
             $table->string('feature_image', 100)->nullable();
             $table->string('youtube_video_url', 100)->nullable();
             $table->boolean('published')->default(1);

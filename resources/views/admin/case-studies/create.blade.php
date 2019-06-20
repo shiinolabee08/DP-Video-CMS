@@ -10,7 +10,12 @@
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="name">Title</label>
-                    <input type="text" class="form-control" name="title">
+                    <input type="text" class="form-control" name="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Post Slug</label>
+                    <input type="text" class="form-control" name="post_slug" placeholder="URL friendly name for your post">
                 </div>
                 <div class="form-group">
                     <label for="name">Feature Image</label>
@@ -28,7 +33,7 @@
 
                 <div class="form-group">
                     <label>Category</label>
-                    <select class="form-control" multiple name="category_id[]">
+                    <select class="form-control" multiple name="category_id[]" required>
                         @foreach ($categories as $category)
                             <option value="{{$category->id}}">{{$category->title}}</option>
                         @endforeach
