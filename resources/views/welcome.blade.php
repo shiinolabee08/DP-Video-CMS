@@ -32,7 +32,7 @@
     <meta property='og:title' content='Home'/><meta property='og:type' content='article'/>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" onload="this.rel = 'stylesheet'" rel="preload" as="style">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
     <body>
         <!-- App -->
