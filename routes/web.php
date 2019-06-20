@@ -34,7 +34,7 @@ Route::get('/case-studies/{url}', function( $url ){
 });
 
 Route::get('/services/{category}', function( $category ){
-    return view('front/services/' . $category);
+    return view('front/services/' . $category, [ 'pageName' => ucwords(str_replace('-', ' ', $url)), 'slug' => $url  ]);
 });
 
 //Resource for Pages
