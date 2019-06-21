@@ -16,7 +16,7 @@ class FrontController
 {
     public function index()
     {
-        return view('welcome');
+        return view('welcome', [ 'slug' => '/' ]);
     }
 
     public function fetchData( $type = 1 )
