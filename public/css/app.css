@@ -3,7 +3,7 @@
 @font-face {
   font-family: "FuturaPT Demi";
   font-display: swap;
-  src: url(/fonts/FuturaPTDemi.otf?5b6575ccd521b96b68504700b10e3e66) format("opentype");
+  src: local("FuturaPT Demi"), url(/fonts/FuturaPTDemi.otf?5b6575ccd521b96b68504700b10e3e66) format("opentype");
 }
 
 @font-face {
@@ -11322,16 +11322,19 @@ header#top .free-quote a:hover {
   color: #fff;
 }
 
-.awards-carousel-slider {
+.awards-carousel-slider,
+.carousel-slider {
   padding: 100px 0px;
   background-color: #fff;
 }
 
-.awards-carousel-slider .owl-carousel .owl-item img {
+.awards-carousel-slider .owl-carousel .owl-item img,
+.carousel-slider .owl-carousel .owl-item img {
   margin: 0px auto;
 }
 
-.awards-carousel-slider .prev {
+.awards-carousel-slider .prev,
+.carousel-slider .prev {
   position: absolute;
   top: 0;
   left: -80px;
@@ -11341,11 +11344,13 @@ header#top .free-quote a:hover {
   cursor: pointer;
 }
 
-.awards-carousel-slider .prev:hover {
+.awards-carousel-slider .prev:hover,
+.carousel-slider .prev:hover {
   color: #fff;
 }
 
-.awards-carousel-slider .next {
+.awards-carousel-slider .next,
+.carousel-slider .next {
   position: absolute;
   top: 0;
   right: -80px;
@@ -11355,8 +11360,18 @@ header#top .free-quote a:hover {
   cursor: pointer;
 }
 
-.awards-carousel-slider .next:hover {
+.awards-carousel-slider .next:hover,
+.carousel-slider .next:hover {
   color: #fff;
+}
+
+.carousel-slider {
+  padding: 0px 0px;
+}
+
+.carousel-slider .prev,
+.carousel-slider .next {
+  top: 40%;
 }
 
 .spacer {

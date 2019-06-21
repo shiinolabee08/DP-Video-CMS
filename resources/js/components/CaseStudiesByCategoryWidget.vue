@@ -41,6 +41,20 @@
 				catch((response) => {
 					console.log(response);
 				})
+		},
+
+		methods:{
+			showVideo( record  ){
+				let videoUrl = record.youtube_video_url;
+				let title = record.title;
+
+				console.log(record);
+
+				this.$modal.show('dialog', {
+					title: title,
+			        text: '<iframe width="100%" height="350" src="'+videoUrl+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>',			        
+		 	    });
+			}
 		}
 	}
 </script>

@@ -53,6 +53,8 @@
 <body>
     <div id="app">
 
+        <v-dialog :width="850" :adaptive="true" :draggable="true" :pivotY="1" :height="500"></v-dialog>
+
         @include('layouts/partials/header-nav')
 
         <main class="main-content">

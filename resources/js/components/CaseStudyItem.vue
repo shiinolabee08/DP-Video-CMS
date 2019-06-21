@@ -4,7 +4,7 @@
 		<div class="inner-content">
 			<h1><img class="icon" v-bind:src="item.icon"/> {{ item.title }} </h1>
 			<p>{{ item.content }}</p>
-			<a href="javascript:void(0);">View Case Study</a>
+			<a v-bind:href="item.postUrl">View Case Study</a>
 		</div>	  	
 		<modal
 	</div>

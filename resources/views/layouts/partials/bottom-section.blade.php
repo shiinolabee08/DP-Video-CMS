@@ -31,23 +31,25 @@
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid consultancy">
-		<div class="container">
-			<div class="row">
-                <div class="col-md-12 col-sm-12 text-center">
-                    <div class="title-heading white-heading has-primary-border-center">
-                        <h1>Get Free Consultancy</h1>
-                        <h3>Say hi on live chat, give us a call or simply fill out the form below. We would love to get to know you and your project better.</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-            	<!-- Form Area -->
-				<contact-form-widget v-bind:id="2" v-bind:is-default="true"></contact-form-widget>
-				<!-- Form Area -->
-            </div>
+	@if($slug !== 'contact')
+		<div class="container-fluid consultancy">
+			<div class="container">
+				<div class="row">
+	                <div class="col-md-12 col-sm-12 text-center">
+	                    <div class="title-heading white-heading has-primary-border-center">
+	                        <h1>Get Free Consultancy</h1>
+	                        <h3>Say hi on live chat, give us a call or simply fill out the form below. We would love to get to know you and your project better.</h3>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="row">
+	            	<!-- Form Area -->
+					<contact-form-widget v-bind:id="2" v-bind:is-default="true"></contact-form-widget>
+					<!-- Form Area -->
+	            </div>
+			</div>
 		</div>
-	</div>
+	@endif
 	<!-- Work Together -->
 </section>
 <transition name="slide-up-down">

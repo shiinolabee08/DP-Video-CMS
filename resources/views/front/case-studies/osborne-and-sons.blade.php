@@ -18,6 +18,7 @@
 </div>
 
 <div class="container-fluid inner-page-header-container">
+	<carousel-slider v-bind:base-url="'../images/case-studies/posts'" v-bind:items="[ '/osborne/1.jpg', '/osborne/2.jpg', '/osborne/3.jpg', '/osborne/4.jpg', '/osborne/5.jpg', '/osborne/6.jpg' ]"></carousel-slider>
 	<div class="container">
 		<div class="row" style="margin:20px 0px;">
 			<div class="col-md-12">
@@ -87,7 +88,7 @@
 				<div class="title-heading text-center has-primary-border-center">
 					<h1>Related Case Studies</h1>
 				</div>
-				<case-studies-filter-post-widget v-bind:show-categories="false" v-bind:selected-post="70"></case-studies-filter-post-widget>
+				<case-studies-filter-post-widget v-bind:show-categories="false" v-bind:selected-post-slug="'osborne-and-sons'"></case-studies-filter-post-widget>
 			</div>
 		</div>
 	</div>

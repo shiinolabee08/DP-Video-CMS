@@ -18,6 +18,7 @@
 </div>
 
 <div class="container-fluid inner-page-header-container">
+	<carousel-slider v-bind:base-url="'../images/case-studies/posts'" v-bind:items="[ '/rotaflex/1.jpg', '/rotaflex/2.jpg', '/rotaflex/3.jpg', '/rotaflex/4.jpg', '/rotaflex/5.jpg', '/rotaflex/6.jpg', '/rotaflex/7.jpg', '/rotaflex/8.jpg' ]"></carousel-slider>
 	<div class="container">
 		<div class="row" style="margin:20px 0px;">
 			<div class="col-md-12">
@@ -107,7 +108,7 @@
 				<div class="title-heading text-center has-primary-border-center">
 					<h1>Related Case Studies</h1>
 				</div>
-				<case-studies-filter-post-widget v-bind:show-categories="false" v-bind:selected-post="69"></case-studies-filter-post-widget>
+				<case-studies-filter-post-widget v-bind:show-categories="false" v-bind:selected-post-slug="'rotaflex'"></case-studies-filter-post-widget>
 			</div>
 		</div>
 	</div>

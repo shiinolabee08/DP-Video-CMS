@@ -47,8 +47,8 @@
 			showCategories : {
 				type : Boolean,
 			},
-			selectedPost : {
-				type : Number,
+			selectedPostSlug : {
+				type : String,
 				default : ''
 			},
 			showAllPosts : {
@@ -91,7 +91,7 @@
 					console.log(data);
 					if ( app.showAllPosts ){
 						return data;
-					} else if( app.selectedPost !== data.id ) {
+					} else if( app.selectedPostSlug !== data.post_slug ) {
 						return data;
 					} else{
 						return;

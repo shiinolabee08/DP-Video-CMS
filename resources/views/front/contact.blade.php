@@ -1,4 +1,4 @@
-@extends('layouts.app-without-bottom-consultancy-form')
+@extends('layouts.app')
 
 @section('content')
 

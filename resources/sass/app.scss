@@ -2,7 +2,7 @@
 @font-face{
 	font-family: 'FuturaPT Demi';
 	font-display:swap;
-	src : url('../fonts/Futura/FuturaPTDemi.otf') format('opentype');
+	src : local('FuturaPT Demi'), url('../fonts/Futura/FuturaPTDemi.otf') format('opentype');
 }
 
 @font-face{
@@ -674,7 +674,7 @@ background-color: #555;
 	}
 }
 
-.awards-carousel-slider{
+.awards-carousel-slider, .carousel-slider{
 	padding: 100px 0px;
 	background-color: #fff;
 
@@ -709,6 +709,14 @@ background-color: #555;
 		&:hover{
 			color: #fff;
 		}
+	}
+}
+
+.carousel-slider{
+	padding:0px 0px;
+
+	.prev, .next{
+		top:40%;
 	}
 }
 
