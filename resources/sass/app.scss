@@ -2366,7 +2366,7 @@ background-color: #555;
 @media only screen and (max-width:768px) {
 
 	.mobile-only{
-		display: block;
+		display: flex;
 	}
 
 	.desktop-only{
@@ -2389,7 +2389,7 @@ background-color: #555;
 	}
 
 	.desktop-only{
-		display: block;
+		display: flex;
 	}
 }
 
