@@ -85,7 +85,7 @@
                     </div>
                     <div class="container-fluid camera-tools">
                         <div class="container">
-                            <div class="row">
+                            <div class="row desktop-only">
                                 <div class="col-md-3">
                                     <img src="/images/camoptions-nonanim.svg" width="150"/>
                                 </div>
@@ -96,14 +96,14 @@
                                     <img src="/images/camera-animated-looped-futura.svg" width="150"/>
                                 </div>
                             </div>
+                            <div class="row mobile-only">
+                                <div class="col-sm-12 text-center">
+                                    <img src="/images/camera-animated-looped-futura.svg" width="250"/>
+                                </div>
+                            </div>
                         </div>
                     </div>  
-                </video-bg>
-                <!-- <div class="video-background">                    
-                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                        <source src="{{url('/videos/dp-video-banner-video.mp4')}}" type="video/mp4">
-                    </video>
-                </div>   -->             
+                </video-bg>                           
             </div>
             <!-- Banner Area -->
 
@@ -124,7 +124,7 @@
                         </div>
                         <a href="{{ URL::to('/contact') }}" class="call-to-action">Let's Get Started</a>
                     </div>
-                        <div class="clearfix"></div>
+                        <!-- <div class="clearfix"></div> -->
                     <div class="col-md-6 flex-column">
                         <div class="embed-responsive embed-responsive-4by3">
                             <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/329367471" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> <!-- width="640" height="360" -->

@@ -103,7 +103,7 @@
 		                </div>
 		                <div class="divider"></div>
 		                <div class="chat-discuss">
-		                    <span>Want to discuss? <a href="javascript:void(0);">Live Chat Now</a></span><!-- onclick="LC_API.open_chat_window();return false" -->
+		                    <span>Want to discuss? <a href="javascript:void(0);" v-on:click="showChatbox=!showChatbox">Live Chat Now</a></span>
 		                </div>
 		            </div>
 		        </div>
@@ -131,7 +131,7 @@
 		                </div>
 		                <div class="divider"></div>
 		                <div class="chat-discuss">
-		                    <span>Want to discuss? <a href="javascript:void(0);">Live Chat Now</a></span><!-- onclick="LC_API.open_chat_window();return false" -->
+		                    <span>Want to discuss? <a href="javascript:void(0);" v-on:click="showChatbox=!showChatbox">Live Chat Now</a></span>
 		                </div>
 		            </div>
 		        </div>
@@ -159,7 +159,7 @@
 		                </div>
 		                <div class="divider"></div>
 		                <div class="chat-discuss">
-		                    <span>Want to discuss? <a href="javascript:void(0);">Live Chat Now</a></span>
+		                    <span>Want to discuss? <a href="javascript:void(0);" v-on:click="showChatbox=!showChatbox">Live Chat Now</a></span>
 		                </div>
 		            </div>
 		        </div>

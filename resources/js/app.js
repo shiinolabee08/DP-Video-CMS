@@ -19,17 +19,15 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-window.baseUrl = 'http://localhost:8000/';
-
 /*Google Map*/
-import * as VueGoogleMaps from "vue2-google-maps";
+// import * as VueGoogleMaps from "vue2-google-maps";
 
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: process.env.MIX_GOOGLE_MAP_API_KEY,
-    libraries: "places" // necessary for places input
-  }
-});
+// Vue.use(VueGoogleMaps, {
+//   load: {
+//     key: process.env.MIX_GOOGLE_MAP_API_KEY,
+//     libraries: "places" // necessary for places input
+//   }
+// });
 
 /*Video BG*/
 import VideoBg from 'vue-videobg'
@@ -80,7 +78,7 @@ const app = new Vue({
     },
 
     created() {
-        this.fetchMessages();        
+        // this.fetchMessages();        
 
         Echo.channel('chat')
             .listen('MessageSent', (e) => {
@@ -99,13 +97,18 @@ const app = new Vue({
 
             e.preventDefault();
 
+            let app = this;
+
             if ( this.subscribe_email.length) {
                 let email = this.subscribe_email;
 
                 axios.post('/api/subscribe/newsletter', { email : email })
                     .then((response)=>{
                         console.log(response);
-                        if ( response.data.status ) alert('Thank you for subscribing our Newsletter.');
+                        if ( response.data.status ){
+                          alert('Thank you for subscribing our Newsletter.');
+                          app.subscribe_email = '';  
+                        } 
                     })
             } else{
                 alert('Enter email to subscribe.');

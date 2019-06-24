@@ -10899,6 +10899,7 @@ header#top .free-quote a:hover {
   padding-top: 105px;
   text-align: left;
   height: auto;
+  width: 100%;
 }
 
 .banner-area .VideoBg .VideoBg__content {
@@ -10929,6 +10930,7 @@ header#top .free-quote a:hover {
   width: 150px !important;
   vertical-align: middle;
   position: relative;
+  display: inline-block;
 }
 
 .banner-area .VideoBg .content {
@@ -12872,6 +12874,10 @@ header#top .free-quote a:hover {
   padding-bottom: 30px;
 }
 
+.footer-wrapper .footer-widgets .footer-widget-item {
+  margin-bottom: 20px;
+}
+
 .footer-wrapper .footer-widgets h3 {
   text-transform: capitalize;
   font-family: "FuturaPT Demi";
@@ -12934,6 +12940,35 @@ header#top .free-quote a:hover {
   .video-background video {
     width: auto;
     height: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .VideoBg {
+    height: 840px !important;
+  }
+
+  .banner-area .VideoBg .content .title-heading h1 {
+    font-size: 40px;
+    line-height: 38px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
   }
 }
 

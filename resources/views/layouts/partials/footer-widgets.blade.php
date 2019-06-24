@@ -3,7 +3,7 @@
 		<div class="container-fluid flex-center">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3 col-sm-6 footer-widget-item">
 						<h3>Top Notch Services</h3>
 						<ul class="nav flex-column">
 						  <li class="nav-item">
@@ -29,7 +29,7 @@
 						  </li> -->
 						</ul>
 					</div>
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3 col-sm-6 footer-widget-item">
 						<h3>Packages</h3>
 						<ul class="nav flex-column">
 						  <li class="nav-item">
@@ -38,7 +38,7 @@
 						  </li>					  
 						</ul>
 					</div>
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3 col-sm-6 footer-widget-item">
 						<h3>Company</h3>
 						<ul class="nav flex-column">
 						  <li class="nav-item">
