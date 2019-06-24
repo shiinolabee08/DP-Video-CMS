@@ -16,7 +16,7 @@ class FrontController
 {
     public function index()
     {
-        return view('welcome', [ 'slug' => '/' ]);
+        return view('welcome')->with('slug', '/');
     }
 
     public function fetchData( $type = 1 )

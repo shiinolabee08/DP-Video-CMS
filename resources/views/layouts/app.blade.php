@@ -66,7 +66,7 @@
             @yield('content')
         </main>
 
-        @include('layouts/partials/bottom-section')
+        @include('layouts/partials/bottom-section', [ 'slug' => (strlen($slug) > 1 ? $slug : '/') ])
 
         @include('layouts/partials/footer-widgets')        
         
