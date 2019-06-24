@@ -1,5 +1,6 @@
 <section class="bottom-section">
 	<!-- Work Together -->
+	@if($slug !== 'contact')
 	<div class="container-fluid work-together">
 		<div class="container">
 			<div class="row">
@@ -31,7 +32,6 @@
 			</div>
 		</div>
 	</div>
-	@if($slug !== 'contact')
 		<div class="container-fluid consultancy">
 			<div class="container">
 				<div class="row">

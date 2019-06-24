@@ -9,7 +9,7 @@
             <div class="col-md-10 col-sm-12">
                 <div class="title-heading text-center has-primary-border-center">
                     <h1>Our Valued Clients Are Our Greatest Asset</h1>
-                    <h3>proud of our strong relationships with our clients with the key ingredient to our success being ease of communication. an award-winning video production company with expert, experienced and qualified employees for all services provided. We offer a full range of video production services.</h3>
+                    <h3>Proud of our strong relationships with our clients with the key ingredient to our success being ease of communication. An award-winning video production company with expert, experienced and qualified employees for all services provided. We offer a full range of video production services.</h3>
                 </div>
             </div>
             <div class="col-md-1 col-sm-12"><div class="spacer"></div></div>

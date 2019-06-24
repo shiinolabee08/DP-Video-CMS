@@ -45,7 +45,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="title-heading">
-                    <p>proud of our strong relationships with our clients with the key ingredient to our success being ease of communication. <br><strong>Contact us today on the phone, live chat or arrange a meeting.</strong></p>                   
+                    <p>Proud of our strong relationships with our clients with the key ingredient to our success being ease of communication. <br><strong>Contact us today on the phone, live chat or arrange a meeting.</strong></p>                   
                 </div>
             </div>
         </div>
