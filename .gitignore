@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/page-cache
+/public/uploads/*
 /public/css/app.css
 /public/js/app.js
 /storage/*.key
