@@ -68,7 +68,9 @@
             @yield('content')
         </main>
 
-        @include('layouts/partials/bottom-section')
+        @if( $pageName !== 'Contact' )
+            @include('layouts/partials/bottom-section')
+        @endif
 
         @include('layouts/partials/footer-widgets')        
         

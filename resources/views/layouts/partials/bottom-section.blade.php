@@ -1,6 +1,5 @@
 <section class="bottom-section">
 	<!-- Work Together -->
-	@if($pageName !== 'Contact')
 	<div class="container-fluid work-together">
 		<div class="container">
 			<div class="row">
@@ -49,7 +48,6 @@
 	            </div>
 			</div>
 		</div>
-	@endif
 	<!-- Work Together -->
 </section>
 <transition name="slide-up-down">
