@@ -14,6 +14,8 @@
             </div>
             <div class="col-md-1 col-sm-12"><div class="spacer"></div></div>
         </div>
+
+        <client-services-widget></client-services-widget>
     </div>
 </div>
 
