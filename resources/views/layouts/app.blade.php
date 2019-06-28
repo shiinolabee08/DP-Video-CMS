@@ -13,7 +13,7 @@
     <meta name="title" content="{{ $pageName }} | Digital Pie Video"/>
     <meta name="description" content="{{$pageName}}">
 
-    <link rel="canonical" href="{{ url('/' . $slug)}}" />
+    <link rel="canonical" href="{{ url()->current() }}" />
 
     <!-- Mapbox GL CSS -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='preload' as="style" onload="this.rel = 'stylesheet'" />
@@ -68,7 +68,7 @@
             @yield('content')
         </main>
 
-        @include('layouts/partials/bottom-section', [ 'slug' => (strlen($slug) > 1 ? $slug : '/') ])
+        @include('layouts/partials/bottom-section')
 
         @include('layouts/partials/footer-widgets')        
         

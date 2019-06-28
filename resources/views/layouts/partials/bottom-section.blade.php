@@ -1,6 +1,6 @@
 <section class="bottom-section">
 	<!-- Work Together -->
-	@if($slug !== 'contact')
+	@if($pageName !== 'Contact')
 	<div class="container-fluid work-together">
 		<div class="container">
 			<div class="row">
