@@ -22,7 +22,7 @@
         <div class="col-md-6">
             <div class="testimonial-box">
                 <div class="thumb">
-                    <img src="../images/placeholder_profile.jpg"/>
+                    <img style="width:138px" src="../images/testimonials/redone/premier.png"/>
                 </div>
                 <div class="content">
                     <h2>Digital Pie has helped increase our online visibility...</h2>
@@ -34,8 +34,8 @@
         </div>
         <div class="col-md-6">
             <div class="testimonial-box">
-                <div class="thumb">
-                    <img src="../images/placeholder_profile.jpg"/>
+                <div class="thumb svg">
+                    <img style="width:138px" src="../images/testimonials/redone/tubetech.svg"/>
                 </div>
                 <div class="content">
                     <h2>Highly recommend Digital Pie</h2>
@@ -50,7 +50,7 @@
         <div class="col-md-6">
             <div class="testimonial-box">
                 <div class="thumb">
-                    <img src="../images/placeholder_profile.jpg"/>
+                    <img style="width:138px" src="../images/testimonials/redone/kevinpt.png"/>
                 </div>
                 <div class="content">
                     <h2>The staff at Digital Pie are always there</h2>
@@ -62,8 +62,8 @@
         </div>
         <div class="col-md-6">
             <div class="testimonial-box">
-                <div class="thumb">
-                    <img src="../images/placeholder_profile.jpg"/>
+                <div class="thumb svg">
+                    <img style="width:138px" src="../images/testimonials/redone/palisade.svg"/>
                 </div>
                 <div class="content">
                     <h2>They consistently deliver to their promises</h2>
@@ -77,8 +77,8 @@
     <div class="row">
         <div class="col-md-6">
             <div class="testimonial-box">
-                <div class="thumb">
-                    <img src="../images/placeholder_profile.jpg"/>
+                <div class="thumb svg">
+                    <img style="width:138px" src="../images/testimonials/redone/ablestoke.svg"/>
                 </div>
                 <div class="content">
                     <h2>The team at Digital Pie provide an all round terrific service.</h2>
@@ -91,7 +91,7 @@
         <div class="col-md-6">
             <div class="testimonial-box">
                 <div class="thumb">
-                    <img src="../images/placeholder_profile.jpg"/>
+                    <img style="width:138px" src="../images/testimonials/redone/iod-logo.png"/>
                 </div>
                 <div class="content">
                     <h2>Always ready to push the boundaries</h2>
@@ -102,6 +102,9 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="container-fluid testimonials-view-more">
     <div class="row">
         <div class="col-md-3 col-sm-12"></div>
         <div class="col-md-6 col-sm-12 text-center">
