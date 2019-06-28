@@ -62,7 +62,7 @@
             <!-- Banner Area -->
             <div class="position-ref banner-area">   
 
-                <video-bg :sources="['{{url('/videos/dp-video-banner-video.mp4')}}']">
+                <video-bg :sources="['{{secure_url('/videos/dp-video-banner-video.mp4')}}']">
                   <!-- If you want to add content here, a slot is waiting! -->
                     <div class="container content">
                         <div class="row">

@@ -1972,7 +1972,11 @@ background-color: #555;
 //Testimonial Boxes
 .testimonial-boxes{
 	position: relative;
-	padding: 50px 35px;
+	padding: 50px 35px 20px;
+
+	.col-md-6 { // Make the testimonial boxes all the same height in a row.
+		display: flex;
+	}
 
 	.testimonial-box{
 	    display: flex;
@@ -1983,16 +1987,27 @@ background-color: #555;
 	    -webkit-box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.2);
 	    -moz-box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.2);
 	    box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.2);
+		flex-grow: 1;
 
 	    .thumb{
 	    	vertical-align: baseline;
     		font-family: inherit;
+			max-width: 138px;
+			max-height: 138px;
 
     		img{
     			width: auto;
     			height: auto;
     		}
 	    }
+
+		.thumb.svg { // Quick and easy way to center these non-box images vertically.
+			img {
+				position: relative;
+				top: 50%;
+				transform: translateY( -50% );
+			}
+		}
 
 	   	.content{
 	   		padding: 0px 25px;
@@ -2029,6 +2044,10 @@ background-color: #555;
 		    }
 	   	}
 	}
+}
+
+.testimonials-view-more {
+	padding: 10px 35px;
 }
 
 .social-links{
