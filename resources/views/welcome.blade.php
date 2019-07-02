@@ -69,7 +69,7 @@
                             <div class="col-md-7">
                                 <div class="title-heading">
                                     <h3>The Art of Videography</h3>
-                                    <h1>The To Stand Out From The Crowd Using Creative <br>Video Production</h1>
+                                    <h1>Time to Stand Out from the Crowd Using Creative <br>Video Production</h1>
                                 </div>
                             </div>
                             <div class="col-md-5"></div>
@@ -236,48 +236,6 @@
                 <awards-carousel-slider v-bind:home="true"></awards-carousel-slider>                    
             </div>        
             <!-- Awards Carousel Slider -->
-
-            <!-- Satisfied Customers,Videos Filmed, Projects Completed -->
-            <div class="container-fluid satisfied-videos-projects-completed" style="background-image: url('./images/P2050663-1.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-12"></div>
-                        <div class="col-md-8 col-sm-12 text-center">
-                            <div class="title-heading white-heading has-primary-border-center">
-                                <h1>Numbers That Move Mountains</h1>
-                                <h3>proud to have delivered the highest quality of video production and editing services globally to hundreds of satisfied and returning customers. Contact us today on the phone, live chat or arrange a meeting today!</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-12"><div class="spacer"></div></div>
-                    </div>
-                    <div class="row text-center items">
-                        <div class="col-md-4">
-                            <div class="item">
-                                <count-up v-bind:endval="500"></count-up>
-                                <h2>Satisfied Customers</h2>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="item">
-                                <count-up v-bind:endVal="500"></count-up>
-                                <h2>Videos Filmed</h2>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="item">
-                                <count-up v-bind:endVal="500"></count-up>
-                                <h2>Projects Completed</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row text-center white-heading">
-                        <div class="col-md-4 col-sm-12"></div>
-                        <div class="col-md-4 col-sm-12"><a href="{{ URL::to('/testimonials') }}" class="call-to-action">Read Client Testimonials</a></div>
-                        <div class="col-md-4 col-sm-12"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Satisfied Customers,Videos Filmed, Projects Completed -->
 
             <!-- Services Info -->
             <div class="container-fluid page-content packages">
