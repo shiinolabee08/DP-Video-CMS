@@ -85,12 +85,13 @@
             var map = new mapboxgl.Map({        
                 container: 'map', // container id
                 style: 'mapbox://styles/mapbox/light-v10',
-                center: [54.213861, -3.495718], // starting position,
+                center: [0.6859232, 51.5733951], // starting position,
+                zoom : 8
             });
              
             // Add zoom and rotation controls to the map.
             map.addControl(new mapboxgl.NavigationControl());
-            // map.addControl(new mapboxgl.GeolocateControl());
+            map.addControl(new mapboxgl.GeolocateControl());
 
             var geojson = {
                 "type": "FeatureCollection",
