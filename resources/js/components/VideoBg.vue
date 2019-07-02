@@ -3,7 +3,7 @@
     <video autoplay loop muted ref="video">
         <source v-for="source in sources" :src="source" :type="getMediaType(source)">
         <embed v-for="source in sources" :src="source" wmode="opaque"/>
-        <object width="1280" height="650" v-for="source in sources" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+        <object width="1280" height="650" v-for="source in sources" type="application/x-shockwave-flash" data="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
             <param name="movie" :value="getSwfSource(source)"/> 
         </object> 
     </video>
