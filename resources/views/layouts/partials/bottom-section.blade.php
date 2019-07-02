@@ -50,24 +50,18 @@
 		</div>
 	<!-- Work Together -->
 </section>
-<transition name="slide-up-down">
-    <div class="chat-box-toggle" v-if="!showChatbox" v-on:click="showChatbox=!showChatbox">
-        <h3>Start a Project <i class="fa fa-comment-dots"></i></h3>
-    </div>
-</transition>
 
-<transition name="slide-up-down" :duration="{ enter : 600, leave : 300 }">
-    <div class="chat-box" v-if="showChatbox">
-        <h3>Welcome to <strong>Digital Pie</strong> <i v-on:click="showChatbox=!showChatbox" class="fa fa-window-minimize"></i></h3>
-        <div class="panel panel-default">
-            <div class="panel-heading">Start a project with us now by chatting straight away!</div>
-
-            <div class="panel-body">
-                <chat-messages :messages="messages"></chat-messages>
-            </div>
-            <div class="panel-footer">
-                <chat-form v-on:messagesent="addMessage"></chat-form>
-            </div>
-        </div>
-    </div>
-</transition>
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+  window.__lc = window.__lc || {};
+  window.__lc.license = 10470057;
+  (function() {
+    var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+  })();
+</script>
+<noscript>
+Find us on <a href="https://www.facebook.com/digitalpieltd/" rel="noopener nofollow" target="_blank">our Facebook</a>
+</noscript>
+<!-- End of LiveChat code -->
