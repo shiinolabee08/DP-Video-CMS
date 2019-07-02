@@ -12551,6 +12551,7 @@ header#top .free-quote a:hover {
   position: relative;
   padding: 50px 35px 20px;
 }
+
 .testimonial-boxes .col-md-6 {
   display: flex;
 }
@@ -12576,11 +12577,14 @@ header#top .free-quote a:hover {
   width: auto;
   height: auto;
 }
+
 .testimonial-boxes .testimonial-box .thumb.svg img {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
+
 .testimonial-boxes .testimonial-box .content {
   padding: 0px 25px;
   flex-grow: 0;

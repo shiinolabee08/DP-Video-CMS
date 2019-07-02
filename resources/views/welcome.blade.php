@@ -62,7 +62,7 @@
             <!-- Banner Area -->
             <div class="position-ref banner-area">   
 
-                <video-bg :sources="['{{secure_url('/videos/dp-video-banner-video.mp4')}}']">
+                <video-bg :sources="['{{url('/videos/dp-video-banner-video.mp4')}}']">
                   <!-- If you want to add content here, a slot is waiting! -->
                     <div class="container content">
                         <div class="row">
@@ -427,6 +427,19 @@
         </div>
         <!-- App -->
         
-        
+        <!-- Start of LiveChat (www.livechatinc.com) code -->
+        <script type="text/javascript">
+          window.__lc = window.__lc || {};
+          window.__lc.license = 10470057;
+          (function() {
+            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+          })();
+        </script>
+        <noscript>
+        Find us on <a href="https://www.facebook.com/digitalpieltd/" rel="noopener nofollow" target="_blank">our Facebook</a>
+        </noscript>
+        <!-- End of LiveChat code -->
     </body>
 </html>

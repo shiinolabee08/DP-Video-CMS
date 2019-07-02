@@ -71,12 +71,12 @@
 <!-- Map -->
 <div class="container-fluid">
 	<div class="row">
-		<map-widget></map-widget>
+		<div style="height: 500px;width: 100%;" id="map"></div>
 	</div>
 </div>
 <!-- Map -->
 
-<transition name="slide-up-down">
+<!-- <transition name="slide-up-down">
     <div class="chat-box-toggle" v-if="!showChatbox" v-on:click="showChatbox=!showChatbox">
         <h3>Start a Project <i class="fa fa-comment-dots"></i></h3>
     </div>
@@ -96,6 +96,6 @@
             </div>
         </div>
     </div>
-</transition>
+</transition> -->
 
 @endsection

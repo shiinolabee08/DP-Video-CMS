@@ -15,10 +15,12 @@
 
     <link rel="canonical" href="{{ url()->current() }}" />
 
-    <!-- Mapbox GL CSS -->
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='preload' as="style" onload="this.rel = 'stylesheet'" />
+    @if( $pageName === 'Contact' )
+        <!-- Mapbox GL CSS -->
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='preload' as="style" onload="this.rel = 'stylesheet'" />
 
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+    @endif
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84382522-10"></script>
@@ -75,5 +77,78 @@
         @include('layouts/partials/footer-widgets')        
         
     </div>
+        
+    @if( $pageName === 'Contact' )
+        <script type="text/javascript">
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZGlnaXRhbHBpZSIsImEiOiI2ODcwNTA1ZWMxNTE0ZGI3YmU1YzFlNWViYWM0YmM1ZCJ9.ZVZ25aGzVkAymQ2rMhWWxA';         
+
+            var map = new mapboxgl.Map({        
+                container: 'map', // container id
+                style: 'mapbox://styles/mapbox/light-v10',
+                center: [54.213861, -3.495718], // starting position,
+            });
+             
+            // Add zoom and rotation controls to the map.
+            map.addControl(new mapboxgl.NavigationControl());
+            // map.addControl(new mapboxgl.GeolocateControl());
+
+            var geojson = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "message": "Main Office",
+                            "iconSize": [60, 60]
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                0.6859232,
+                                51.5733951
+                            ]
+                        }
+                    }   
+                ]
+            };
+
+            // add markers to map
+            geojson.features.forEach(function(marker) {
+
+                // create a DOM element for the marker
+                var el = document.createElement('div');
+
+                el.className = 'marker';
+                el.style.backgroundImage = 'url(./dplogo-light.svg)';
+                el.style.width = marker.properties.iconSize[0] + 'px';
+                el.style.height = marker.properties.iconSize[1] + 'px';
+                 
+                el.addEventListener('click', function() {
+                    window.alert(marker.properties.message);
+                });
+                 
+                // add marker to map
+                new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .addTo(map);
+            });
+        </script>
+    @endif
+
+
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+    <script type="text/javascript">
+      window.__lc = window.__lc || {};
+      window.__lc.license = 10470057;
+      (function() {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+      })();
+    </script>
+    <noscript>
+    Find us on <a href="https://www.facebook.com/digitalpieltd/" rel="noopener nofollow" target="_blank">our Facebook</a>
+    </noscript>
+    <!-- End of LiveChat code -->
 </body>
 </html>

@@ -29,12 +29,6 @@ window.Vue = require('vue');
 //   }
 // });
 
-/*Video BG*/
-import VideoBg from 'vue-videobg'
-
-Vue.component('video-bg', VideoBg);
-
-
 /*Modal*/
 import VModal from 'vue-js-modal'
 
@@ -48,16 +42,17 @@ Vue.component('client-carousel-slider', require('./components/ClientCarouselSlid
 Vue.component('testimonials-carousel-slider', require('./components/TestimonialsCarouselSlider.vue').default);
 Vue.component('case-studies-slider', require('./components/CaseStudiesSlider.vue').default);
 Vue.component('awards-carousel-slider', require('./components/AwardsSlider.vue').default);
-Vue.component('map-widget', require('./components/MapWidget.vue').default);
+// Vue.component('map-widget', require('./components/MapWidget.vue').default);
 Vue.component('count-up', require('./components/CountUpWidget.vue').default);
 Vue.component('client-services-widget', require('./components/ClientServicesWidget.vue').default);
 Vue.component('case-studies-by-category-widget', require('./components/CaseStudiesByCategoryWidget.vue').default);
 Vue.component('image-slider', require('./components/ImageSlider.vue').default);
 Vue.component('contact-form-widget', require('./components/ContactUsForm.vue').default);
-Vue.component('chat-messages', require('./components/ChatMessages.vue').default);
-Vue.component('chat-form', require('./components/ChatForm.vue').default);
+// Vue.component('chat-messages', require('./components/ChatMessages.vue').default);
+// Vue.component('chat-form', require('./components/ChatForm.vue').default);
 Vue.component('case-studies-filter-post-widget', require('./components/CaseStudyFilterPostWidget.vue').default);
 Vue.component('carousel-slider', require('./components/CarouselSlider.vue').default);
+Vue.component('video-bg', require('./components/VideoBg.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -80,16 +75,16 @@ const app = new Vue({
     created() {
         // this.fetchMessages();        
 
-        Echo.channel('chat')
-            .listen('MessageSent', (e) => {
+        // Echo.channel('chat')
+        //     .listen('MessageSent', (e) => {
 
-                this.messages.push({
-                    name : e.message.name,
-                    email : e.message.email,
-                    message: e.message.message,
-                    // user: e.user
-                });
-            });
+        //         this.messages.push({
+        //             name : e.message.name,
+        //             email : e.message.email,
+        //             message: e.message.message,
+        //             // user: e.user
+        //         });
+        //     });
     },
 
     methods: {
