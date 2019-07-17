@@ -82,7 +82,7 @@ class FrontController
 
         $sendMail = Mail::to(env('MAIL_TO_ADDRESS'))->send(new EnquirySubmission($contactSubmission));
 
-        return response()->json([ 'status' => ( $contactSubmission ? true : false ), 'mail_sent' => Mail::failures() ? false : true ]);
+        return view('front.thank-you', [ 'pageName' => 'thank-you' ]);
     }
 
     public function sendNewsletter( Request $request )

@@ -138,6 +138,18 @@
         </script>
     @endif
 
+    @if( $pageName === 'Thank You' ||  $pageName == 'thank-you' )
+    <!-- Google Adwords conversions -->
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-825149911/Xn-9CPnSg5UBENeTu4kD'}); 
+    </script>
+    <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/825149911/?label=Xn-9CPnSg5UBENeTu4kD&guid=ON&script=0"/>
+        </div>
+    </noscript>
+    <!-- Google Adwords conversions -->
+    @endif
 
     <!-- Start of LiveChat (www.livechatinc.com) code -->
     <script type="text/javascript">

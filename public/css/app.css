@@ -12187,6 +12187,16 @@ header#top .free-quote a:hover {
   line-height: normal;
 }
 
+.thank-you {
+  background-color: #fff;
+  padding: 80px 0px;
+}
+
+.thank-you a {
+  color: #e3c00e;
+  text-decoration: none;
+}
+
 .get-in-touch {
   background-color: #fff;
   padding: 80px 0px;

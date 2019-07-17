@@ -50383,7 +50383,7 @@ var render = function() {
                 width: "1280",
                 height: "650",
                 type: "application/x-shockwave-flash",
-                data: "http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"
+                data: "https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"
               }
             },
             [
