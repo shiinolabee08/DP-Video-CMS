@@ -2351,6 +2351,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     setSuccessMessage: function setSuccessMessage() {
       this.successMsg = true;
+      setTimeout(function () {
+        window.location.href = '/thank-you';
+      }, 2000);
     },
     submitForm: function submitForm(e) {
       e.preventDefault();

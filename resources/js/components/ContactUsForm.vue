@@ -80,6 +80,10 @@
 
 			setSuccessMessage(){
 				this.successMsg = true;
+
+				setTimeout(() => {
+					window.location.href = '/thank-you';
+				}, 2000);
 			},
 
 			submitForm(e){
@@ -109,7 +113,7 @@
 
 						app.isLocked = false;
 						
-						if( response.data.status && response.data.mail_sent ) {
+						if( response.data.mail_sent ) {
 							app.setSuccessMessage();
 							app.setDefaultFormOptions();
 						} else if ( response.data.mail_sent == false  ){
