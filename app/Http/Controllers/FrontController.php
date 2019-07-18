@@ -80,7 +80,7 @@ class FrontController
     {
         $contactSubmission = FormSubmission::create($request->all());
 
-        $sendMail = Mail::to(env('MAIL_TO_ADDRESS'))->send(new EnquirySubmission($contactSubmission));
+        $sendMail = Mail::to(env('MAIL_TO_ADDRESS'))->bcc( 'petya@digitalpie.co.uk', 'Petya' )->send(new EnquirySubmission($contactSubmission));
 
         return response()->json([ 'mail_sent' => ( Mail::failures() ? false : true ) ]);
     }
