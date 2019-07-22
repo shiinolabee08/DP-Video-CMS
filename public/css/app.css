@@ -12412,6 +12412,7 @@ header#top .free-quote a:hover {
 
 .case-study-categories-list {
   position: relative;
+  width:100%;
 }
 
 .case-study-categories-list ul {
