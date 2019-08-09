@@ -2,5 +2,5 @@
 
 <p>Phone Number: {{$form_submission->phone_number}}</p><br>
 
-<h3>Inquiry Information :</h3><br>
+<h3>Enquiry Information :</h3><br>
 <p>{{$form_submission->more_info}}</p>
