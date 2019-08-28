@@ -1,4 +1,4 @@
-<p>From: {{$form_submission->full_name}} <{{$form_submission->email}}></p><br>
+<p>From: {{$form_submission->full_name}} {{$form_submission->email}}</p><br>
 
 <p>Phone Number: {{$form_submission->phone_number}}</p><br>
 
