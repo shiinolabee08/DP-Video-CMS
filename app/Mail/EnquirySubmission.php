@@ -33,6 +33,9 @@ class EnquirySubmission extends Mailable
      */
     public function build()
     {
-        return $this->from('info@digitalpie.co.uk')->subject('New DP Video Enquiry')->view('emails.inquiry-submission');
+        return $this->from('info@digitalpie.co.uk')
+                    ->subject('New DP Video Enquiry')
+                    ->replyTo($this->form_submission->email)
+                    ->view('emails.inquiry-submission');
     }
 }
