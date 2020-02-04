@@ -16,7 +16,7 @@
 						<img src="/images/trust-pilot-logo.png"/>
 					</div>
 					<div class="col-md-4 col-sm-12">
-						<p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
+						<p><strong>Call Us: <a href="tel:01702 749662">01702 749662</a></strong></p>
 						<img src="/images/google-partner-logo.png"/>
 					</div>
 				</div>
@@ -40,14 +40,14 @@
 				<div class="main-heading text-center">
 					<p>We pride ourselves on delivering a premium, friendly & straight-forward service providing Facebook Cover Videos. Working to detailed specification & within tight deadlines, we thrive in creating exciting and informative video solutions for your Facebook business page.</p>
 				</div>
-			</div>			
+			</div>
 		</div>
 	</div>
 </div>
 
 <!-- Packages -->
 <div class="container-fluid packages gray-bg-container">
-	<div class="container">		
+	<div class="container">
 		<div class="row">
 		    <div class="col-md-1 col-sm-12"></div>
 		    <div class="col-md-5 col-sm-12">
@@ -164,7 +164,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4">				
+				<div class="col-md-4">
 				</div>
 				<div class="col-md-4 text-center">
 					<div class="item">
@@ -172,20 +172,20 @@
 						<h2>07.  UPLOAD YOUR NEW FACEBOOK COVER VIDEO!</h2>
 					</div>
 				</div>
-				<div class="col-md-4">				
+				<div class="col-md-4">
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4">				
+				<div class="col-md-4">
 				</div>
 				<div class="col-md-4 text-center">
 					<a href="#" class="call-to-action">Let's Build Your Idea Into Motion</a>
 				</div>
-				<div class="col-md-4">				
+				<div class="col-md-4">
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 
@@ -214,7 +214,7 @@
 				<div class="main-heading text-center">
 					<p>Digital Pie Video's team of creative professionals specialise in delivering the highest quality of facebook cover video production for corporate and creative clients all around the world for thousands of businesses and projects. here with all the tools required to help you stand out from your competitors and make your customers decisions easier. Got a project for us? Let's talk today and discuss your idea in more details.</p>
 				</div>
-			</div>			
+			</div>
 		</div>
 	</div>
 </div>

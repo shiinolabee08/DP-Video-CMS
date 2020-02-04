@@ -18,7 +18,7 @@
     </script>
     <!-- Event snippet for Clicks on number on mobile website (01702 749662) conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
-        function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-825149911/YONsCJHWg5UBENeTu4kD', 'event_callback': callback }); return false; } 
+        function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-825149911/YONsCJHWg5UBENeTu4kD', 'event_callback': callback }); return false; }
     </script>
 
     <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"26065705"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
@@ -57,11 +57,11 @@
         <div id="app">
 
             <v-dialog :width="850" :adaptive="true" :draggable="true" :pivotY="1" :height="500"></v-dialog>
-            
+
             @include('layouts/partials/header-nav')
 
             <!-- Banner Area -->
-            <div class="position-ref banner-area">   
+            <div class="position-ref banner-area">
 
                 <video-bg :sources="['{{secure_url('/videos/dp-video-banner-video.mp4')}}']">
                   <!-- If you want to add content here, a slot is waiting! -->
@@ -81,7 +81,7 @@
                                 <img src="/images/trust-pilot-logo.png"/>
                             </div>
                             <div class="col-md-3 col-sm-12">
-                                <p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
+                                <p><strong>Call Us: <a href="tel:01702 749662">01702 749662</a></strong></p>
                                 <img src="/images/google-partner-logo.png"/>
                             </div>
                         </div>
@@ -105,17 +105,17 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
-                </video-bg>                           
+                    </div>
+                </video-bg>
             </div>
             <!-- Banner Area -->
 
             <!-- Client Carousel Slider -->
             <div class="container-fluid client-carousel-slider">
-                <client-carousel-slider></client-carousel-slider>                    
-            </div>        
+                <client-carousel-slider></client-carousel-slider>
+            </div>
             <!-- Client Carousel Slider -->
-        
+
             <div class="container page-content top-info">
                 <div class="row">
                     <div class="col-md-6 flex-column">
@@ -142,7 +142,7 @@
                     <div class="col-sm-6 service-fancy-box">
                         <div class="inner-content" style="background-image: url('/images/services/corporate-video.png');">
                             <h2>Corporate Video</h2>
-                            <p>We can create videos that help companies gain an edge over their competiors, be it for internal use or external.</p>
+                            <p>We can create videos that help companies gain an edge over their competitors, be it for internal use or external.</p>
                             <div class="links">
                                 <a href="{{ URL::to('/services/corporate-video') }}">Read More <i class="fa fa-arrow-circle-right"></i></a>
                                 <a href="{{ URL::to('/contact') }}">Enquire <i class="fa fa-arrow-circle-right"></i></a>
@@ -225,7 +225,7 @@
                         <div class="col-md-3"><div class="spacer"></div></div>
                     </div>
                     <!-- Case Studies List -->
-                    
+
                     <client-services-widget></client-services-widget>
                     <!-- Case Studies List -->
                 </div>
@@ -234,13 +234,13 @@
 
             <!-- Awards Carousel Slider -->
             <div class="container-fluid awards-carousel-slider">
-                <awards-carousel-slider v-bind:home="true"></awards-carousel-slider>                    
-            </div>        
+                <awards-carousel-slider v-bind:home="true"></awards-carousel-slider>
+            </div>
             <!-- Awards Carousel Slider -->
 
             <!-- Services Info -->
             <div class="container-fluid page-content packages">
-                <div class="container">                    
+                <div class="container">
                     <div class="row">
                         <div class="col-md-1 col-sm-12"></div>
                         <div class="col-md-5 col-sm-12 flex-column">
@@ -423,11 +423,11 @@
             <!-- Convert Your Customers More Sucessfully With Video -->
 
             @include('layouts/partials/bottom-section')
-            
+
             @include('layouts/partials/footer-widgets')
         </div>
         <!-- App -->
-        
+
         <!-- Start of LiveChat (www.livechatinc.com) code -->
         <script type="text/javascript">
           window.__lc = window.__lc || {};

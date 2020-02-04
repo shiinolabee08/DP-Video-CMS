@@ -16,7 +16,7 @@
 						<img src="/images/trust-pilot-logo.png"/>
 					</div>
 					<div class="col-md-4 col-sm-12">
-						<p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
+						<p><strong>Call Us: <a href="tel:01702 749662">01702 749662</a></strong></p>
 						<img src="/images/google-partner-logo.png"/>
 					</div>
 				</div>
@@ -40,19 +40,19 @@
 				<div class="main-heading text-center">
 					<p>Customer Testimonials, case studies and other types of third-party endorsements are a great alternative to encourage your prospects to say “yes” to your proposal, to achieve your marketing goals and ultimately to increase your sales.</p>
 				</div>
-			</div>			
+			</div>
 		</div>
 	</div>
 </div>
 
 <!-- Packages -->
 <div class="container-fluid packages gray-bg-container">
-	<div class="container">		
+	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
 				<div class="title-heading has-primary-border-center text-center">
 					<h1>Our Packages</h1>
-				</div>				
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -122,7 +122,7 @@
 		        </div>
 		    </div>
 		    <div class="col-md-1 col-sm-12"></div>
-		</div>		
+		</div>
 	</div>
 </div>
 <!-- Packages -->
@@ -209,18 +209,18 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="row">
-				<div class="col-md-4">				
+				<div class="col-md-4">
 				</div>
 				<div class="col-md-4 text-center">
 					<a href="#" class="call-to-action">Let's Build Your Idea Into Motion</a>
 				</div>
-				<div class="col-md-4">				
+				<div class="col-md-4">
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 
@@ -251,7 +251,7 @@
 
 					Got a project for us? Let's talk today and discuss your idea in more details.</p>
 				</div>
-			</div>			
+			</div>
 		</div>
 	</div>
 </div>

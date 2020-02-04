@@ -16,7 +16,7 @@
 						<img src="/images/trust-pilot-logo.png"/>
 					</div>
 					<div class="col-md-4 col-sm-12">
-						<p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
+						<p><strong>Call Us: <a href="tel:01702 749662">01702 749662</a></strong></p>
 						<img src="/images/google-partner-logo.png"/>
 					</div>
 				</div>
@@ -70,7 +70,7 @@
 				<div class="title-heading has-primary-border-center text-center">
 					<h1>Our Packages</h1>
 					<h3>At Digital Pie Video, we take an experienced approach to creating highly engaging digital branding. We believe in providing purely highly creative, exclusive and fitting brand identities giving your business or project an edge over its competitors and an opportunity to stand out from the crowd.</h3>
-				</div>				
+				</div>
 			</div>
 		</div>
 		<div class="row">

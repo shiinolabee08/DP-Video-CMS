@@ -4,11 +4,11 @@
 
 <!-- Corporate Video Banner -->
 <div class="container-fluid service-banner" style="height:105vh;">
-	<div class="video-background">                    
+	<div class="video-background">
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="{{url('/videos/dp-indent-reel.mp4')}}" type="video/mp4">
         </video>
-    </div> 
+    </div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-7 col-sm-12">
@@ -22,7 +22,7 @@
 						<img src="/images/trust-pilot-logo.png"/>
 					</div>
 					<div class="col-md-4 col-sm-12">
-						<p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
+						<p><strong>Call Us: <a href="tel:01702 749662">01702 749662</a></strong></p>
 						<img src="/images/google-partner-logo.png"/>
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 			<div class="col-md-8 col-sm-12">
 				<div class="title-heading has-primary-border-center text-center">
 					<h1>Our Packages</h1>
-				</div>				
+				</div>
 			</div>
 			<div class="col-md-2 col-sm-12"></div>
 		</div>
@@ -203,19 +203,19 @@
 						<p>We deliver your animated logo in your preferred file type. We can assist with this by discussing what your usage purposes are and suggest the most suitable format.</p>
 					</div>
 				</div>
-			</div>		
-			
+			</div>
+
 			<div class="row">
-				<div class="col-md-4">				
+				<div class="col-md-4">
 				</div>
 				<div class="col-md-4 text-center">
 					<a href="#" class="call-to-action">Let's Build Your Idea Into Motion</a>
 				</div>
-				<div class="col-md-4">				
+				<div class="col-md-4">
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 

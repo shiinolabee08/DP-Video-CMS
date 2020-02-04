@@ -16,7 +16,7 @@
 						<img src="/images/trust-pilot-logo.png"/>
 					</div>
 					<div class="col-md-4 col-sm-12">
-						<p><strong>Call Us: <a href="tel:+441702749662">+441702749662</a></strong></p>
+						<p><strong>Call Us: <a href="tel:01702 749662">01702 749662</a></strong></p>
 						<img src="/images/google-partner-logo.png"/>
 					</div>
 				</div>
@@ -69,7 +69,7 @@
 				<div class="title-heading has-primary-border-center text-center">
 					<h1>Our Packages</h1>
 					<h3>At Digital Pie Video, we take an experienced approach to creating highly engaging event videos. We can offer a range of editing services for your event. We have vast experience in event highlight videos, so choosing the best moments for the final cut comes natural to us.</h3>
-				</div>				
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -232,16 +232,16 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4">				
+				<div class="col-md-4">
 				</div>
 				<div class="col-md-4 text-center">
 					<a href="#" class="call-to-action">Let's Build Your Idea Into Motion</a>
 				</div>
-				<div class="col-md-4">				
+				<div class="col-md-4">
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 
