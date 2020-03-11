@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KRMNFDT');</script>
+    <!-- End Google Tag Manager -->
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{url('/fav.ico')}}">
@@ -22,22 +31,6 @@
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
     @endif
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84382522-10"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-84382522-10');
-      gtag('config', 'AW-825149911');
-      gtag('config', 'AW-825149911/Ufj4CJ7Lg5UBENeTu4kD', { 'phone_conversion_number': '01702 749662' });
-    </script>
-    <!-- Event snippet for Clicks on number on mobile website (01702 749662) conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-        function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-825149911/YONsCJHWg5UBENeTu4kD', 'event_callback': callback }); return false; } 
-    </script>
-    
     <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"26065705"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
 
     <!-- CSRF Token -->
@@ -59,9 +52,14 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-  
+
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src=“https://www.googletagmanager.com/ns.html?id=GTM-KRMNFDT”
+                      height=“0" width=“0” style=“display:none;visibility:hidden”></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="app">
 
         <v-dialog :width="850" :adaptive="true" :draggable="true" :pivotY="1" :height="500"></v-dialog>
@@ -76,21 +74,21 @@
             @include('layouts/partials/bottom-section')
         @endif
 
-        @include('layouts/partials/footer-widgets')        
-        
+        @include('layouts/partials/footer-widgets')
+
     </div>
-        
+
     @if( $pageName === 'Contact' )
         <script type="text/javascript">
-            mapboxgl.accessToken = 'pk.eyJ1IjoiZGlnaXRhbHBpZSIsImEiOiI2ODcwNTA1ZWMxNTE0ZGI3YmU1YzFlNWViYWM0YmM1ZCJ9.ZVZ25aGzVkAymQ2rMhWWxA';         
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZGlnaXRhbHBpZSIsImEiOiI2ODcwNTA1ZWMxNTE0ZGI3YmU1YzFlNWViYWM0YmM1ZCJ9.ZVZ25aGzVkAymQ2rMhWWxA';
 
-            var map = new mapboxgl.Map({        
+            var map = new mapboxgl.Map({
                 container: 'map', // container id
                 style: 'mapbox://styles/mapbox/light-v10',
                 center: [0.6859232, 51.5733951], // starting position,
                 zoom : 8
             });
-             
+
             // Add zoom and rotation controls to the map.
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.GeolocateControl());
@@ -111,7 +109,7 @@
                                 51.5733951
                             ]
                         }
-                    }   
+                    }
                 ]
             };
 
@@ -125,30 +123,17 @@
                 el.style.backgroundImage = 'url(./dplogo-light.svg)';
                 el.style.width = marker.properties.iconSize[0] + 'px';
                 el.style.height = marker.properties.iconSize[1] + 'px';
-                 
+
                 el.addEventListener('click', function() {
                     window.alert(marker.properties.message);
                 });
-                 
+
                 // add marker to map
                 new mapboxgl.Marker(el)
                 .setLngLat(marker.geometry.coordinates)
                 .addTo(map);
             });
         </script>
-    @endif
-
-    @if( $pageName === 'Thank You' ||  $pageName == 'thank-you' )
-    <!-- Google Adwords conversions -->
-    <script>
-        gtag('event', 'conversion', {'send_to': 'AW-825149911/Xn-9CPnSg5UBENeTu4kD'}); 
-    </script>
-    <noscript>
-        <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/825149911/?label=Xn-9CPnSg5UBENeTu4kD&guid=ON&script=0"/>
-        </div>
-    </noscript>
-    <!-- Google Adwords conversions -->
     @endif
 
     <!-- Start of LiveChat (www.livechatinc.com) code -->
